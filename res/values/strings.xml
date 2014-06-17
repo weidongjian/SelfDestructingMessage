@@ -17,5 +17,6 @@
     <string name="show_password">Show password</string>
     <string name="message_singup">Don\'t have an account, Sing up!</string>
     <string name="action_logout">Logout</string>
+    <string name="hint_password">password</string>
 
 </resources>

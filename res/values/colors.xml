@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="Text">#1E1E1E</color>
+    <color name="background_activity">#99C68E</color>
+    <color name="background_editText">#E0FFFF</color>
+</resources>
