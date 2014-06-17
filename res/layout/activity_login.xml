@@ -6,11 +6,68 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.weidongjian.com.selfdestructingmessage.LoginActivity$PlaceholderFragment" >
+    tools:context="com.weidongjian.com.selfdestructingmessage.LoginActivity" >
 
     <TextView
+        android:id="@+id/tv_title"
+        style="@style/TextView"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="40dp"
+        android:text="@string/login"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tv_subtitle"
+        style="@style/TextView"
+        android:layout_below="@id/tv_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:text="@string/login_subtilte"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/et_username"
+        style="@style/EditText"
+        android:layout_alignParentLeft="true"
+        android:paddingLeft="10dp"
+        android:layout_below="@id/tv_subtitle"
+        android:hint="@string/hint_username" >
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/et_password"
+        style="@style/EditText"
+        android:layout_alignLeft="@id/et_username"
+        android:layout_below="@id/et_username"
+        android:inputType="textPassword" />
+
+    <CheckBox
+        android:id="@+id/cb_show_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_alignLeft="@id/et_username"
+        android:layout_below="@id/et_password"
+        android:text="@string/show_password" />
+
+    <Button
+        android:id="@+id/bt_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/et_username"
+        android:layout_below="@id/cb_show_password"
+        android:layout_marginTop="14dp"
+        android:text="@string/login" />
+
+    <TextView
+        android:id="@+id/tv_singup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/et_username"
+        android:layout_below="@id/bt_login"
+        android:layout_marginTop="19dp"
+        android:text="@string/message_singup" />
 
 </RelativeLayout>
