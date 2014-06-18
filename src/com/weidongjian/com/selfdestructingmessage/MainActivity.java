@@ -1,36 +1,14 @@
 package com.weidongjian.com.selfdestructingmessage;
 
-import java.util.Locale;
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-import com.parse.ParseAnalytics;
-import com.weidongjian.com.selfdestructingmessage.R;
-import com.weidongjian.com.selfdestructingmessage.R.id;
-import com.weidongjian.com.selfdestructingmessage.R.layout;
-import com.weidongjian.com.selfdestructingmessage.R.menu;
-
-=======
->>>>>>> parent of 65afe22... initialize parse
-=======
->>>>>>> parent of 65afe22... initialize parse
-import android.app.Activity;
 import android.app.ActionBar;
-import android.app.Fragment;
-import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Intent;
-import android.support.v13.app.FragmentPagerAdapter;
 import android.os.Bundle;
+import android.support.v13.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
-import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
 
 public class MainActivity extends FragmentActivity implements ActionBar.TabListener {
 
