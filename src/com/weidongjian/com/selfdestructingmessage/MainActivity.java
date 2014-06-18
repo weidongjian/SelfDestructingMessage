@@ -2,6 +2,8 @@ package com.weidongjian.com.selfdestructingmessage;
 
 import java.util.Locale;
 
+import com.parse.ParseAnalytics;
+
 import android.app.Activity;
 import android.app.ActionBar;
 import android.app.Fragment;
@@ -39,6 +41,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		ParseAnalytics.trackAppOpened(getIntent());
 		setContentView(R.layout.activity_main);
 
 		// Set up the action bar.
