@@ -3,12 +3,15 @@ package com.weidongjian.com.selfdestructingmessage;
 import java.util.Locale;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import com.parse.ParseAnalytics;
 import com.weidongjian.com.selfdestructingmessage.R;
 import com.weidongjian.com.selfdestructingmessage.R.id;
 import com.weidongjian.com.selfdestructingmessage.R.layout;
 import com.weidongjian.com.selfdestructingmessage.R.menu;
 
+=======
+>>>>>>> parent of 65afe22... initialize parse
 =======
 >>>>>>> parent of 65afe22... initialize parse
 import android.app.Activity;
