@@ -18,5 +18,8 @@
     <string name="message_singup">Don\'t have an account, Sing up!</string>
     <string name="action_logout">Logout</string>
     <string name="hint_password">password</string>
+    <string name="hint_email">Email</string>
+    <string name="message_back_to_login">Back to Login.</string>
+    <string name="singup">Sing up</string>
 
 </resources>

@@ -10,7 +10,6 @@ import android.app.ActionBar;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.app.Fragment;
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.PasswordTransformationMethod;
 import android.view.LayoutInflater;
@@ -26,18 +25,16 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.os.Build;
 
-public class LoginActivity extends Activity {
+public class SingupActivity extends Activity {
 	
 	protected EditText mUsername;
 	protected EditText mPassword;
 	protected CheckBox mShowPasswordCheckBox;
-	protected Button mLoginButton;
-	protected TextView mSingupTextView;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_login);
+		setContentView(R.layout.activity_sing_up);
 		
 		ActionBar actionBar = getActionBar();
 		actionBar.hide();
@@ -45,26 +42,7 @@ public class LoginActivity extends Activity {
 		mUsername = (EditText) findViewById(R.id.et_username);
 		mPassword = (EditText) findViewById(R.id.et_password);
 		mShowPasswordCheckBox = (CheckBox) findViewById(R.id.cb_show_password);
-		mLoginButton = (Button) findViewById(R.id.bt_login);
-		mSingupTextView = (TextView) findViewById(R.id.tv_singup);
 
-		mLoginButton.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				String username = mUsername.getText().toString().trim();
-				String password = mPassword.getText().toString().trim();
-				
-				if (username.isEmpty() || password.isEmpty()) {
-					new AlertDialog.Builder(LoginActivity.this)
-					.setTitle("Oops!")
-					.setMessage("Please make sure you have inputed the username and password.")
-					.setPositiveButton(android.R.string.ok, null)
-					.show();
-				}
-				
-			}
-		});
-		
 		mShowPasswordCheckBox.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 			@Override
 			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -76,14 +54,8 @@ public class LoginActivity extends Activity {
 					mPassword.setTransformationMethod(new PasswordTransformationMethod());
 					mPassword.setSelection(mPassword.getText().length());
 				}
-			}
-		});
-		
-		mSingupTextView.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				Intent intent = new Intent(LoginActivity.this, SingupActivity.class);
-				startActivity(intent);
+					
+				
 			}
 		});
 
