@@ -3,6 +3,10 @@ package com.weidongjian.com.selfdestructingmessage;
 import java.util.Locale;
 
 import com.parse.ParseAnalytics;
+import com.weidongjian.com.selfdestructingmessage.R;
+import com.weidongjian.com.selfdestructingmessage.R.id;
+import com.weidongjian.com.selfdestructingmessage.R.layout;
+import com.weidongjian.com.selfdestructingmessage.R.menu;
 
 import android.app.Activity;
 import android.app.ActionBar;

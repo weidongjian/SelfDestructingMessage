@@ -26,8 +26,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.weidongjian.com.selfdestructingmessage.LoginActivity"
-            android:label="@string/title_activity_login" >
+            android:name="comcom.weidongjian.com.selfdestructingmessage.LoginActivity            android:label="@string/title_activity_login" >
         </activity>
     </application>
 
