@@ -96,8 +96,8 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 		// as you specify a parent activity in AndroidManifest.xml.
 		int id = item.getItemId();
 		if (id == R.id.action_logout) {
-			Intent intent = new Intent(this, LoginActivity.class);
-			startActivity(intent);
+			ParseUser.logOut();
+			navigateToLogin();
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
