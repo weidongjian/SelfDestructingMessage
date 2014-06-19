@@ -49,6 +49,7 @@
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:layout_alignParentLeft="true"
+        android:inputType="textEmailAddress"
         android:hint="@string/hint_email"
         android:layout_marginTop="10dp" />
 

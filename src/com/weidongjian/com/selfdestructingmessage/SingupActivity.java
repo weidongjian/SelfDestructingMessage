@@ -1,5 +1,8 @@
 package com.weidongjian.com.selfdestructingmessage;
 
+import com.parse.ParseException;
+import com.parse.ParseUser;
+import com.parse.SignUpCallback;
 import com.weidongjian.com.selfdestructingmessage.R;
 import com.weidongjian.com.selfdestructingmessage.R.id;
 import com.weidongjian.com.selfdestructingmessage.R.layout;
@@ -10,6 +13,7 @@ import android.app.ActionBar;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.PasswordTransformationMethod;
 import android.view.LayoutInflater;
@@ -29,6 +33,8 @@ public class SingupActivity extends Activity {
 	
 	protected EditText mUsername;
 	protected EditText mPassword;
+	protected EditText mEmail;
+	protected Button mSingupButton;
 	protected CheckBox mShowPasswordCheckBox;
 
 	@Override
@@ -41,9 +47,12 @@ public class SingupActivity extends Activity {
 		
 		mUsername = (EditText) findViewById(R.id.et_username);
 		mPassword = (EditText) findViewById(R.id.et_password);
+		mEmail = (EditText) findViewById(R.id.et_email);
 		mShowPasswordCheckBox = (CheckBox) findViewById(R.id.cb_show_password);
+		mSingupButton = (Button) findViewById(R.id.bt_singup);
 
 		mShowPasswordCheckBox.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+
 			@Override
 			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 				if (isChecked) {
@@ -54,11 +63,53 @@ public class SingupActivity extends Activity {
 					mPassword.setTransformationMethod(new PasswordTransformationMethod());
 					mPassword.setSelection(mPassword.getText().length());
 				}
-					
-				
 			}
 		});
 
+		mSingupButton.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				String username = mUsername.getText().toString().trim();
+				String email = mEmail.getText().toString().trim();
+				String password = mPassword.getText().toString().trim();
+				
+				if (username.isEmpty() || password.isEmpty() || email.isEmpty()) {
+					new AlertDialog.Builder(SingupActivity.this)
+					.setTitle("Oops!")
+					.setMessage("Please make sure you have inputed the username, password and email.")
+					.setPositiveButton(android.R.string.ok, null)
+					.show();
+				} 
+				else {
+					final ParseUser user = new ParseUser();
+					user.setUsername(username);
+					user.setEmail(email);
+					user.setPassword(password);
+					
+					user.signUpInBackground(new SignUpCallback() {
+						@Override
+						public void done(ParseException e) {
+							if (e == null) {
+								// sing up successful
+								BaseApplication.updataInstallation(user);
+								Intent intent = new Intent(SingupActivity.this, MainActivity.class);
+								intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+								intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+								startActivity(intent);
+							}
+							else {
+								//fail to sing up
+								new AlertDialog.Builder(SingupActivity.this)
+								.setTitle("Oops!")
+								.setMessage(e.getMessage())
+								.setPositiveButton(android.R.string.ok, null)
+								.show();
+							}
+						}
+					});
+				}
+			}
+		});
 	}
 
 	@Override
