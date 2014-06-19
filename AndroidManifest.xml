@@ -18,7 +18,7 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.weidongjian.com.selfdestructingmessage.MainActivity"
-            android:label="@string/app_name"
+            android:label="@string/title_main_actionbar"
             android:screenOrientation="portrait" >
 
             <intent-filter>

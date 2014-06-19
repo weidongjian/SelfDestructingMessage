@@ -3,6 +3,7 @@ package com.weidongjian.com.selfdestructingmessage;
 import com.parse.ParseUser;
 
 import android.app.ActionBar;
+import android.app.AlertDialog;
 import android.app.FragmentTransaction;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -96,11 +97,21 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 		// automatically handle clicks on the Home/Up button, so long
 		// as you specify a parent activity in AndroidManifest.xml.
 		int id = item.getItemId();
-		if (id == R.id.action_logout) {
+		switch (id) {
+		case R.id.action_logout:
 			ParseUser.logOut();
 			navigateToLogin();
-			return true;
+			break;
+		case R.id.action_choice:
+			new AlertDialog.Builder(MainActivity.this)
+			.setTitle("choose one")
+			.setItems(R.array.action_choice, mListener)
+			.setInverseBackgroundForced(true)
+			.setPositiveButton(android.R.string.ok, null)
+			.show();
+
 		}
+		
 		return super.onOptionsItemSelected(item);
 	}
 
@@ -125,7 +136,24 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 	DialogInterface.OnClickListener mListener = new DialogInterface.OnClickListener() {
 		@Override
 		public void onClick(DialogInterface dialog, int position) {
-			// TODO Auto-generated method stub
+			switch (position) {
+			case 0:
+				//take picture
+				
+				break;
+			case 1:
+				//choose picture
+				
+				break;
+			case 2:
+				//take video
+				
+				break;
+			case 3:
+				//choose picture
+				
+				break;
+			}
 			
 		}
 	};

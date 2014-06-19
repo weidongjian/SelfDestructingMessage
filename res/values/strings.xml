@@ -29,5 +29,6 @@
         <item >take video</item>
         <item >choose video</item>
     </string-array>
+        <string name="title_main_actionbar">Main</string>
 
 </resources>

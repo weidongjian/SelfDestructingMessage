@@ -78,6 +78,7 @@ public final class R {
         public static final int tab_title_inbox=0x7f060007;
         public static final int title_activity_inbox_fragment=0x7f060005;
         public static final int title_activity_login=0x7f060009;
+        public static final int title_main_actionbar=0x7f060015;
         public static final int title_section1=0x7f060001;
         public static final int title_section2=0x7f060002;
         public static final int title_section3=0x7f060003;
