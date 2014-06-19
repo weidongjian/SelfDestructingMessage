@@ -4,6 +4,7 @@ import com.parse.ParseUser;
 
 import android.app.ActionBar;
 import android.app.FragmentTransaction;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v13.app.FragmentPagerAdapter;
@@ -80,7 +81,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 		intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
 		startActivity(intent);
 	}
-
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 
@@ -121,5 +122,11 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 			FragmentTransaction fragmentTransaction) {
 	}
 
-	
+	DialogInterface.OnClickListener mListener = new DialogInterface.OnClickListener() {
+		@Override
+		public void onClick(DialogInterface dialog, int position) {
+			// TODO Auto-generated method stub
+			
+		}
+	};
 }

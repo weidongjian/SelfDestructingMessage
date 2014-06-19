@@ -77,6 +77,7 @@ public class SingupActivity extends Activity {
 					new AlertDialog.Builder(SingupActivity.this)
 					.setTitle("Oops!")
 					.setMessage("Please make sure you have inputed the username, password and email.")
+					.setInverseBackgroundForced(true)
 					.setPositiveButton(android.R.string.ok, null)
 					.show();
 				} 
@@ -102,6 +103,7 @@ public class SingupActivity extends Activity {
 								new AlertDialog.Builder(SingupActivity.this)
 								.setTitle("Oops!")
 								.setMessage(e.getMessage())
+								.setInverseBackgroundForced(true)
 								.setPositiveButton(android.R.string.ok, null)
 								.show();
 							}

@@ -21,5 +21,13 @@
     <string name="hint_email">Email</string>
     <string name="message_back_to_login">Back to Login.</string>
     <string name="singup">Sing up</string>
+    <string name="choice">choice</string>
+    
+    <string-array name="action_choice">
+        <item >take picture</item>
+        <item >choose picture</item>
+        <item >take video</item>
+        <item >choose video</item>
+    </string-array>
 
 </resources>

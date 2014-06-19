@@ -52,6 +52,7 @@ public class LoginActivity extends Activity {
 					new AlertDialog.Builder(LoginActivity.this)
 					.setTitle("Oops!")
 					.setMessage("Please make sure you have inputed the username and password.")
+					.setInverseBackgroundForced(true)
 					.setPositiveButton(android.R.string.ok, null)
 					.show();
 				}
@@ -65,6 +66,7 @@ public class LoginActivity extends Activity {
 						    	new AlertDialog.Builder(LoginActivity.this)
 								.setTitle("Oops!")
 								.setMessage(e.getMessage())
+								.setInverseBackgroundForced(true)
 								.setPositiveButton(android.R.string.ok, null)
 								.show();
 						    }
