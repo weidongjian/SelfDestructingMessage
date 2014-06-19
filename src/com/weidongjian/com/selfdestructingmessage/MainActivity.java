@@ -1,5 +1,7 @@
 package com.weidongjian.com.selfdestructingmessage;
 
+import com.parse.ParseUser;
+
 import android.app.ActionBar;
 import android.app.FragmentTransaction;
 import android.content.Intent;
@@ -30,6 +32,12 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
+		ParseUser currentUser = ParseUser.getCurrentUser();
+		
+		if (currentUser == null) {
+			navigateToLogin();
+		}
 
 		// Set up the action bar.
 		final ActionBar actionBar = getActionBar();
@@ -64,6 +72,13 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 					.setText(mSectionsPagerAdapter.getPageTitle(i))
 					.setTabListener(this));
 		}
+	}
+
+	private void navigateToLogin() {
+		Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+		intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+		intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+		startActivity(intent);
 	}
 
 	@Override
