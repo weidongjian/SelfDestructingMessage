@@ -1,5 +1,10 @@
 package com.weidongjian.com.selfdestructingmessage;
 
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import com.parse.ParseUser;
 
 import android.app.ActionBar;
@@ -7,10 +12,13 @@ import android.app.AlertDialog;
 import android.app.FragmentTransaction;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.v13.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -29,6 +37,9 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 	 * The {@link ViewPager} that will host the section contents.
 	 */
 	ViewPager mViewPager;
+	public static final String TAG = MainActivity.class.getSimpleName();
+	public static final int MEDIA_TYPE_IMAGE = 4;
+	public static final int MEDIA_TYPE_VIDEO = 5;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +47,12 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 		setContentView(R.layout.activity_main);
 		
 		ParseUser currentUser = ParseUser.getCurrentUser();
+		
+		try {
+			Uri test = getOutputMediaFileUri(MEDIA_TYPE_IMAGE);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		
 		if (currentUser == null) {
 			navigateToLogin();
@@ -157,4 +174,64 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 			
 		}
 	};
+	
+	private Uri getOutputMediaFileUri(int mediaType) throws IOException {
+		
+		if (isExternalStorageAvaliable()) {
+			String appName = MainActivity.this.getString(R.string.app_name);
+			String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+			
+			File storageDir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES), appName);
+			
+			if (!storageDir.exists()) {
+				if (!storageDir.mkdirs()) {
+					Log.e(TAG, "Fail to make external storage dir.");
+				}
+			}
+			
+			String path = storageDir.getPath() + File.separator;
+			File mediaFile = null;
+			
+			if (mediaType == MEDIA_TYPE_IMAGE) {
+				mediaFile = new File(path + "IMG_" + timeStamp + ".jpg");
+			}
+			else if (mediaType == MEDIA_TYPE_VIDEO) {
+				mediaFile = new File(path + "VID_" + timeStamp + ".mp4");
+			}
+			
+			Log.d(TAG, "File: " + Uri.fromFile(mediaFile));
+			
+			return Uri.fromFile(mediaFile);
+		}
+		
+		return null;
+	}
+	
+	
+	private boolean isExternalStorageAvaliable() {
+		String stage = Environment.getExternalStorageState();
+		if (stage.equals(Environment.MEDIA_MOUNTED)) {
+			return true;
+		}
+		else return false;
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
