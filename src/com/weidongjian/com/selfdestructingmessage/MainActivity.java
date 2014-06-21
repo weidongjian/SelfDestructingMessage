@@ -15,6 +15,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.provider.MediaStore;
 import android.support.v13.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
@@ -38,6 +39,10 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 	 */
 	ViewPager mViewPager;
 	public static final String TAG = MainActivity.class.getSimpleName();
+	public static final int REQUEST_CODE_TAKE_PICTURE = 0;
+	public static final int REQUEST_CODE_CHOOSE_PICTURE = 1;
+	public static final int REQUEST_CODE_TAKE_VIDEO = 2;
+	public static final int REQUEST_CODE_CHOOSE_VIDEO = 3;
 	public static final int MEDIA_TYPE_IMAGE = 4;
 	public static final int MEDIA_TYPE_VIDEO = 5;
 
@@ -156,7 +161,18 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 			switch (position) {
 			case 0:
 				//take picture
-				
+				Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+				Uri pictureUri = null;
+				try {
+					pictureUri = getOutputMediaFileUri(MEDIA_TYPE_IMAGE);
+				} catch (IOException e) {
+					Log.e(TAG, e.getMessage());
+				}
+				if (pictureUri != null) {
+					takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, pictureUri);
+					startActivityForResult(takePictureIntent, REQUEST_CODE_TAKE_PICTURE);
+					galleryAddPic(pictureUri);
+				}
 				break;
 			case 1:
 				//choose picture
@@ -215,6 +231,14 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 		}
 		else return false;
 	}
+
+
+	private void galleryAddPic(Uri contentUri) {
+		Intent mediaScanIntent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
+		mediaScanIntent.setData(contentUri);
+		this.sendBroadcast(mediaScanIntent);
+	}
+
 }
 
 
