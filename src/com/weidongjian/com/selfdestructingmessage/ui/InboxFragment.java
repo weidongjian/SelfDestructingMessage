@@ -1,4 +1,4 @@
-package com.weidongjian.com.selfdestructingmessage;
+package com.weidongjian.com.selfdestructingmessage.ui;
 
 import com.weidongjian.com.selfdestructingmessage.R;
 import com.weidongjian.com.selfdestructingmessage.R.layout;
@@ -9,11 +9,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class FriendFragment extends Fragment {
+public class InboxFragment extends Fragment {
+	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		View rootView = inflater.inflate(R.layout.fragment_friend, container, false);
+		View rootView = inflater.inflate(R.layout.fragment_inbox, container, false);
 		return rootView;
 	}
+
 }

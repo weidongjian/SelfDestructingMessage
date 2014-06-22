@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.weidongjian.com.selfdestructingmessage.LoginActivity" >
+    tools:context="com.weidongjian.com.selfdestructingmessage.ui.LoginActivity" >
 
     <TextView
         android:id="@+id/tv_title"

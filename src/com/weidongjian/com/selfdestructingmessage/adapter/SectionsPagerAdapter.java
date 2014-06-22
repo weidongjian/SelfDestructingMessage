@@ -1,6 +1,11 @@
-package com.weidongjian.com.selfdestructingmessage;
+package com.weidongjian.com.selfdestructingmessage.adapter;
 
 import java.util.Locale;
+
+import com.weidongjian.com.selfdestructingmessage.R;
+import com.weidongjian.com.selfdestructingmessage.R.string;
+import com.weidongjian.com.selfdestructingmessage.ui.FriendFragment;
+import com.weidongjian.com.selfdestructingmessage.ui.InboxFragment;
 
 
 import android.content.Context;

@@ -15,5 +15,12 @@
         android:layout_height="0dp"
         android:layout_weight="1" >
     </ListView>
+    
+    <TextView 
+        android:id="@android:id/empty"
+        style="@style/TextView"
+        android:text="No message"
+        />
+    
 
 </LinearLayout>

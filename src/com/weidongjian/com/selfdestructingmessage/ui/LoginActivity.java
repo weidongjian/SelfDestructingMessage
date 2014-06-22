@@ -1,4 +1,4 @@
-package com.weidongjian.com.selfdestructingmessage;
+package com.weidongjian.com.selfdestructingmessage.ui;
 
 import android.app.ActionBar;
 import android.app.Activity;
@@ -21,6 +21,10 @@ import android.widget.TextView;
 import com.parse.LogInCallback;
 import com.parse.ParseException;
 import com.parse.ParseUser;
+import com.weidongjian.com.selfdestructingmessage.R;
+import com.weidongjian.com.selfdestructingmessage.R.id;
+import com.weidongjian.com.selfdestructingmessage.R.layout;
+import com.weidongjian.com.selfdestructingmessage.R.menu;
 
 public class LoginActivity extends Activity {
 	

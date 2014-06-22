@@ -1,8 +1,9 @@
-package com.weidongjian.com.selfdestructingmessage;
+package com.weidongjian.com.selfdestructingmessage.ui;
 
 import com.parse.ParseException;
 import com.parse.ParseUser;
 import com.parse.SignUpCallback;
+import com.weidongjian.com.selfdestructingmessage.BaseApplication;
 import com.weidongjian.com.selfdestructingmessage.R;
 import com.weidongjian.com.selfdestructingmessage.R.id;
 import com.weidongjian.com.selfdestructingmessage.R.layout;

@@ -1,4 +1,4 @@
-package com.weidongjian.com.selfdestructingmessage;
+package com.weidongjian.com.selfdestructingmessage.ui;
 
 import java.io.File;
 import java.io.IOException;
@@ -6,6 +6,13 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import com.parse.ParseUser;
+import com.weidongjian.com.selfdestructingmessage.R;
+import com.weidongjian.com.selfdestructingmessage.R.array;
+import com.weidongjian.com.selfdestructingmessage.R.id;
+import com.weidongjian.com.selfdestructingmessage.R.layout;
+import com.weidongjian.com.selfdestructingmessage.R.menu;
+import com.weidongjian.com.selfdestructingmessage.R.string;
+import com.weidongjian.com.selfdestructingmessage.adapter.SectionsPagerAdapter;
 
 import android.app.ActionBar;
 import android.app.AlertDialog;
@@ -188,6 +195,16 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 				break;
 			}
 			
+		}
+	};
+	
+	protected void onActivityResult(int requestCode, int resultCode, Intent resultIntent) {
+		super.onActivityResult(requestCode, resultCode, resultIntent);
+		switch (requestCode) {
+		case REQUEST_CODE_TAKE_PICTURE:
+			if (resultCode == RESULT_OK) {
+				//handle take picture
+			}
 		}
 	};
 	
