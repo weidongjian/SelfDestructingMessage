@@ -37,6 +37,7 @@ public final class R {
     }
     public static final class id {
         public static final int action_choice=0x7f0a0010;
+        public static final int action_edit_friends=0x7f0a0011;
         public static final int action_logout=0x7f0a000f;
         public static final int action_settings=0x7f0a000e;
         public static final int bt_login=0x7f0a0005;

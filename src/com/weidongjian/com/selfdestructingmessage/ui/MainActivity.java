@@ -30,7 +30,8 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class MainActivity extends FragmentActivity implements ActionBar.TabListener {
+public class MainActivity extends FragmentActivity implements
+		ActionBar.TabListener {
 
 	/**
 	 * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -57,15 +58,15 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		
+
 		ParseUser currentUser = ParseUser.getCurrentUser();
-		
+
 		try {
 			Uri test = getOutputMediaFileUri(MEDIA_TYPE_IMAGE);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
+
 		if (currentUser == null) {
 			navigateToLogin();
 		}
@@ -76,7 +77,8 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 
 		// Create the adapter that will return a fragment for each of the three
 		// primary sections of the activity.
-		mSectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
+		mSectionsPagerAdapter = new SectionsPagerAdapter(this,
+				getSupportFragmentManager());
 
 		// Set up the ViewPager with the sections adapter.
 		mViewPager = (ViewPager) findViewById(R.id.pager);
@@ -111,7 +113,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 		intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
 		startActivity(intent);
 	}
-	
+
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 
@@ -132,15 +134,18 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 			navigateToLogin();
 			break;
 		case R.id.action_choice:
-			new AlertDialog.Builder(MainActivity.this)
-			.setTitle("choose one")
-			.setItems(R.array.action_choice, mListener)
-			.setInverseBackgroundForced(true)
-			.setPositiveButton(android.R.string.ok, null)
-			.show();
-
+			new AlertDialog.Builder(MainActivity.this).setTitle("choose one")
+					.setItems(R.array.action_choice, mListener)
+					.setInverseBackgroundForced(true)
+					.setPositiveButton(android.R.string.ok, null).show();
+			break;
+		case R.id.action_edit_friends:
+			Intent editFriendsIntent = new Intent(MainActivity.this,
+					EditFriends.class);
+			startActivity(editFriendsIntent);
+			break;
 		}
-		
+
 		return super.onOptionsItemSelected(item);
 	}
 
@@ -167,8 +172,9 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 		public void onClick(DialogInterface dialog, int position) {
 			switch (position) {
 			case 0:
-				//take picture
-				Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+				// take picture
+				Intent takePictureIntent = new Intent(
+						MediaStore.ACTION_IMAGE_CAPTURE);
 				Uri pictureUri = null;
 				try {
 					pictureUri = getOutputMediaFileUri(MEDIA_TYPE_IMAGE);
@@ -176,103 +182,89 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 					Log.e(TAG, e.getMessage());
 				}
 				if (pictureUri != null) {
-					takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, pictureUri);
-					startActivityForResult(takePictureIntent, REQUEST_CODE_TAKE_PICTURE);
+					takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT,
+							pictureUri);
+					startActivityForResult(takePictureIntent,
+							REQUEST_CODE_TAKE_PICTURE);
 					galleryAddPic(pictureUri);
 				}
 				break;
 			case 1:
-				//choose picture
-				
+				// choose picture
+
 				break;
 			case 2:
-				//take video
-				
+				// take video
+
 				break;
 			case 3:
-				//choose picture
-				
+				// choose picture
+
 				break;
 			}
-			
+
 		}
 	};
-	
-	protected void onActivityResult(int requestCode, int resultCode, Intent resultIntent) {
+
+	protected void onActivityResult(int requestCode, int resultCode,
+			Intent resultIntent) {
 		super.onActivityResult(requestCode, resultCode, resultIntent);
 		switch (requestCode) {
 		case REQUEST_CODE_TAKE_PICTURE:
 			if (resultCode == RESULT_OK) {
-				//handle take picture
+				// handle take picture
 			}
 		}
 	};
-	
+
 	private Uri getOutputMediaFileUri(int mediaType) throws IOException {
-		
+
 		if (isExternalStorageAvaliable()) {
 			String appName = MainActivity.this.getString(R.string.app_name);
-			String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-			
-			File storageDir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES), appName);
-			
+			String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss")
+					.format(new Date());
+
+			File storageDir = new File(
+					Environment
+							.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES),
+					appName);
+
 			if (!storageDir.exists()) {
 				if (!storageDir.mkdirs()) {
 					Log.e(TAG, "Fail to make external storage dir.");
 				}
 			}
-			
+
 			String path = storageDir.getPath() + File.separator;
 			File mediaFile = null;
-			
+
 			if (mediaType == MEDIA_TYPE_IMAGE) {
 				mediaFile = new File(path + "IMG_" + timeStamp + ".jpg");
-			}
-			else if (mediaType == MEDIA_TYPE_VIDEO) {
+			} else if (mediaType == MEDIA_TYPE_VIDEO) {
 				mediaFile = new File(path + "VID_" + timeStamp + ".mp4");
 			}
-			
+
 			Log.d(TAG, "File: " + Uri.fromFile(mediaFile));
-			
+
 			return Uri.fromFile(mediaFile);
 		}
-		
+
 		return null;
 	}
-	
-	
+
 	private boolean isExternalStorageAvaliable() {
 		String stage = Environment.getExternalStorageState();
 		if (stage.equals(Environment.MEDIA_MOUNTED)) {
 			return true;
-		}
-		else return false;
+		} else
+			return false;
 	}
 
-
 	private void galleryAddPic(Uri contentUri) {
-		Intent mediaScanIntent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
+		Intent mediaScanIntent = new Intent(
+				Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
 		mediaScanIntent.setData(contentUri);
 		this.sendBroadcast(mediaScanIntent);
 	}
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
