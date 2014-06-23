@@ -65,11 +65,10 @@ public class EditFriends extends Activity {
 					else {
 						((userAdapter)(mGridview.getAdapter())).refill(mUsers);
 					}
-					
+					addFriendsCheck();
 				}
 			}
 		});
-		addFriendsCheck();
 	}
 	
 
