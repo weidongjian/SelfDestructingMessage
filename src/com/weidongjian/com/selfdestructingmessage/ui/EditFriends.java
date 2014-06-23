@@ -27,11 +27,11 @@ import android.widget.TextView;
 public class EditFriends extends Activity {
 	public static final String TAG = EditFriends.class.getSimpleName();
 
-	private GridView mGridview;
+	protected GridView mGridview;
 	protected List<ParseUser> mUsers;
 	protected ParseRelation<ParseUser> mParseRelation;
-	private TextView emptyTextView;
-	private ParseUser mCurrentUser;
+	protected TextView emptyTextView;
+	protected ParseUser mCurrentUser;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +43,6 @@ public class EditFriends extends Activity {
 		mGridview.setEmptyView(emptyTextView);
 		mGridview.setChoiceMode(GridView.CHOICE_MODE_MULTIPLE);
 		mGridview.setOnItemClickListener(mItemClickListener);
-		
 		mCurrentUser = ParseUser.getCurrentUser();
 	}
 	
@@ -66,13 +65,14 @@ public class EditFriends extends Activity {
 					else {
 						((userAdapter)(mGridview.getAdapter())).refill(mUsers);
 					}
-					addFriendsCheck();
+					
 				}
 			}
 		});
-		
-		
+		addFriendsCheck();
 	}
+	
+
 
 	private void addFriendsCheck() {
 		mParseRelation.getQuery().findInBackground(new FindCallback<ParseUser>() {
@@ -114,4 +114,6 @@ public class EditFriends extends Activity {
 			});
 		};
 	};
+	
+	
 }
