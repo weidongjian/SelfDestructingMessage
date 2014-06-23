@@ -36,19 +36,20 @@ public final class R {
         public static final int iv_friend_check=0x7f020003;
     }
     public static final class id {
-        public static final int action_choice=0x7f0a000f;
-        public static final int action_logout=0x7f0a000e;
-        public static final int action_settings=0x7f0a000d;
+        public static final int action_choice=0x7f0a0010;
+        public static final int action_logout=0x7f0a000f;
+        public static final int action_settings=0x7f0a000e;
         public static final int bt_login=0x7f0a0005;
         public static final int bt_singup=0x7f0a0009;
         public static final int cb_show_password=0x7f0a0004;
         public static final int et_email=0x7f0a0008;
         public static final int et_password=0x7f0a0003;
         public static final int et_username=0x7f0a0002;
-        public static final int iv_background_grid=0x7f0a000a;
-        public static final int iv_check_grid=0x7f0a000b;
+        public static final int gv_friends=0x7f0a000a;
+        public static final int iv_background_grid=0x7f0a000b;
+        public static final int iv_check_grid=0x7f0a000c;
         public static final int pager=0x7f0a0007;
-        public static final int tv_friend_name=0x7f0a000c;
+        public static final int tv_friend_name=0x7f0a000d;
         public static final int tv_singup=0x7f0a0006;
         public static final int tv_subtitle=0x7f0a0001;
         public static final int tv_title=0x7f0a0000;
@@ -59,7 +60,8 @@ public final class R {
         public static final int activity_sing_up=0x7f030002;
         public static final int fragment_friend=0x7f030003;
         public static final int fragment_inbox=0x7f030004;
-        public static final int grid_user=0x7f030005;
+        public static final int gv_user=0x7f030005;
+        public static final int user_item=0x7f030006;
     }
     public static final class menu {
         public static final int login=0x7f090000;

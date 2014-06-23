@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.zip.Inflater;
 
 import com.parse.ParseUser;
+import com.squareup.picasso.Picasso;
+import com.weidongjian.com.selfdestructingmessage.MD5Util;
 import com.weidongjian.com.selfdestructingmessage.R;
 
 import android.content.Context;
@@ -11,13 +13,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 public class userAdapter extends ArrayAdapter<ParseUser> {
 	
 	private Context mContext;
-	private List<ParseUser> users;
+	private List<ParseUser> mUsers;
 	
 	static class ViewHolder {
 		public ImageView background;
@@ -26,9 +29,9 @@ public class userAdapter extends ArrayAdapter<ParseUser> {
 	}
 
 	public userAdapter(Context context, List<ParseUser> objects) {
-		super(context, R.layout.grid_user, objects);
+		super(context, R.layout.user_item, objects);
 		mContext = context;
-		users = objects;
+		mUsers = objects;
 	}
 	
 	@Override
@@ -38,7 +41,7 @@ public class userAdapter extends ArrayAdapter<ParseUser> {
 		
 		if (rowView == null) {
 			LayoutInflater inflater = LayoutInflater.from(mContext);
-			rowView = inflater.inflate(R.layout.grid_user, null);
+			rowView = inflater.inflate(R.layout.user_item, null);
 			
 			holder = new ViewHolder();
 			
@@ -51,8 +54,29 @@ public class userAdapter extends ArrayAdapter<ParseUser> {
 		else {
 			holder = (ViewHolder) rowView.getTag();
 		}
+		
+		ParseUser user = mUsers.get(position);
+		String email = user.getEmail().toLowerCase();
+		String hash = MD5Util.md5Hex(email);
+		String avatarAddress = "http://www.gravatar.com/avatar/" + hash + "?s=200&r=pg&d=404";
+		Picasso.with(mContext).load(avatarAddress).into(holder.background);
+		
+		holder.friendName.setText(user.getUsername());
+		
+		GridView gridView = (GridView) parent;
+		if (gridView.isItemChecked(position)) {
+			holder.check.setVisibility(View.VISIBLE);
+		}
+		else
+			holder.check.setVisibility(View.INVISIBLE);
  
-		return null;
+		return rowView;
+	}
+	
+	public void refill(List<ParseUser> users) {
+		mUsers.clear();
+		mUsers.addAll(users);
+		notifyDataSetChanged();
 	}
 
 }
