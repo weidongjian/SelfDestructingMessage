@@ -29,6 +29,7 @@ import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class MainActivity extends FragmentActivity implements
 		ActionBar.TabListener {
@@ -46,6 +47,7 @@ public class MainActivity extends FragmentActivity implements
 	 * The {@link ViewPager} that will host the section contents.
 	 */
 	ViewPager mViewPager;
+	protected Uri mediaUri;
 	public static final String TAG = MainActivity.class.getSimpleName();
 	public static final int REQUEST_CODE_TAKE_PICTURE = 0;
 	public static final int REQUEST_CODE_CHOOSE_PICTURE = 1;
@@ -175,31 +177,51 @@ public class MainActivity extends FragmentActivity implements
 				// take picture
 				Intent takePictureIntent = new Intent(
 						MediaStore.ACTION_IMAGE_CAPTURE);
-				Uri pictureUri = null;
+				mediaUri = null;
 				try {
-					pictureUri = getOutputMediaFileUri(MEDIA_TYPE_IMAGE);
+					mediaUri = getOutputMediaFileUri(MEDIA_TYPE_IMAGE);
 				} catch (IOException e) {
 					Log.e(TAG, e.getMessage());
 				}
-				if (pictureUri != null) {
+				if (mediaUri != null) {
 					takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT,
-							pictureUri);
+							mediaUri);
 					startActivityForResult(takePictureIntent,
 							REQUEST_CODE_TAKE_PICTURE);
-					galleryAddPic(pictureUri);
+					galleryAddPic(mediaUri);
 				}
 				break;
 			case 1:
 				// choose picture
-
+				Intent pickPhotoIntent = new Intent(Intent.ACTION_GET_CONTENT);
+				pickPhotoIntent.setType("image/*");
+				startActivityForResult(pickPhotoIntent,
+						REQUEST_CODE_CHOOSE_PICTURE);
 				break;
 			case 2:
 				// take video
-
+				Intent takeVideoIntent = new Intent(
+						MediaStore.ACTION_VIDEO_CAPTURE);
+				try {
+					mediaUri = getOutputMediaFileUri(MEDIA_TYPE_VIDEO);
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+				takeVideoIntent.putExtra(MediaStore.EXTRA_OUTPUT, mediaUri);
+				takeVideoIntent.putExtra(MediaStore.EXTRA_DURATION_LIMIT, 5);
+				takeVideoIntent.putExtra(MediaStore.EXTRA_VIDEO_QUALITY, 0);
+				startActivityForResult(takeVideoIntent, REQUEST_CODE_TAKE_VIDEO);
+				galleryAddPic(mediaUri);
 				break;
 			case 3:
-				// choose picture
-
+				// choose video
+				Intent pickVideoIntent = new Intent(Intent.ACTION_GET_CONTENT);
+				pickVideoIntent.setType("video/*");
+				Toast.makeText(MainActivity.this,
+						"The size of the video should be less than 10M.",
+						Toast.LENGTH_SHORT).show();
+				startActivityForResult(pickVideoIntent,
+						REQUEST_CODE_CHOOSE_VIDEO);
 				break;
 			}
 
