@@ -1,11 +1,14 @@
 package com.weidongjian.com.selfdestructingmessage.ui;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import com.parse.ParseUser;
+import com.weidongjian.com.selfdestructingmessage.ParseConstant;
 import com.weidongjian.com.selfdestructingmessage.R;
 import com.weidongjian.com.selfdestructingmessage.R.array;
 import com.weidongjian.com.selfdestructingmessage.R.id;
@@ -219,7 +222,7 @@ public class MainActivity extends FragmentActivity implements
 				pickVideoIntent.setType("video/*");
 				Toast.makeText(MainActivity.this,
 						"The size of the video should be less than 10M.",
-						Toast.LENGTH_SHORT).show();
+						Toast.LENGTH_LONG).show();
 				startActivityForResult(pickVideoIntent,
 						REQUEST_CODE_CHOOSE_VIDEO);
 				break;
@@ -229,15 +232,63 @@ public class MainActivity extends FragmentActivity implements
 	};
 
 	protected void onActivityResult(int requestCode, int resultCode,
-			Intent resultIntent) {
-		super.onActivityResult(requestCode, resultCode, resultIntent);
-		switch (requestCode) {
-		case REQUEST_CODE_TAKE_PICTURE:
-			if (resultCode == RESULT_OK) {
-				// handle take picture
+			Intent data) {
+		super.onActivityResult(requestCode, resultCode, data);
+		String fileType;
+		if (resultCode == RESULT_OK) {
+			if (requestCode == REQUEST_CODE_CHOOSE_PICTURE || requestCode == REQUEST_CODE_CHOOSE_VIDEO) {
+				if (data == null) {
+					Toast.makeText(MainActivity.this, "Gengral error", Toast.LENGTH_LONG).show();
+				}
+				else {
+					mediaUri = data.getData();
+				}
+				
+				fileType = ParseConstant.KEY_FILE_TYPE_PHOTO;
+				if (requestCode == REQUEST_CODE_CHOOSE_VIDEO) {
+					int fileSize = 0;
+					InputStream inputStream = null;
+					
+					try {
+						inputStream = getContentResolver().openInputStream(mediaUri);
+						fileSize = inputStream.available();
+					} catch (FileNotFoundException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					} 
+					finally {
+						try {
+							inputStream.close();
+						} catch (IOException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+					}
+					
+					if (fileSize > 1024*1024*10) {
+						Toast.makeText(this, "content too large", Toast.LENGTH_LONG).show();
+						return;
+					}
+				}
 			}
+			
+			Intent recipientIntent = new Intent(MainActivity.this, RecipientActivity.class);
+			recipientIntent.setData(mediaUri);
+			
+			if (requestCode == REQUEST_CODE_CHOOSE_PICTURE || requestCode == REQUEST_CODE_TAKE_PICTURE) {
+				fileType = ParseConstant.KEY_FILE_TYPE_PHOTO;
+			}
+			else {
+				fileType = ParseConstant.KEY_FILE_TYPE_VIDEO;
+			}
+			
+			recipientIntent.putExtra(ParseConstant.KEY_FILE_TYPE, fileType);
+			startActivity(recipientIntent);
 		}
-	};
+	}
 
 	private Uri getOutputMediaFileUri(int mediaType) throws IOException {
 

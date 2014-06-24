@@ -42,6 +42,7 @@
             android:screenOrientation="portrait"
             android:parentActivityName="com.weidongjian.com.selfdestructingmessage.ui.MainActivity" >
         </activity>
+        <activity android:name=".ui.RecipientActivity" android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>
