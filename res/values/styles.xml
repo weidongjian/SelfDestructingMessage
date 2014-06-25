@@ -37,9 +37,10 @@
     
     <style name="TextView" parent="Globle">
         <item name="android:textSize">17sp</item>
-        <item name="android:paddingBottom">2dp</item>
         <item name="android:textColor">@color/Text</item>
     </style>
+    
+    
     
    <style name="GridView">
        <item name="android:adjustViewBounds">true</item>

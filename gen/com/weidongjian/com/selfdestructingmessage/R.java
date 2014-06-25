@@ -64,7 +64,8 @@ public final class R {
         public static final int fragment_friend=0x7f030003;
         public static final int fragment_inbox=0x7f030004;
         public static final int gv_user=0x7f030005;
-        public static final int user_item=0x7f030006;
+        public static final int message_item=0x7f030006;
+        public static final int user_item=0x7f030007;
     }
     public static final class menu {
         public static final int login=0x7f090000;

@@ -241,7 +241,7 @@ public class MainActivity extends FragmentActivity implements
 					Toast.makeText(MainActivity.this, "Gengral error", Toast.LENGTH_LONG).show();
 				}
 				else {
-					mediaUri = data.getData();
+					mediaUri = data.getData(); 
 				}
 				
 				fileType = ParseConstant.KEY_FILE_TYPE_PHOTO;
