@@ -28,6 +28,7 @@ public final class R {
          */
         public static final int activity_horizontal_margin=0x7f050000;
         public static final int activity_vertical_margin=0x7f050001;
+        public static final int gridView_margin=0x7f050002;
     }
     public static final class drawable {
         public static final int ic_action_choice=0x7f020000;
@@ -35,29 +36,31 @@ public final class R {
         public static final int ic_av_play=0x7f020002;
         public static final int ic_content_picture=0x7f020003;
         public static final int ic_launcher=0x7f020004;
-        public static final int iv_background_grid=0x7f020005;
-        public static final int iv_friend_check=0x7f020006;
+        public static final int ic_social_person=0x7f020005;
+        public static final int iv_background_grid=0x7f020006;
+        public static final int iv_friend_check=0x7f020007;
     }
     public static final class id {
-        public static final int action_choice=0x7f0a0013;
-        public static final int action_edit_friends=0x7f0a0014;
-        public static final int action_logout=0x7f0a0012;
-        public static final int action_send=0x7f0a0015;
-        public static final int action_settings=0x7f0a0011;
+        public static final int action_choice=0x7f0a0014;
+        public static final int action_edit_friends=0x7f0a0015;
+        public static final int action_logout=0x7f0a0013;
+        public static final int action_send=0x7f0a0016;
+        public static final int action_settings=0x7f0a0012;
         public static final int bt_login=0x7f0a0005;
         public static final int bt_singup=0x7f0a0009;
         public static final int cb_show_password=0x7f0a0004;
         public static final int et_email=0x7f0a0008;
         public static final int et_password=0x7f0a0003;
         public static final int et_username=0x7f0a0002;
-        public static final int gv_friends=0x7f0a000a;
-        public static final int iv_background_grid=0x7f0a000e;
-        public static final int iv_check_grid=0x7f0a000f;
-        public static final int iv_file_type=0x7f0a000d;
+        public static final int gv_friends=0x7f0a000b;
+        public static final int iv_background_grid=0x7f0a000f;
+        public static final int iv_check_grid=0x7f0a0010;
+        public static final int iv_file_type=0x7f0a000e;
+        public static final int iv_view_image=0x7f0a000a;
         public static final int pager=0x7f0a0007;
-        public static final int tv_created_at=0x7f0a000c;
-        public static final int tv_friend_name=0x7f0a0010;
-        public static final int tv_sender_name=0x7f0a000b;
+        public static final int tv_created_at=0x7f0a000d;
+        public static final int tv_friend_name=0x7f0a0011;
+        public static final int tv_sender_name=0x7f0a000c;
         public static final int tv_singup=0x7f0a0006;
         public static final int tv_subtitle=0x7f0a0001;
         public static final int tv_title=0x7f0a0000;
@@ -66,16 +69,18 @@ public final class R {
         public static final int activity_login=0x7f030000;
         public static final int activity_main=0x7f030001;
         public static final int activity_sing_up=0x7f030002;
-        public static final int fragment_friend=0x7f030003;
-        public static final int fragment_inbox=0x7f030004;
-        public static final int gv_user=0x7f030005;
-        public static final int message_item=0x7f030006;
-        public static final int user_item=0x7f030007;
+        public static final int activity_view_image=0x7f030003;
+        public static final int fragment_friend=0x7f030004;
+        public static final int fragment_inbox=0x7f030005;
+        public static final int gv_user=0x7f030006;
+        public static final int message_item=0x7f030007;
+        public static final int user_item=0x7f030008;
     }
     public static final class menu {
         public static final int login=0x7f090000;
         public static final int main=0x7f090001;
-        public static final int recipient=0x7f090002;
+        public static final int navigate_up_menu=0x7f090002;
+        public static final int recipient=0x7f090003;
     }
     public static final class string {
         public static final int action_logout=0x7f06000f;

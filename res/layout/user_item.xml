@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content" >
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
     
     <ImageView 
         android:id="@+id/iv_background_grid"
+        android:background="#d0c3c3"
         style="@style/GridView"
         android:src="@drawable/iv_background_grid"
         />
@@ -22,8 +23,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/iv_background_grid"
         android:layout_alignParentLeft="true"
+        android:background="#e7dddd"
         android:padding="4dp"
         android:maxLines="2"
+        android:textStyle="bold"
+        android:gravity="center"
         android:text="Demo" />
 
 </RelativeLayout>

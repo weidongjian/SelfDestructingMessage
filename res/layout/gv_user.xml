@@ -9,6 +9,9 @@
         android:layout_height="match_parent"
         android:numColumns="3"
         android:gravity="center"
+        android:horizontalSpacing="@dimen/gridView_margin"
+        android:verticalSpacing="@dimen/gridView_margin"
+        android:layout_margin="@dimen/gridView_margin"
         ></GridView>
     
     <TextView 

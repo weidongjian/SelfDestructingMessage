@@ -22,10 +22,12 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.NavUtils;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -48,7 +50,10 @@ public class RecipientActivity extends Activity{
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
 		setContentView(R.layout.gv_user);
+		getActionBar().setDisplayHomeAsUpEnabled(true);
+		setProgressBarIndeterminateVisibility(false);
 		
 		mediaUri = getIntent().getData();
 		fileType = getIntent().getStringExtra(ParseConstant.KEY_FILE_TYPE);
@@ -99,6 +104,7 @@ public class RecipientActivity extends Activity{
 	public boolean onOptionsItemSelected(MenuItem item) {
 		int id = item.getItemId();
 		if (id == R.id.action_send) {
+			setProgressBarIndeterminateVisibility(true);
 			ParseObject message = createMessage();
 			if (message == null) {
 				Toast.makeText(this, "can not create message.", Toast.LENGTH_LONG).show();
@@ -109,6 +115,12 @@ public class RecipientActivity extends Activity{
 			}
 			return true;
 		}
+		else {
+			if (id == android.R.id.home) {
+				NavUtils.navigateUpFromSameTask(this);
+		        return true;
+			}
+		}
 		return super.onOptionsItemSelected(item);
 	}
 	
@@ -116,6 +128,7 @@ public class RecipientActivity extends Activity{
 		message.saveInBackground(new SaveCallback() {
 			@Override
 			public void done(ParseException e) {
+				setProgressBarIndeterminateVisibility(false);
 				if (e == null) {
 					Toast.makeText(RecipientActivity.this, "success save message.", Toast.LENGTH_LONG).show();
 				}
@@ -168,6 +181,15 @@ public class RecipientActivity extends Activity{
 
 	private OnItemClickListener mItemClickListener = new OnItemClickListener() {
 		public void onItemClick(android.widget.AdapterView<?> parent, View view, int position, long id) {
+			ImageView checkImageView = (ImageView) view.findViewById(R.id.iv_check_grid);
+			
+			if (mGridview.isItemChecked(position)) {
+				checkImageView.setVisibility(view.VISIBLE);
+			}
+			else {
+				checkImageView.setVisibility(view.INVISIBLE);
+			}
+			
 			if (mGridview.getCheckedItemCount() > 0) {
 				sendMenuItem.setVisible(true);
 			}

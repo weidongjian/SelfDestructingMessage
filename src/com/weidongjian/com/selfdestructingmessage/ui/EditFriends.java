@@ -15,7 +15,10 @@ import com.weidongjian.com.selfdestructingmessage.adapter.userAdapter;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v4.app.NavUtils;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView.OnItemClickListener;
@@ -37,6 +40,7 @@ public class EditFriends extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.gv_user);
+		getActionBar().setDisplayHomeAsUpEnabled(true);
 
 		mGridview = (GridView) findViewById(R.id.gv_friends);
 		emptyTextView = (TextView) findViewById(android.R.id.empty);
@@ -44,12 +48,12 @@ public class EditFriends extends Activity {
 		mGridview.setChoiceMode(GridView.CHOICE_MODE_MULTIPLE);
 		mGridview.setOnItemClickListener(mItemClickListener);
 		mCurrentUser = ParseUser.getCurrentUser();
+		mParseRelation = mCurrentUser.getRelation(ParseConstant.KEY_FRIEND_RELATION);
 	}
 	
 	@Override
 	protected void onResume() {
 		super.onResume();
-		mParseRelation = mCurrentUser.getRelation(ParseConstant.KEY_FRIEND_RELATION);
 		ParseQuery<ParseUser> query = ParseUser.getQuery();
 		query.setLimit(100);
 		query.orderByAscending(ParseConstant.KEY_USERNAME);
@@ -71,7 +75,21 @@ public class EditFriends extends Activity {
 		});
 	}
 	
+@Override
+public boolean onCreateOptionsMenu(Menu menu) {
+	getMenuInflater().inflate(R.menu.navigate_up_menu, menu);
+	return true;
+}
 
+@Override
+public boolean onOptionsItemSelected(MenuItem item) {
+	switch (item.getItemId()) {
+	case android.R.id.home:
+		NavUtils.navigateUpFromSameTask(this);
+        return true;
+	}
+	return super.onOptionsItemSelected(item);
+}
 
 	private void addFriendsCheck() {
 		mParseRelation.getQuery().findInBackground(new FindCallback<ParseUser>() {
@@ -100,7 +118,7 @@ public class EditFriends extends Activity {
 				mParseRelation.add(mUsers.get(pisition));
 			}
 			else {
-				mParseRelation.remove(mUsers.remove(pisition));
+				mParseRelation.remove(mUsers.get(pisition));
 			}
 			
 			mCurrentUser.saveInBackground(new SaveCallback() {

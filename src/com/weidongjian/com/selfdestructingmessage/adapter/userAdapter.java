@@ -59,7 +59,7 @@ public class userAdapter extends ArrayAdapter<ParseUser> {
 		String email = user.getEmail().toLowerCase();
 		String hash = MD5Util.md5Hex(email);
 		String avatarAddress = "http://www.gravatar.com/avatar/" + hash + "?s=200&r=pg&d=404";
-		Picasso.with(mContext).load(avatarAddress).into(holder.background);
+		Picasso.with(mContext).load(avatarAddress).placeholder(R.drawable.ic_social_person).into(holder.background);
 		
 		holder.friendName.setText(user.getUsername());
 		
