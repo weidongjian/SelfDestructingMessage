@@ -53,7 +53,6 @@ public class RecipientActivity extends Activity{
 		requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
 		setContentView(R.layout.gv_user);
 		getActionBar().setDisplayHomeAsUpEnabled(true);
-		setProgressBarIndeterminateVisibility(false);
 		
 		mediaUri = getIntent().getData();
 		fileType = getIntent().getStringExtra(ParseConstant.KEY_FILE_TYPE);
@@ -68,6 +67,7 @@ public class RecipientActivity extends Activity{
 	@Override
 	protected void onResume() {
 		super.onResume();
+		setProgressBarIndeterminateVisibility(true);
 		mCurrentUser = ParseUser.getCurrentUser();
 		mParseRelation = mCurrentUser.getRelation(ParseConstant.KEY_FRIEND_RELATION);
 		ParseQuery<ParseUser> query = mParseRelation.getQuery();
@@ -76,6 +76,7 @@ public class RecipientActivity extends Activity{
 		query.findInBackground(new FindCallback<ParseUser>() {
 			@Override
 			public void done(List<ParseUser> users, ParseException e) {
+				setProgressBarIndeterminateVisibility(false);
 				if (e == null) {
 					mUsers = users;
 					if (mGridview.getAdapter() == null) {

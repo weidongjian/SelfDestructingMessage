@@ -36,17 +36,19 @@ public class InboxFragment extends ListFragment {
 	@Override
 	public void onResume() {
 		super.onResume();
-		
+		getActivity().setProgressBarIndeterminateVisibility(true);
 		retrieveMessages();
 	}
 
-	private void retrieveMessages() {
+	public void retrieveMessages() {
+		
 		ParseQuery<ParseObject> query = new ParseQuery<ParseObject>(ParseConstant.CLASS_MESSAGE);
 		query.whereEqualTo(ParseConstant.KEY_RECEIVE_ID, ParseUser.getCurrentUser().getObjectId());
 		query.orderByDescending(ParseConstant.KEY_CREATED_AT);
 		query.findInBackground(new FindCallback<ParseObject>() {
 			@Override
 			public void done(List<ParseObject> messages, ParseException e) {
+				getActivity().setProgressBarIndeterminateVisibility(false);
 				if (e == null) {
 					mMessage = messages;
 					

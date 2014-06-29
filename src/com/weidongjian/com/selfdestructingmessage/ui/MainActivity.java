@@ -27,11 +27,14 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.v13.app.FragmentPagerAdapter;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.ListFragment;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.Window;
 import android.widget.Toast;
 
 public class MainActivity extends FragmentActivity implements
@@ -50,6 +53,7 @@ public class MainActivity extends FragmentActivity implements
 	 * The {@link ViewPager} that will host the section contents.
 	 */
 	ViewPager mViewPager;
+	protected Menu optionMenu;
 	protected Uri mediaUri;
 	public static final String TAG = MainActivity.class.getSimpleName();
 	public static final int REQUEST_CODE_TAKE_PICTURE = 0;
@@ -62,6 +66,7 @@ public class MainActivity extends FragmentActivity implements
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
 		setContentView(R.layout.activity_main);
 
 		ParseUser currentUser = ParseUser.getCurrentUser();
@@ -121,7 +126,6 @@ public class MainActivity extends FragmentActivity implements
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
@@ -339,5 +343,6 @@ public class MainActivity extends FragmentActivity implements
 		mediaScanIntent.setData(contentUri);
 		this.sendBroadcast(mediaScanIntent);
 	}
+	
 
 }
