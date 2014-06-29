@@ -1,28 +1,43 @@
 package com.weidongjian.com.selfdestructingmessage.ui;
 
-import com.squareup.picasso.Picasso;
-import com.weidongjian.com.selfdestructingmessage.R;
-
 import android.app.Activity;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.Window;
 import android.widget.ImageView;
+
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.squareup.picasso.Callback;
+import com.squareup.picasso.Picasso;
+import com.weidongjian.com.selfdestructingmessage.R;
 
 public class ViewImageActivity extends Activity {
 	protected ImageView mImageView;
+	protected ImageLoader imageLoader = ImageLoader.getInstance();
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
 		setContentView(R.layout.activity_view_image);
 		getActionBar().setDisplayHomeAsUpEnabled(true);
 		Uri fileUri = getIntent().getData();
 		mImageView = (ImageView) findViewById(R.id.iv_view_image);
-		
-		Picasso.with(this).load(fileUri).into(mImageView);
+		setProgressBarIndeterminateVisibility(true);
+		Picasso.with(this).load(fileUri).into(mImageView, new Callback() {
+			@Override
+			public void onSuccess() {
+				setProgressBarIndeterminateVisibility(false);
+			}
+			
+			@Override
+			public void onError() {
+				
+			}
+		});
 	}
 	
 	@Override
