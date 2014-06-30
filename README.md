@@ -8,7 +8,8 @@ SelfDestructingMessage
 5. 点击NEW MESSAGE可以来创建信的Message，先选择创建的方式，然后app会自动跳到接收人页面，选择要接受的好友；
 6. 当你有未读message的时候，可以点击打开，对于video，使用app自带的应用打开的，对于图片类型的，是一个新的窗口打开，当图片load结束的时候，会有一个10s的倒计时，过了十秒，页面自动关闭，该message被删除；
 
-
 **测试账号：test，密码：test**
+
+![](//2014063001.gif)
 
 
