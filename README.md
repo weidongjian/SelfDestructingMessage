@@ -10,4 +10,4 @@ SelfDestructingMessage
 
 测试账号：test，密码：test
 
-self destructing message
+
