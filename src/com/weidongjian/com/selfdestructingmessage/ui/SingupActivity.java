@@ -22,6 +22,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -37,20 +38,27 @@ public class SingupActivity extends Activity {
 	protected EditText mEmail;
 	protected Button mSingupButton;
 	protected CheckBox mShowPasswordCheckBox;
+	protected TextView mBackToLogin;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_sing_up);
-		
-		ActionBar actionBar = getActionBar();
-		actionBar.hide();
 		
 		mUsername = (EditText) findViewById(R.id.et_username);
 		mPassword = (EditText) findViewById(R.id.et_password);
 		mEmail = (EditText) findViewById(R.id.et_email);
 		mShowPasswordCheckBox = (CheckBox) findViewById(R.id.cb_show_password);
 		mSingupButton = (Button) findViewById(R.id.bt_singup);
+		mBackToLogin = (TextView) findViewById(R.id.tv_back_to_login);
+		mBackToLogin.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(SingupActivity.this, LoginActivity.class);
+				startActivity(intent);
+			}
+		});
 
 		mShowPasswordCheckBox.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 

@@ -17,6 +17,64 @@
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
     
+    <style name="Theme.Ribbitthem" parent="@android:style/Theme.Holo">
+        <item name="android:actionBarItemBackground">@drawable/selectable_background_ribbitthem</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu.Ribbitthem</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Ribbitthem</item>
+        <item name="android:actionBarTabStyle">@style/ActionBarTabStyle.Ribbitthem</item>
+        <item name="android:actionDropDownStyle">@style/DropDownNav.Ribbitthem</item>
+        <item name="android:actionBarStyle">@style/ActionBar.Solid.Ribbitthem</item>
+        <item name="android:actionModeBackground">@drawable/cab_background_top_ribbitthem</item>
+        <item name="android:actionModeSplitBackground">@drawable/cab_background_bottom_ribbitthem</item>
+        <item name="android:actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Ribbitthem</item>
+        
+        
+    </style>
+
+    <style name="ActionBar.Solid.Ribbitthem" parent="@android:style/Widget.Holo.ActionBar.Solid">
+        <item name="android:background">@drawable/ab_solid_ribbitthem</item>
+        <item name="android:backgroundStacked">@drawable/ab_stacked_solid_ribbitthem</item>
+        <item name="android:backgroundSplit">@drawable/ab_bottom_solid_ribbitthem</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Ribbitthem</item>
+    </style>
+
+    <style name="ActionBar.Transparent.Ribbitthem" parent="@android:style/Widget.Holo.ActionBar">
+        <item name="android:background">@drawable/ab_transparent_ribbitthem</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Ribbitthem</item>
+    </style>
+
+    <style name="PopupMenu.Ribbitthem" parent="@android:style/Widget.Holo.ListPopupWindow">
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_ribbitthem</item>	
+    </style>
+
+    <style name="DropDownListView.Ribbitthem" parent="@android:style/Widget.Holo.ListView.DropDown">
+        <item name="android:listSelector">@drawable/selectable_background_ribbitthem</item>
+    </style>
+
+    <style name="ActionBarTabStyle.Ribbitthem" parent="@android:style/Widget.Holo.ActionBar.TabView">
+        <item name="android:background">@drawable/tab_indicator_ab_ribbitthem</item>
+    </style>
+
+    <style name="DropDownNav.Ribbitthem" parent="@android:style/Widget.Holo.Spinner">
+        <item name="android:background">@drawable/spinner_background_ab_ribbitthem</item>
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_ribbitthem</item>
+        <item name="android:dropDownSelector">@drawable/selectable_background_ribbitthem</item>
+    </style>
+    
+    <style name="ProgressBar.Ribbitthem" parent="@android:style/Widget.Holo.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_horizontal_ribbitthem</item>
+    </style>
+    
+    <style name="ActionButton.CloseMode.Ribbitthem" parent="@android:style/Widget.Holo.ActionButton.CloseMode">
+        <item name="android:background">@drawable/btn_cab_done_ribbitthem</item>
+    </style>
+
+    <!-- this style is only referenced in a Light.DarkActionBar based theme -->
+    <style name="Theme.Ribbitthem.Widget" parent="@android:style/Theme.Holo">
+        <item name="android:popupMenuStyle">@style/PopupMenu.Ribbitthem</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Ribbitthem</item>
+    </style>
+    
     <style name="Globle">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>

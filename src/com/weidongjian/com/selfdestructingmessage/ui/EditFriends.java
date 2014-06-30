@@ -41,6 +41,7 @@ public class EditFriends extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.gv_user);
 		getActionBar().setDisplayHomeAsUpEnabled(true);
+		setTitle("Edit Friends");
 
 		mGridview = (GridView) findViewById(R.id.gv_friends);
 		emptyTextView = (TextView) findViewById(android.R.id.empty);
@@ -116,9 +117,11 @@ public boolean onOptionsItemSelected(MenuItem item) {
 			
 			if (mGridview.isItemChecked(pisition)) {
 				mParseRelation.add(mUsers.get(pisition));
+				checkImageView.setVisibility(view.VISIBLE);
 			}
 			else {
 				mParseRelation.remove(mUsers.get(pisition));
+				checkImageView.setVisibility(view.INVISIBLE);
 			}
 			
 			mCurrentUser.saveInBackground(new SaveCallback() {

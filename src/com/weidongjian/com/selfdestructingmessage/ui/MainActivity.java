@@ -143,7 +143,7 @@ public class MainActivity extends FragmentActivity implements
 			navigateToLogin();
 			break;
 		case R.id.action_choice:
-			new AlertDialog.Builder(MainActivity.this).setTitle("choose one")
+			new AlertDialog.Builder(MainActivity.this).setTitle("Create message")
 					.setItems(R.array.action_choice, mListener)
 					.setInverseBackgroundForced(true)
 					.setPositiveButton(android.R.string.ok, null).show();

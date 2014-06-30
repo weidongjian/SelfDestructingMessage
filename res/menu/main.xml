@@ -9,9 +9,8 @@
         android:title="@string/action_logout"/>
     <item
         android:id="@+id/action_choice"
-        android:icon="@drawable/ic_action_choice"
         android:showAsAction="always"
-        android:title="@string/choice">
+        android:title="NEW MESSAGE">
     </item>
     <item
         android:id="@+id/action_edit_friends"

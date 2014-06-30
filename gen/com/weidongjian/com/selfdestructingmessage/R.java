@@ -31,39 +31,73 @@ public final class R {
         public static final int gridView_margin=0x7f050002;
     }
     public static final class drawable {
-        public static final int ic_action_choice=0x7f020000;
-        public static final int ic_action_navigation_refresh=0x7f020001;
-        public static final int ic_action_send_now=0x7f020002;
-        public static final int ic_av_play=0x7f020003;
-        public static final int ic_content_picture=0x7f020004;
-        public static final int ic_launcher=0x7f020005;
-        public static final int ic_social_person=0x7f020006;
-        public static final int iv_background_grid=0x7f020007;
-        public static final int iv_friend_check=0x7f020008;
+        public static final int ab_background_textured_ribbitthem=0x7f020000;
+        public static final int ab_bottom_solid_ribbitthem=0x7f020001;
+        public static final int ab_solid_ribbitthem=0x7f020002;
+        public static final int ab_stacked_solid_ribbitthem=0x7f020003;
+        public static final int ab_texture_tile_ribbitthem=0x7f020004;
+        public static final int ab_transparent_ribbitthem=0x7f020005;
+        public static final int btn_cab_done_default_ribbitthem=0x7f020006;
+        public static final int btn_cab_done_focused_ribbitthem=0x7f020007;
+        public static final int btn_cab_done_pressed_ribbitthem=0x7f020008;
+        public static final int btn_cab_done_ribbitthem=0x7f020009;
+        public static final int cab_background_bottom_ribbitthem=0x7f02000a;
+        public static final int cab_background_top_ribbitthem=0x7f02000b;
+        public static final int ic_action_choice=0x7f02000c;
+        public static final int ic_action_navigation_refresh=0x7f02000d;
+        public static final int ic_action_send_now=0x7f02000e;
+        public static final int ic_av_play=0x7f02000f;
+        public static final int ic_content_picture=0x7f020010;
+        public static final int ic_launcher=0x7f020011;
+        public static final int ic_social_person=0x7f020012;
+        public static final int iv_background_grid=0x7f020013;
+        public static final int iv_friend_check=0x7f020014;
+        public static final int list_focused_ribbitthem=0x7f020015;
+        public static final int list_pressed_ribbitthem=0x7f020016;
+        public static final int menu_dropdown_panel_ribbitthem=0x7f020017;
+        public static final int progress_bg_ribbitthem=0x7f020018;
+        public static final int progress_horizontal_ribbitthem=0x7f020019;
+        public static final int progress_primary_ribbitthem=0x7f02001a;
+        public static final int progress_secondary_ribbitthem=0x7f02001b;
+        public static final int selectable_background_ribbitthem=0x7f02001c;
+        public static final int spinner_ab_default_ribbitthem=0x7f02001d;
+        public static final int spinner_ab_disabled_ribbitthem=0x7f02001e;
+        public static final int spinner_ab_focused_ribbitthem=0x7f02001f;
+        public static final int spinner_ab_pressed_ribbitthem=0x7f020020;
+        public static final int spinner_background_ab_ribbitthem=0x7f020021;
+        public static final int tab_indicator_ab_ribbitthem=0x7f020022;
+        public static final int tab_selected_focused_ribbitthem=0x7f020023;
+        public static final int tab_selected_pressed_ribbitthem=0x7f020024;
+        public static final int tab_selected_ribbitthem=0x7f020025;
+        public static final int tab_unselected_focused_ribbitthem=0x7f020026;
+        public static final int tab_unselected_pressed_ribbitthem=0x7f020027;
+        public static final int tab_unselected_ribbitthem=0x7f020028;
     }
     public static final class id {
-        public static final int action_choice=0x7f0a0014;
-        public static final int action_edit_friends=0x7f0a0015;
-        public static final int action_logout=0x7f0a0013;
-        public static final int action_send=0x7f0a0016;
-        public static final int action_settings=0x7f0a0012;
+        public static final int action_choice=0x7f0a0016;
+        public static final int action_edit_friends=0x7f0a0017;
+        public static final int action_logout=0x7f0a0015;
+        public static final int action_send=0x7f0a0018;
+        public static final int action_settings=0x7f0a0014;
         public static final int bt_login=0x7f0a0005;
         public static final int bt_singup=0x7f0a0009;
         public static final int cb_show_password=0x7f0a0004;
         public static final int et_email=0x7f0a0008;
         public static final int et_password=0x7f0a0003;
         public static final int et_username=0x7f0a0002;
-        public static final int gv_friends=0x7f0a000b;
-        public static final int iv_background_grid=0x7f0a000f;
-        public static final int iv_check_grid=0x7f0a0010;
-        public static final int iv_file_type=0x7f0a000e;
-        public static final int iv_view_image=0x7f0a000a;
+        public static final int gv_friends=0x7f0a000d;
+        public static final int iv_background_grid=0x7f0a0011;
+        public static final int iv_check_grid=0x7f0a0012;
+        public static final int iv_file_type=0x7f0a0010;
+        public static final int iv_view_image=0x7f0a000b;
         public static final int pager=0x7f0a0007;
-        public static final int tv_created_at=0x7f0a000d;
-        public static final int tv_friend_name=0x7f0a0011;
-        public static final int tv_sender_name=0x7f0a000c;
+        public static final int tv_back_to_login=0x7f0a000a;
+        public static final int tv_created_at=0x7f0a000f;
+        public static final int tv_friend_name=0x7f0a0013;
+        public static final int tv_sender_name=0x7f0a000e;
         public static final int tv_singup=0x7f0a0006;
         public static final int tv_subtitle=0x7f0a0001;
+        public static final int tv_time_conuntDown=0x7f0a000c;
         public static final int tv_title=0x7f0a0000;
     }
     public static final class layout {
@@ -101,14 +135,19 @@ public final class R {
         public static final int singup=0x7f060013;
         public static final int tab_title_friend=0x7f060008;
         public static final int tab_title_inbox=0x7f060007;
+        public static final int time_countDown=0x7f060016;
         public static final int title_activity_inbox_fragment=0x7f060005;
         public static final int title_activity_login=0x7f060009;
-        public static final int title_main_actionbar=0x7f060016;
+        public static final int title_main_actionbar=0x7f060017;
         public static final int title_section1=0x7f060001;
         public static final int title_section2=0x7f060002;
         public static final int title_section3=0x7f060003;
     }
     public static final class style {
+        public static final int ActionBar_Solid_Ribbitthem=0x7f080003;
+        public static final int ActionBar_Transparent_Ribbitthem=0x7f080004;
+        public static final int ActionBarTabStyle_Ribbitthem=0x7f080007;
+        public static final int ActionButton_CloseMode_Ribbitthem=0x7f08000a;
         /** 
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
@@ -135,10 +174,18 @@ public final class R {
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f080001;
-        public static final int EditText=0x7f080003;
-        public static final int Globle=0x7f080002;
-        public static final int GridView=0x7f080006;
-        public static final int TextView=0x7f080004;
-        public static final int TextView_subtitle=0x7f080005;
+        public static final int DropDownListView_Ribbitthem=0x7f080006;
+        public static final int DropDownNav_Ribbitthem=0x7f080008;
+        public static final int EditText=0x7f08000d;
+        public static final int Globle=0x7f08000c;
+        public static final int GridView=0x7f080010;
+        public static final int PopupMenu_Ribbitthem=0x7f080005;
+        public static final int ProgressBar_Ribbitthem=0x7f080009;
+        public static final int TextView=0x7f08000e;
+        public static final int TextView_subtitle=0x7f08000f;
+        public static final int Theme_Ribbitthem=0x7f080002;
+        /**  this style is only referenced in a Light.DarkActionBar based theme 
+         */
+        public static final int Theme_Ribbitthem_Widget=0x7f08000b;
     }
 }

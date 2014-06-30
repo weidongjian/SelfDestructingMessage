@@ -82,12 +82,14 @@
         android:text="@string/singup" />
 
     <TextView
-        android:id="@+id/tv_singup"
+        android:id="@+id/tv_back_to_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@id/et_username"
         android:layout_below="@id/bt_singup"
         android:layout_marginTop="19dp"
+        android:textSize="16dp"
+        android:textStyle="bold"
         android:text="@string/message_back_to_login" />
 
 </RelativeLayout>

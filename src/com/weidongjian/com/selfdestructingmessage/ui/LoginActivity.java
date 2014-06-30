@@ -11,6 +11,7 @@ import android.text.method.PasswordTransformationMethod;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -37,10 +38,8 @@ public class LoginActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_login);
-		
-		ActionBar actionBar = getActionBar();
-		actionBar.hide();
 		
 		mUsername = (EditText) findViewById(R.id.et_username);
 		mPassword = (EditText) findViewById(R.id.et_password);

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Self Destructing Message</string>
-    <string name="title_section1">Section 1</string>
-    <string name="title_section2">Section 2</string>
+    <string name="app_name">Destructing Message</string>
+    <string name="title_section1">INBOX</string>
+    <string name="title_section2">FRIENDS</string>
     <string name="title_section3">Section 3</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_inbox_fragment">InboxFragment</string>
@@ -23,6 +23,7 @@
     <string name="singup">Sing up</string>
     <string name="choice">choice</string>
     <string name="action_send">Send</string>
+    <string name="time_countDown">seconds remaining: %1$d S.</string>
     
     <string-array name="action_choice">
         <item >take picture</item>
@@ -30,6 +31,6 @@
         <item >take video</item>
         <item >choose video</item>
     </string-array>
-        <string name="title_main_actionbar">Main</string>
+        <string name="title_main_actionbar">Message</string>
 
 </resources>

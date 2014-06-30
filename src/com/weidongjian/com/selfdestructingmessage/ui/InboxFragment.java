@@ -82,6 +82,8 @@ public class InboxFragment extends ListFragment {
 			viewImageIntent.setData(fileUri);
 			startActivity(viewImageIntent);
 		}
+		
+		deleteMessage(message);
 	}
 	
 	private void deleteMessage(ParseObject message) {

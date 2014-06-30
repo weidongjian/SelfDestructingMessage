@@ -53,6 +53,7 @@ public class RecipientActivity extends Activity{
 		requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
 		setContentView(R.layout.gv_user);
 		getActionBar().setDisplayHomeAsUpEnabled(true);
+		setTitle("Select recipients");
 		
 		mediaUri = getIntent().getData();
 		fileType = getIntent().getStringExtra(ParseConstant.KEY_FILE_TYPE);
