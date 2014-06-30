@@ -5,6 +5,7 @@ SelfDestructingMessage
 2、需要登入账号或者创建账号才可以登入app；
 ![](//2014063008.png)
 3、INBOX显示的是你未阅读的信息， FRIENDS显示是你的好友（新注册账号进入，INBOX跟FRIENDS都是空的）；
+![](//2014063001.gif)
 ![](//2014063002.png)
 4、点击overflow可以打开EditFriends，里面显示的全部注册的好友，你可以点击头像来选中好友或者删除好友；
 5、点击NEW MESSAGE可以来创建信的Message，先选择创建的方式，然后app会自动跳到接收人页面，选择要接受的好友；
