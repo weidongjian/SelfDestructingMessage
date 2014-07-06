@@ -21,6 +21,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.Window;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.GridView;
@@ -39,7 +40,9 @@ public class EditFriends extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
 		setContentView(R.layout.gv_user);
+		setProgressBarIndeterminateVisibility(true);
 		getActionBar().setDisplayHomeAsUpEnabled(true);
 		setTitle("Edit Friends");
 
@@ -71,6 +74,10 @@ public class EditFriends extends Activity {
 						((userAdapter)(mGridview.getAdapter())).refill(mUsers);
 					}
 					addFriendsCheck();
+					setProgressBarIndeterminateVisibility(false);
+				}
+				else {
+					Log.e(TAG, e.getMessage());
 				}
 			}
 		});
@@ -96,6 +103,7 @@ public boolean onOptionsItemSelected(MenuItem item) {
 		mParseRelation.getQuery().findInBackground(new FindCallback<ParseUser>() {
 			@Override
 			public void done(List<ParseUser> friends, ParseException e) {
+				setProgressBarIndeterminateVisibility(false);
 				if (e == null) {
 					for (int i = 0; i < mUsers.size(); i++) {
 						ParseUser user = mUsers.get(i);

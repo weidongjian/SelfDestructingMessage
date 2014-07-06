@@ -10,6 +10,7 @@ import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.HeaderViewListAdapter;
 import android.widget.ListView;
 
 import com.parse.FindCallback;
@@ -22,23 +23,36 @@ import com.weidongjian.com.selfdestructingmessage.ParseConstant;
 import com.weidongjian.com.selfdestructingmessage.R;
 import com.weidongjian.com.selfdestructingmessage.adapter.MessageAdapter;
 
+import eu.erikw.PullToRefreshListView;
+import eu.erikw.PullToRefreshListView.OnRefreshListener;
+
+
 public class InboxFragment extends ListFragment {
 	
 	protected List<ParseObject> mMessage;
+	protected PullToRefreshListView listview;
 	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		View rootView = inflater.inflate(R.layout.fragment_inbox, container, false);
+		listview = (PullToRefreshListView) rootView.findViewById(android.R.id.list);
+		listview.setOnRefreshListener(refreshlistener);
 		return rootView;
 	}
 	
 	@Override
-	public void onResume() {
-		super.onResume();
+	public void onStart() {
+		super.onStart();
 		getActivity().setProgressBarIndeterminateVisibility(true);
 		retrieveMessages();
 	}
+	
+//	@Override
+//	public void onResume() {
+//		super.onResume();
+//		
+//	}
 
 	public void retrieveMessages() {
 		
@@ -49,16 +63,17 @@ public class InboxFragment extends ListFragment {
 			@Override
 			public void done(List<ParseObject> messages, ParseException e) {
 				getActivity().setProgressBarIndeterminateVisibility(false);
+				listview.onRefreshComplete();
 				if (e == null) {
 					mMessage = messages;
 					
-					if (getListView().getAdapter() == null) {
+//					if (getListView().getAdapter() == null) {
 						MessageAdapter adapter = new MessageAdapter(getListView().getContext(), mMessage);
 						setListAdapter(adapter);
-					}
-					else {
-						((MessageAdapter)(getListView().getAdapter())).refill(mMessage);
-					}
+//					}
+//					else {
+//						((MessageAdapter)(getListView().getAdapter())).refill(mMessage);
+//					}
 				}
 			}
 		});
@@ -99,6 +114,12 @@ public class InboxFragment extends ListFragment {
 		}
 	}
 
+	private OnRefreshListener refreshlistener = new OnRefreshListener() {
+		@Override
+		public void onRefresh() {
+			retrieveMessages();
+		}
+	};
 }
 
 
