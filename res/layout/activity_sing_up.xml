@@ -14,7 +14,7 @@
         style="@style/TextView"
         android:layout_alignParentTop="true"
         android:layout_marginTop="40dp"
-        android:text="@string/singup"
+        android:text="@string/signup"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
         android:textSize="30sp" />
@@ -79,7 +79,7 @@
         android:layout_alignRight="@id/et_username"
         android:layout_below="@id/cb_show_password"
         android:layout_marginTop="14dp"
-        android:text="@string/singup" />
+        android:text="@string/signup" />
 
     <TextView
         android:id="@+id/tv_back_to_login"

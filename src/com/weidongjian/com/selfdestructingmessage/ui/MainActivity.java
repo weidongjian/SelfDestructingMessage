@@ -66,19 +66,17 @@ public class MainActivity extends FragmentActivity implements
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		ParseUser currentUser = ParseUser.getCurrentUser();
+		if (currentUser == null) {
+			navigateToLogin();
+		}
 		requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
 		setContentView(R.layout.activity_main);
-
-		ParseUser currentUser = ParseUser.getCurrentUser();
 
 		try {
 			Uri test = getOutputMediaFileUri(MEDIA_TYPE_IMAGE);
 		} catch (IOException e) {
 			e.printStackTrace();
-		}
-
-		if (currentUser == null) {
-			navigateToLogin();
 		}
 
 		// Set up the action bar.
@@ -143,7 +141,8 @@ public class MainActivity extends FragmentActivity implements
 			navigateToLogin();
 			break;
 		case R.id.action_choice:
-			new AlertDialog.Builder(MainActivity.this).setTitle("Create message")
+			new AlertDialog.Builder(MainActivity.this)
+					.setTitle("Create message")
 					.setItems(R.array.action_choice, mListener)
 					.setInverseBackgroundForced(true)
 					.setPositiveButton(android.R.string.ok, null).show();
@@ -235,26 +234,27 @@ public class MainActivity extends FragmentActivity implements
 		}
 	};
 
-	protected void onActivityResult(int requestCode, int resultCode,
-			Intent data) {
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
 		String fileType;
 		if (resultCode == RESULT_OK) {
-			if (requestCode == REQUEST_CODE_CHOOSE_PICTURE || requestCode == REQUEST_CODE_CHOOSE_VIDEO) {
+			if (requestCode == REQUEST_CODE_CHOOSE_PICTURE
+					|| requestCode == REQUEST_CODE_CHOOSE_VIDEO) {
 				if (data == null) {
-					Toast.makeText(MainActivity.this, "Gengral error", Toast.LENGTH_LONG).show();
+					Toast.makeText(MainActivity.this, "Gengral error",
+							Toast.LENGTH_LONG).show();
+				} else {
+					mediaUri = data.getData();
 				}
-				else {
-					mediaUri = data.getData(); 
-				}
-				
+
 				fileType = ParseConstant.KEY_FILE_TYPE_PHOTO;
 				if (requestCode == REQUEST_CODE_CHOOSE_VIDEO) {
 					int fileSize = 0;
 					InputStream inputStream = null;
-					
+
 					try {
-						inputStream = getContentResolver().openInputStream(mediaUri);
+						inputStream = getContentResolver().openInputStream(
+								mediaUri);
 						fileSize = inputStream.available();
 					} catch (FileNotFoundException e) {
 						// TODO Auto-generated catch block
@@ -262,8 +262,7 @@ public class MainActivity extends FragmentActivity implements
 					} catch (IOException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
-					} 
-					finally {
+					} finally {
 						try {
 							inputStream.close();
 						} catch (IOException e) {
@@ -271,24 +270,26 @@ public class MainActivity extends FragmentActivity implements
 							e.printStackTrace();
 						}
 					}
-					
-					if (fileSize > 1024*1024*10) {
-						Toast.makeText(this, "content too large", Toast.LENGTH_LONG).show();
+
+					if (fileSize > 1024 * 1024 * 10) {
+						Toast.makeText(this, "content too large",
+								Toast.LENGTH_LONG).show();
 						return;
 					}
 				}
 			}
-			
-			Intent recipientIntent = new Intent(MainActivity.this, RecipientActivity.class);
+
+			Intent recipientIntent = new Intent(MainActivity.this,
+					RecipientActivity.class);
 			recipientIntent.setData(mediaUri);
-			
-			if (requestCode == REQUEST_CODE_CHOOSE_PICTURE || requestCode == REQUEST_CODE_TAKE_PICTURE) {
+
+			if (requestCode == REQUEST_CODE_CHOOSE_PICTURE
+					|| requestCode == REQUEST_CODE_TAKE_PICTURE) {
 				fileType = ParseConstant.KEY_FILE_TYPE_PHOTO;
-			}
-			else {
+			} else {
 				fileType = ParseConstant.KEY_FILE_TYPE_VIDEO;
 			}
-			
+
 			recipientIntent.putExtra(ParseConstant.KEY_FILE_TYPE, fileType);
 			startActivity(recipientIntent);
 		}
@@ -343,6 +344,5 @@ public class MainActivity extends FragmentActivity implements
 		mediaScanIntent.setData(contentUri);
 		this.sendBroadcast(mediaScanIntent);
 	}
-	
 
 }

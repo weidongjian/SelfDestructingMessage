@@ -172,7 +172,7 @@ public class RecipientActivity extends Activity{
 	}
 	
 	private ArrayList<String> getRecipientIDs() {
-		ArrayList<String> messages = new ArrayList<>();
+		ArrayList<String> messages = new ArrayList<String>();
 		for (int i = 0; i < mGridview.getCount(); i++) {
 			if (mGridview.isItemChecked(i)) {
 				messages.add(mUsers.get(i).getObjectId());

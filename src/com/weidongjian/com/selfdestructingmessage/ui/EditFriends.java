@@ -78,6 +78,7 @@ public class EditFriends extends Activity {
 				}
 				else {
 					Log.e(TAG, e.getMessage());
+					setProgressBarIndeterminateVisibility(false);
 				}
 			}
 		});
@@ -103,7 +104,6 @@ public boolean onOptionsItemSelected(MenuItem item) {
 		mParseRelation.getQuery().findInBackground(new FindCallback<ParseUser>() {
 			@Override
 			public void done(List<ParseUser> friends, ParseException e) {
-				setProgressBarIndeterminateVisibility(false);
 				if (e == null) {
 					for (int i = 0; i < mUsers.size(); i++) {
 						ParseUser user = mUsers.get(i);

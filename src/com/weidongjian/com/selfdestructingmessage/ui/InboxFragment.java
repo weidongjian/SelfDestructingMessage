@@ -107,7 +107,7 @@ public class InboxFragment extends ListFragment {
 			message.deleteInBackground();
 		}
 		else {
-			ArrayList<String> idToRemove = new ArrayList<>();
+			ArrayList<String> idToRemove = new ArrayList<String>();
 			idToRemove.add(ParseUser.getCurrentUser().getObjectId());
 			message.removeAll(ParseConstant.KEY_RECEIVE_ID, idToRemove);
 			message.saveInBackground();
