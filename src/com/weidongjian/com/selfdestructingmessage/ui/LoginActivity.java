@@ -7,11 +7,13 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
 import android.text.method.PasswordTransformationMethod;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -50,34 +52,45 @@ public class LoginActivity extends Activity {
 		mLoginButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				String username = mUsername.getText().toString().trim();
-				String password = mPassword.getText().toString().trim();
+				v.startAnimation(AnimationUtils.loadAnimation(LoginActivity.this, R.anim.aa_btn));
 				
-				if (username.isEmpty() || password.isEmpty()) {
-					new AlertDialog.Builder(LoginActivity.this)
-					.setTitle("Oops!")
-					.setMessage("Please make sure you have inputed the username and password.")
-					.setInverseBackgroundForced(true)
-					.setPositiveButton(android.R.string.ok, null)
-					.show();
-				}
-				else {
-					ParseUser.logInInBackground(username, password, new LogInCallback() {
-						  public void done(ParseUser user, ParseException e) {
-						    if (user != null) {
-						      navigateToMainAcvivity();
-						    } else {
-						      // Signup failed. Look at the ParseException to see what happened.
-						    	new AlertDialog.Builder(LoginActivity.this)
-								.setTitle("Oops!")
-								.setMessage(e.getMessage())
-								.setInverseBackgroundForced(true)
-								.setPositiveButton(android.R.string.ok, null)
-								.show();
-						    }
-						  }
-						});
-				}
+				Handler handler = new Handler();
+				handler.postDelayed(new Runnable() {
+					@Override
+					public void run() {
+						String username = mUsername.getText().toString().trim();
+						String password = mPassword.getText().toString().trim();
+						
+						if (username.isEmpty() || password.isEmpty()) {
+							new AlertDialog.Builder(LoginActivity.this)
+							.setTitle("Oops!")
+							.setMessage("Please make sure you have inputed the username and password.")
+							.setInverseBackgroundForced(true)
+							.setPositiveButton(android.R.string.ok, null)
+							.show();
+						}
+						else {
+							ParseUser.logInInBackground(username, password, new LogInCallback() {
+								  public void done(ParseUser user, ParseException e) {
+								    if (user != null) {
+								      navigateToMainAcvivity();
+								    } else {
+								      // Signup failed. Look at the ParseException to see what happened.
+								    	new AlertDialog.Builder(LoginActivity.this)
+										.setTitle("Oops!")
+										.setMessage(e.getMessage())
+										.setInverseBackgroundForced(true)
+										.setPositiveButton(android.R.string.ok, null)
+										.show();
+								    }
+								  }
+								});
+						}
+					}
+				}, 1000);
+				
+				
+				
 			}
 		});
 		
