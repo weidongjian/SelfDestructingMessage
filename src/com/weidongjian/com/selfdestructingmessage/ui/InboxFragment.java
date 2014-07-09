@@ -8,6 +8,9 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.HeaderViewListAdapter;
@@ -31,6 +34,23 @@ public class InboxFragment extends ListFragment {
 	
 	protected List<ParseObject> mMessage;
 	protected PullToRefreshListView listview;
+//	protected MenuItem progressBar = null;
+	
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+//		setHasOptionsMenu(true);
+	}
+	
+//	@Override
+//	public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+//		inflater.inflate(R.menu.inbox_fragment, menu);
+//		if (menu != null) {
+//			progressBar = menu.findItem(R.id.progress_bar);
+//			progressBar.setActionView(R.layout.indeterminate_progress_bar);
+//		}
+//		super.onCreateOptionsMenu(menu, inflater);
+//	}
 	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -55,13 +75,18 @@ public class InboxFragment extends ListFragment {
 //	}
 
 	public void retrieveMessages() {
-		
+//		if (progressBar != null) {
+//			progressBar.setVisible(true);
+//		}
 		ParseQuery<ParseObject> query = new ParseQuery<ParseObject>(ParseConstant.CLASS_MESSAGE);
 		query.whereEqualTo(ParseConstant.KEY_RECEIVE_ID, ParseUser.getCurrentUser().getObjectId());
 		query.orderByDescending(ParseConstant.KEY_CREATED_AT);
 		query.findInBackground(new FindCallback<ParseObject>() {
 			@Override
 			public void done(List<ParseObject> messages, ParseException e) {
+//				if (progressBar != null && progressBar.isVisible()) {
+//					progressBar.setVisible(false);
+//				}
 				getActivity().setProgressBarIndeterminateVisibility(false);
 				listview.onRefreshComplete();
 				if (e == null) {

@@ -1,6 +1,12 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.weidongjian.com.selfdestructingmessage.ui.MainActivity" >
+    
+    <item android:id="@+id/progress_bar"
+        android:orderInCategory="1"
+        android:showAsAction="always"
+        android:title="refresh"
+        android:visible="true"/>
 
     <item
         android:id="@+id/action_logout"
@@ -12,6 +18,7 @@
         android:showAsAction="always"
         android:title="NEW MESSAGE">
     </item>
+    
     <item
         android:id="@+id/action_edit_friends"
         android:showAsAction="never"

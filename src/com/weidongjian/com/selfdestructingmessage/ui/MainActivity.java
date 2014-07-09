@@ -125,7 +125,9 @@ public class MainActivity extends FragmentActivity implements
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
+		this.optionMenu = menu;
 		getMenuInflater().inflate(R.menu.main, menu);
+		optionMenu.findItem(R.id.progress_bar).setActionView(R.layout.indeterminate_progress_bar);
 		return true;
 	}
 

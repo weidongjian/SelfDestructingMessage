@@ -1,5 +1,6 @@
 package com.weidongjian.com.selfdestructingmessage;
 
+import com.parse.ParseAnalytics;
 import com.parse.ParseUser;
 import com.weidongjian.com.selfdestructingmessage.ui.LoginActivity;
 import com.weidongjian.com.selfdestructingmessage.ui.MainActivity;
@@ -26,6 +27,8 @@ public class DispatchActivity extends Activity {
 			i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
 			startActivity(i);
 		}
+		
+		ParseAnalytics.trackAppOpened(getIntent());
 	}
 
 }

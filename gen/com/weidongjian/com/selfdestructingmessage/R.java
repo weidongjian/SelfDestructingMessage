@@ -107,11 +107,11 @@ public final class R {
         public static final int tab_unselected_ribbitthem=0x7f02002c;
     }
     public static final class id {
-        public static final int action_choice=0x7f0c001c;
-        public static final int action_edit_friends=0x7f0c001d;
-        public static final int action_logout=0x7f0c001b;
-        public static final int action_send=0x7f0c001e;
-        public static final int action_settings=0x7f0c001a;
+        public static final int action_choice=0x7f0c001d;
+        public static final int action_edit_friends=0x7f0c001e;
+        public static final int action_logout=0x7f0c001c;
+        public static final int action_send=0x7f0c001f;
+        public static final int action_settings=0x7f0c001b;
         public static final int bt_login=0x7f0c0005;
         public static final int bt_singup=0x7f0c0009;
         public static final int cb_show_password=0x7f0c0004;
@@ -124,6 +124,7 @@ public final class R {
         public static final int iv_file_type=0x7f0c0010;
         public static final int iv_view_image=0x7f0c000b;
         public static final int pager=0x7f0c0007;
+        public static final int progress_bar=0x7f0c001a;
         public static final int ptr_id_header=0x7f0c0011;
         public static final int ptr_id_image=0x7f0c0012;
         public static final int ptr_id_last_updated=0x7f0c0016;
@@ -147,15 +148,17 @@ public final class R {
         public static final int fragment_friend=0x7f030004;
         public static final int fragment_inbox=0x7f030005;
         public static final int gv_user=0x7f030006;
-        public static final int message_item=0x7f030007;
-        public static final int ptr_header=0x7f030008;
-        public static final int user_item=0x7f030009;
+        public static final int indeterminate_progress_bar=0x7f030007;
+        public static final int message_item=0x7f030008;
+        public static final int ptr_header=0x7f030009;
+        public static final int user_item=0x7f03000a;
     }
     public static final class menu {
-        public static final int login=0x7f0b0000;
-        public static final int main=0x7f0b0001;
-        public static final int navigate_up_menu=0x7f0b0002;
-        public static final int recipient=0x7f0b0003;
+        public static final int inbox_fragment=0x7f0b0000;
+        public static final int login=0x7f0b0001;
+        public static final int main=0x7f0b0002;
+        public static final int navigate_up_menu=0x7f0b0003;
+        public static final int recipient=0x7f0b0004;
     }
     public static final class plurals {
         public static final int com_parse_ui_password_too_short_toast=0x7f0a0000;
@@ -246,15 +249,19 @@ public final class R {
         public static final int ActionBar_Solid_Ribbitthem=0x7f05000a;
         public static final int ActionBar_Transparent_Ribbitthem=0x7f05000b;
         public static final int ActionBarTabStyle_Ribbitthem=0x7f05000e;
-        public static final int ActionButton_CloseMode_Ribbitthem=0x7f050011;
+        public static final int ActionButton_CloseMode_Ribbitthem=0x7f050012;
         /** 
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+
+
     
 
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
             backward-compatibility can go here.
+
+
         
 
         Base application theme for API 11+. This theme completely replaces
@@ -274,26 +281,27 @@ public final class R {
          */
         public static final int AppTheme=0x7f050008;
         public static final int DropDownListView_Ribbitthem=0x7f05000d;
-        public static final int DropDownNav_Ribbitthem=0x7f05000f;
-        public static final int EditText=0x7f050014;
-        public static final int Globle=0x7f050013;
-        public static final int GridView=0x7f050017;
+        public static final int DropDownNav_Ribbitthem=0x7f050010;
+        public static final int EditText=0x7f050015;
+        public static final int Globle=0x7f050014;
+        public static final int GridView=0x7f050018;
+        public static final int IndeterminateProgress=0x7f05000f;
         /**  add from parse ui 
          */
-        public static final int ParseLoginUI=0x7f050018;
-        public static final int ParseLoginUI_Button=0x7f050019;
-        public static final int ParseLoginUI_Button_ThirdPartyLogin=0x7f05001a;
-        public static final int ParseLoginUI_EditText=0x7f05001d;
-        public static final int ParseLoginUI_HelpButton=0x7f05001b;
-        public static final int ParseLoginUI_TextView=0x7f05001c;
+        public static final int ParseLoginUI=0x7f050019;
+        public static final int ParseLoginUI_Button=0x7f05001a;
+        public static final int ParseLoginUI_Button_ThirdPartyLogin=0x7f05001b;
+        public static final int ParseLoginUI_EditText=0x7f05001e;
+        public static final int ParseLoginUI_HelpButton=0x7f05001c;
+        public static final int ParseLoginUI_TextView=0x7f05001d;
         public static final int PopupMenu_Ribbitthem=0x7f05000c;
-        public static final int ProgressBar_Ribbitthem=0x7f050010;
-        public static final int TextView=0x7f050015;
-        public static final int TextView_subtitle=0x7f050016;
+        public static final int ProgressBar_Ribbitthem=0x7f050011;
+        public static final int TextView=0x7f050016;
+        public static final int TextView_subtitle=0x7f050017;
         public static final int Theme_Ribbitthem=0x7f050009;
         /**  this style is only referenced in a Light.DarkActionBar based theme 
          */
-        public static final int Theme_Ribbitthem_Widget=0x7f050012;
+        public static final int Theme_Ribbitthem_Widget=0x7f050013;
         public static final int ptr_arrow=0x7f050002;
         public static final int ptr_header=0x7f050001;
         public static final int ptr_headerContainer=0x7f050000;
