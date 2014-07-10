@@ -3,17 +3,14 @@ package com.weidongjian.com.selfdestructingmessage.ui;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.HeaderViewListAdapter;
 import android.widget.ListView;
 
 import com.parse.FindCallback;
@@ -31,9 +28,10 @@ import eu.erikw.PullToRefreshListView.OnRefreshListener;
 
 
 public class InboxFragment extends ListFragment {
-	
+	public static final int REQUEST_CODE_VIEW_IMAGE = 0;
 	protected List<ParseObject> mMessage;
 	protected PullToRefreshListView listview;
+	protected int location;
 //	protected MenuItem progressBar = null;
 	
 	@Override
@@ -107,6 +105,7 @@ public class InboxFragment extends ListFragment {
 	@Override
 	public void onListItemClick(ListView l, View v, int position, long id) {
 		super.onListItemClick(l, v, position, id);
+		location = position;
 		ParseObject message = mMessage.get(position);
 		String fileType = message.getString(ParseConstant.KEY_FILE_TYPE);
 		ParseFile file = message.getParseFile(ParseConstant.KEY_FILE);
@@ -120,10 +119,10 @@ public class InboxFragment extends ListFragment {
 		else {
 			Intent viewImageIntent = new Intent(getActivity(), ViewImageActivity.class);
 			viewImageIntent.setData(fileUri);
-			startActivity(viewImageIntent);
+			startActivityForResult(viewImageIntent, 0);
 		}
 		
-		deleteMessage(message);
+//		deleteMessage(message);
 	}
 	
 	private void deleteMessage(ParseObject message) {
@@ -143,6 +142,13 @@ public class InboxFragment extends ListFragment {
 		@Override
 		public void onRefresh() {
 			retrieveMessages();
+		}
+	};
+	
+	@Override
+	public void onActivityResult(int requestCode, int resultCode, Intent data) {
+		if (resultCode == Activity.RESULT_OK && requestCode == REQUEST_CODE_VIEW_IMAGE) {
+			deleteMessage(mMessage.get(location));
 		}
 	};
 }

@@ -7,16 +7,6 @@ import java.io.InputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import com.parse.ParseUser;
-import com.weidongjian.com.selfdestructingmessage.ParseConstant;
-import com.weidongjian.com.selfdestructingmessage.R;
-import com.weidongjian.com.selfdestructingmessage.R.array;
-import com.weidongjian.com.selfdestructingmessage.R.id;
-import com.weidongjian.com.selfdestructingmessage.R.layout;
-import com.weidongjian.com.selfdestructingmessage.R.menu;
-import com.weidongjian.com.selfdestructingmessage.R.string;
-import com.weidongjian.com.selfdestructingmessage.adapter.SectionsPagerAdapter;
-
 import android.app.ActionBar;
 import android.app.AlertDialog;
 import android.app.FragmentTransaction;
@@ -27,15 +17,18 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.v13.app.FragmentPagerAdapter;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.ListFragment;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Window;
 import android.widget.Toast;
+
+import com.parse.ParseUser;
+import com.weidongjian.com.selfdestructingmessage.ParseConstant;
+import com.weidongjian.com.selfdestructingmessage.R;
+import com.weidongjian.com.selfdestructingmessage.adapter.SectionsPagerAdapter;
 
 public class MainActivity extends FragmentActivity implements
 		ActionBar.TabListener {

@@ -40,6 +40,7 @@ public class ViewImageActivity extends Activity {
 			public void onSuccess() {
 				setProgressBarIndeterminateVisibility(false);
 				getActionBar().hide();
+				setResult(RESULT_OK);
 				mRemainText.setVisibility(View.VISIBLE);
 				
 				new CountDownTimer(10000, 1000) {
