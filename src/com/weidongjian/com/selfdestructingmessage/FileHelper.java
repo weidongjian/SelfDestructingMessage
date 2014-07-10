@@ -18,7 +18,7 @@ public class FileHelper {
 	
 	public static final String TAG = FileHelper.class.getSimpleName();
 	
-	public static final int SHORT_SIDE_TARGET = 1280;
+	public static final int SHORT_SIDE_TARGET = 600;
 	
 	public static byte[] getByteArrayFromFile(Context context, Uri uri) {
 		byte[] fileBytes = null;
@@ -66,9 +66,10 @@ public class FileHelper {
 	
 	public static byte[] reduceImageForUpload(byte[] imageData) {
 		Bitmap bitmap = ImageResizer.resizeImageMaintainAspectRatio(imageData, SHORT_SIDE_TARGET);
+		Bitmap smallSizeBitmap = Bitmap.createScaledBitmap(bitmap, SHORT_SIDE_TARGET, SHORT_SIDE_TARGET, true);
 		
 		ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-		bitmap.compress(Bitmap.CompressFormat.PNG, 100, outputStream);
+		smallSizeBitmap.compress(Bitmap.CompressFormat.PNG, 100, outputStream);
 		byte[] reducedData = outputStream.toByteArray();
 		try {
 			outputStream.close();
