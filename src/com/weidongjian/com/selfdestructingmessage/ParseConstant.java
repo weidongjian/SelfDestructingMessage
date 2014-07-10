@@ -14,4 +14,5 @@ public class ParseConstant {
 	public static final String KEY_FILE_TYPE_VIDEO = "video";
 	public static final String KEY_FILE_TYPE = "fileType";
 	public static final String KEY_CREATED_AT = "createdAt";
+	public static final String KEY_OBJECT_ID = "objectId";
 }

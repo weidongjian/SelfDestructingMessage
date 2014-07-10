@@ -6,7 +6,9 @@ import java.util.List;
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseFile;
+import com.parse.ParseInstallation;
 import com.parse.ParseObject;
+import com.parse.ParsePush;
 import com.parse.ParseQuery;
 import com.parse.ParseRelation;
 import com.parse.ParseUser;
@@ -133,6 +135,7 @@ public class RecipientActivity extends Activity{
 				setProgressBarIndeterminateVisibility(false);
 				if (e == null) {
 					Toast.makeText(RecipientActivity.this, "success save message.", Toast.LENGTH_LONG).show();
+					sendPushNotification();
 				}
 				else {
 					new AlertDialog.Builder(RecipientActivity.this).setTitle("error")
@@ -143,6 +146,16 @@ public class RecipientActivity extends Activity{
 				}
 			}
 		});
+	}
+
+	protected void sendPushNotification() {
+		ParsePush push = new ParsePush();
+		ParseQuery<ParseInstallation> query = ParseInstallation.getQuery();
+		query.whereContainedIn(ParseConstant.KEY_USER_ID, getRecipientIDs());
+		
+		push.setQuery(query);
+		push.setMessage("You have a new message from " + ParseUser.getCurrentUser().getUsername());
+		push.sendInBackground();
 	}
 
 	private ParseObject createMessage() {

@@ -24,6 +24,7 @@ import android.widget.TextView;
 import com.parse.LogInCallback;
 import com.parse.ParseException;
 import com.parse.ParseUser;
+import com.weidongjian.com.selfdestructingmessage.BaseApplication;
 import com.weidongjian.com.selfdestructingmessage.R;
 import com.weidongjian.com.selfdestructingmessage.R.id;
 import com.weidongjian.com.selfdestructingmessage.R.layout;
@@ -72,7 +73,8 @@ public class LoginActivity extends Activity {
 						else {
 							ParseUser.logInInBackground(username, password, new LogInCallback() {
 								  public void done(ParseUser user, ParseException e) {
-								    if (user != null) {
+								    if (e == null) {
+								    	BaseApplication.updataInstallation(user);
 								      navigateToMainAcvivity();
 								    } else {
 								      // Signup failed. Look at the ParseException to see what happened.
