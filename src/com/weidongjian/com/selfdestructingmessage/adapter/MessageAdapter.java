@@ -13,6 +13,7 @@ import com.weidongjian.com.selfdestructingmessage.R;
 
 import android.content.Context;
 import android.text.format.DateFormat;
+import android.text.format.DateUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -65,7 +66,10 @@ public class MessageAdapter extends ArrayAdapter<ParseObject> {
 		}
 		
 		Format df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-		String date = df.format(message.getCreatedAt());
+		long now = new Date().getTime();
+//		String date = df.format(message.getCreatedAt());
+		String date = DateUtils.getRelativeTimeSpanString(
+				message.getCreatedAt().getTime(), now, DateUtils.SECOND_IN_MILLIS).toString();
 		holder.sendDate.setText(date);
 		holder.senderName.setText(message.getString(ParseConstant.KEY_SENDER_NAME));
 		
