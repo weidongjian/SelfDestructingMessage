@@ -117,6 +117,13 @@
         <item name="android:layout_alignParentTop">true</item>
         <item name="android:layout_alignParentLeft">true</item>
     </style>
+    
+    <style name="button">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:shadowColor">#A3A8A1</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:background">@drawable/bg_button</item>
+    </style>
 
     <!-- add from parse ui -->
     <style name="ParseLoginUI" />

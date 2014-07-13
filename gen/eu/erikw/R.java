@@ -8,7 +8,7 @@ package eu.erikw;
 
 public final class R {
 	public static final class drawable {
-		public static final int ptr_pulltorefresh_arrow = 0x7f020022;
+		public static final int ptr_pulltorefresh_arrow = 0x7f020023;
 	}
 	public static final class id {
 		public static final int ptr_id_header = 0x7f0c0011;
