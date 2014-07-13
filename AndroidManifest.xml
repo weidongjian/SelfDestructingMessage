@@ -43,7 +43,7 @@
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name="com.weidongjian.com.selfdestructingmessage.ui.SingupActivity"
+            android:name="com.weidongjian.com.selfdestructingmessage.ui.SignupActivity"
             android:screenOrientation="portrait" >
         </activity>
         <activity

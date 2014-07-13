@@ -10,6 +10,11 @@ package com.weidongjian.com.selfdestructingmessage;
 public final class R {
     public static final class anim {
         public static final int aa_btn=0x7f040000;
+        public static final int button_anim=0x7f040001;
+        public static final int left_in=0x7f040002;
+        public static final int left_out=0x7f040003;
+        public static final int right_in=0x7f040004;
+        public static final int right_out=0x7f040005;
     }
     public static final class array {
         public static final int action_choice=0x7f090000;
@@ -79,32 +84,35 @@ public final class R {
         public static final int ic_action_navigation_refresh=0x7f020010;
         public static final int ic_action_send_now=0x7f020011;
         public static final int ic_av_play=0x7f020012;
-        public static final int ic_content_picture=0x7f020013;
-        public static final int ic_launcher=0x7f020014;
-        public static final int ic_social_person=0x7f020015;
-        public static final int iv_background_grid=0x7f020016;
-        public static final int iv_friend_check=0x7f020017;
-        public static final int list_focused_ribbitthem=0x7f020018;
-        public static final int list_pressed_ribbitthem=0x7f020019;
-        public static final int menu_dropdown_panel_ribbitthem=0x7f02001a;
-        public static final int progress_bg_ribbitthem=0x7f02001b;
-        public static final int progress_horizontal_ribbitthem=0x7f02001c;
-        public static final int progress_primary_ribbitthem=0x7f02001d;
-        public static final int progress_secondary_ribbitthem=0x7f02001e;
-        public static final int ptr_pulltorefresh_arrow=0x7f02001f;
-        public static final int selectable_background_ribbitthem=0x7f020020;
-        public static final int spinner_ab_default_ribbitthem=0x7f020021;
-        public static final int spinner_ab_disabled_ribbitthem=0x7f020022;
-        public static final int spinner_ab_focused_ribbitthem=0x7f020023;
-        public static final int spinner_ab_pressed_ribbitthem=0x7f020024;
-        public static final int spinner_background_ab_ribbitthem=0x7f020025;
-        public static final int tab_indicator_ab_ribbitthem=0x7f020026;
-        public static final int tab_selected_focused_ribbitthem=0x7f020027;
-        public static final int tab_selected_pressed_ribbitthem=0x7f020028;
-        public static final int tab_selected_ribbitthem=0x7f020029;
-        public static final int tab_unselected_focused_ribbitthem=0x7f02002a;
-        public static final int tab_unselected_pressed_ribbitthem=0x7f02002b;
-        public static final int tab_unselected_ribbitthem=0x7f02002c;
+        public static final int ic_content_email=0x7f020013;
+        public static final int ic_content_password=0x7f020014;
+        public static final int ic_content_person=0x7f020015;
+        public static final int ic_content_picture=0x7f020016;
+        public static final int ic_launcher=0x7f020017;
+        public static final int ic_social_person=0x7f020018;
+        public static final int iv_background_grid=0x7f020019;
+        public static final int iv_friend_check=0x7f02001a;
+        public static final int list_focused_ribbitthem=0x7f02001b;
+        public static final int list_pressed_ribbitthem=0x7f02001c;
+        public static final int menu_dropdown_panel_ribbitthem=0x7f02001d;
+        public static final int progress_bg_ribbitthem=0x7f02001e;
+        public static final int progress_horizontal_ribbitthem=0x7f02001f;
+        public static final int progress_primary_ribbitthem=0x7f020020;
+        public static final int progress_secondary_ribbitthem=0x7f020021;
+        public static final int ptr_pulltorefresh_arrow=0x7f020022;
+        public static final int selectable_background_ribbitthem=0x7f020023;
+        public static final int spinner_ab_default_ribbitthem=0x7f020024;
+        public static final int spinner_ab_disabled_ribbitthem=0x7f020025;
+        public static final int spinner_ab_focused_ribbitthem=0x7f020026;
+        public static final int spinner_ab_pressed_ribbitthem=0x7f020027;
+        public static final int spinner_background_ab_ribbitthem=0x7f020028;
+        public static final int tab_indicator_ab_ribbitthem=0x7f020029;
+        public static final int tab_selected_focused_ribbitthem=0x7f02002a;
+        public static final int tab_selected_pressed_ribbitthem=0x7f02002b;
+        public static final int tab_selected_ribbitthem=0x7f02002c;
+        public static final int tab_unselected_focused_ribbitthem=0x7f02002d;
+        public static final int tab_unselected_pressed_ribbitthem=0x7f02002e;
+        public static final int tab_unselected_ribbitthem=0x7f02002f;
     }
     public static final class id {
         public static final int action_choice=0x7f0c001d;

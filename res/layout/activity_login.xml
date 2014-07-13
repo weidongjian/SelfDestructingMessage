@@ -34,6 +34,8 @@
     <EditText
         android:id="@+id/et_username"
         style="@style/EditText"
+        android:drawableLeft="@drawable/ic_content_person"
+        android:drawablePadding="8dp"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:layout_alignParentLeft="true"
@@ -45,6 +47,8 @@
     <EditText
         android:id="@+id/et_password"
         style="@style/EditText"
+        android:drawableLeft="@drawable/ic_content_password"
+        android:drawablePadding="8dp"
         android:hint="@string/hint_password"
         android:layout_alignLeft="@id/et_username"
         android:layout_alignRight="@id/et_username"

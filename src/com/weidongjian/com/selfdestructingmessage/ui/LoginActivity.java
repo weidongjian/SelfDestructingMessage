@@ -1,5 +1,9 @@
 package com.weidongjian.com.selfdestructingmessage.ui;
 
+import android.R.animator;
+import android.animation.Animator;
+import android.animation.AnimatorInflater;
+import android.animation.AnimatorListenerAdapter;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -53,12 +57,18 @@ public class LoginActivity extends Activity {
 		mLoginButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				v.startAnimation(AnimationUtils.loadAnimation(LoginActivity.this, R.anim.aa_btn));
-				
-				Handler handler = new Handler();
-				handler.postDelayed(new Runnable() {
+//				v.startAnimation(AnimationUtils.loadAnimation(LoginActivity.this, R.anim.aa_btn));
+				Animator anim = AnimatorInflater.loadAnimator(LoginActivity.this, R.anim.button_anim);
+				anim.setDuration(1000);
+				anim.setTarget(v);
+				anim.addListener(new AnimatorListenerAdapter() {
 					@Override
-					public void run() {
+					public void onAnimationEnd(Animator animation) {
+						super.onAnimationEnd(animation);
+						mLoginButton.setAlpha(1);
+						mLoginButton.setScaleX(1);
+						mLoginButton.setScaleY(1);
+						
 						String username = mUsername.getText().toString().trim();
 						String password = mPassword.getText().toString().trim();
 						
@@ -89,10 +99,8 @@ public class LoginActivity extends Activity {
 								});
 						}
 					}
-				}, 1000);
-				
-				
-				
+				});
+				anim.start();
 			}
 		});
 		
@@ -113,8 +121,9 @@ public class LoginActivity extends Activity {
 		mSingupTextView.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Intent intent = new Intent(LoginActivity.this, SingupActivity.class);
+				Intent intent = new Intent(LoginActivity.this, SignupActivity.class);
 				startActivity(intent);
+				overridePendingTransition(R.anim.right_in, R.anim.left_out);
 			}
 		});
 
