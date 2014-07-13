@@ -62,8 +62,10 @@ public class SignupActivity extends Activity {
 				Intent intent = new Intent(SignupActivity.this,
 						LoginActivity.class);
 				startActivity(intent);
+				if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.JELLY_BEAN) {
+					overridePendingTransition(R.anim.left_in, R.anim.right_out);
+				}
 				finish();
-				overridePendingTransition(R.anim.left_in, R.anim.right_out);
 			}
 		});
 

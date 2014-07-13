@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -11,6 +14,8 @@ import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.ListView;
 
 import com.parse.FindCallback;
@@ -32,23 +37,13 @@ public class InboxFragment extends ListFragment {
 	protected List<ParseObject> mMessage;
 	protected PullToRefreshListView listview;
 	protected int location;
+	private MessageAdapter adapter;
 //	protected MenuItem progressBar = null;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-//		setHasOptionsMenu(true);
 	}
-	
-//	@Override
-//	public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-//		inflater.inflate(R.menu.inbox_fragment, menu);
-//		if (menu != null) {
-//			progressBar = menu.findItem(R.id.progress_bar);
-//			progressBar.setActionView(R.layout.indeterminate_progress_bar);
-//		}
-//		super.onCreateOptionsMenu(menu, inflater);
-//	}
 	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -56,6 +51,27 @@ public class InboxFragment extends ListFragment {
 		View rootView = inflater.inflate(R.layout.fragment_inbox, container, false);
 		listview = (PullToRefreshListView) rootView.findViewById(android.R.id.list);
 		listview.setOnRefreshListener(refreshlistener);
+		listview.setOnItemLongClickListener(new OnItemLongClickListener() {
+			@Override
+			public boolean onItemLongClick(AdapterView<?> arg0, View arg1,
+					final int position, long id) {
+				new AlertDialog.Builder(getActivity())
+				.setTitle("Comfirmation")
+				.setMessage("The selected message will be deleted")
+				.setPositiveButton(android.R.string.ok, new OnClickListener() {
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						ParseObject message = mMessage.get(position);
+						deleteMessage(message);
+						adapter.remove(message);
+					}
+				})
+				.setNegativeButton(android.R.string.cancel, null)
+				.show();
+				return false;
+			}
+			
+		});
 		return rootView;
 	}
 	
@@ -91,7 +107,7 @@ public class InboxFragment extends ListFragment {
 					mMessage = messages;
 					
 //					if (getListView().getAdapter() == null) {
-						MessageAdapter adapter = new MessageAdapter(getListView().getContext(), mMessage);
+						adapter = new MessageAdapter(getListView().getContext(), mMessage);
 						setListAdapter(adapter);
 //					}
 //					else {
@@ -125,7 +141,10 @@ public class InboxFragment extends ListFragment {
 //		deleteMessage(message);
 	}
 	
+	
+	
 	private void deleteMessage(ParseObject message) {
+		
 		List<String> ids = message.getList(ParseConstant.KEY_RECEIVE_ID);
 		if (ids.size() == 1) {
 			message.deleteInBackground();

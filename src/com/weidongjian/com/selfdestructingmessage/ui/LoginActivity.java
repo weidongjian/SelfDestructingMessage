@@ -65,9 +65,6 @@ public class LoginActivity extends Activity {
 					@Override
 					public void onAnimationEnd(Animator animation) {
 						super.onAnimationEnd(animation);
-						mLoginButton.setAlpha(1);
-						mLoginButton.setScaleX(1);
-						mLoginButton.setScaleY(1);
 						
 						String username = mUsername.getText().toString().trim();
 						String password = mPassword.getText().toString().trim();
@@ -98,6 +95,10 @@ public class LoginActivity extends Activity {
 								  }
 								});
 						}
+						
+						mLoginButton.setAlpha(1);
+						mLoginButton.setScaleX(1);
+						mLoginButton.setScaleY(1);
 					}
 				});
 				anim.start();
@@ -123,7 +124,9 @@ public class LoginActivity extends Activity {
 			public void onClick(View v) {
 				Intent intent = new Intent(LoginActivity.this, SignupActivity.class);
 				startActivity(intent);
+				if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.JELLY_BEAN) {
 				overridePendingTransition(R.anim.right_in, R.anim.left_out);
+				}
 			}
 		});
 
@@ -155,6 +158,8 @@ public class LoginActivity extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
+	
+	
 	
 }
 
