@@ -5,6 +5,7 @@ import java.util.List;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
@@ -38,11 +39,13 @@ public class InboxFragment extends ListFragment {
 	protected PullToRefreshListView listview;
 	protected int location;
 	private MessageAdapter adapter;
+	protected ProgressDialog pd;
 //	protected MenuItem progressBar = null;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+//		pd.show(getActivity(), "loading", "please wait");
 	}
 	
 	@Override
@@ -89,17 +92,14 @@ public class InboxFragment extends ListFragment {
 //	}
 
 	public void retrieveMessages() {
-//		if (progressBar != null) {
-//			progressBar.setVisible(true);
-//		}
 		ParseQuery<ParseObject> query = new ParseQuery<ParseObject>(ParseConstant.CLASS_MESSAGE);
 		query.whereEqualTo(ParseConstant.KEY_RECEIVE_ID, ParseUser.getCurrentUser().getObjectId());
 		query.orderByDescending(ParseConstant.KEY_CREATED_AT);
 		query.findInBackground(new FindCallback<ParseObject>() {
 			@Override
 			public void done(List<ParseObject> messages, ParseException e) {
-//				if (progressBar != null && progressBar.isVisible()) {
-//					progressBar.setVisible(false);
+//				if (pd != null && pd.isShowing()) {
+//					pd.dismiss();
 //				}
 				getActivity().setProgressBarIndeterminateVisibility(false);
 				listview.onRefreshComplete();

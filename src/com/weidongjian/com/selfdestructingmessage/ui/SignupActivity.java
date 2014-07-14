@@ -99,10 +99,7 @@ public class SignupActivity extends Activity {
 					@Override
 					public void onAnimationEnd(Animator animation) {
 						super.onAnimationEnd(animation);
-						mSignupButton.setAlpha(1);
-						mSignupButton.setScaleX(1);
-						mSignupButton.setScaleY(1);
-
+						
 						String username = mUsername.getText().toString().trim();
 						String email = mEmail.getText().toString().trim();
 						String password = mPassword.getText().toString().trim();
@@ -116,6 +113,7 @@ public class SignupActivity extends Activity {
 									.setInverseBackgroundForced(true)
 									.setPositiveButton(android.R.string.ok,
 											null).show();
+							showSignUpButton();
 						} else {
 							final ParseUser user = new ParseUser();
 							user.setUsername(username);
@@ -146,6 +144,7 @@ public class SignupActivity extends Activity {
 												.setPositiveButton(
 														android.R.string.ok,
 														null).show();
+										showSignUpButton();
 									}
 								}
 							});
@@ -181,6 +180,12 @@ public class SignupActivity extends Activity {
 	public void onBackPressed() {
 		finish();
 		overridePendingTransition(R.anim.left_in, R.anim.right_out);
+	}
+
+	private void showSignUpButton() {
+		mSignupButton.setAlpha(1);
+		mSignupButton.setScaleX(1);
+		mSignupButton.setScaleY(1);
 	}
 
 }

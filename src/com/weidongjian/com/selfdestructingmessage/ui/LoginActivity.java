@@ -76,6 +76,8 @@ public class LoginActivity extends Activity {
 							.setInverseBackgroundForced(true)
 							.setPositiveButton(android.R.string.ok, null)
 							.show();
+							
+							showButton();
 						}
 						else {
 							ParseUser.logInInBackground(username, password, new LogInCallback() {
@@ -91,14 +93,12 @@ public class LoginActivity extends Activity {
 										.setInverseBackgroundForced(true)
 										.setPositiveButton(android.R.string.ok, null)
 										.show();
+								    	
+								    	showButton();
 								    }
 								  }
 								});
 						}
-						
-						mLoginButton.setAlpha(1);
-						mLoginButton.setScaleX(1);
-						mLoginButton.setScaleY(1);
 					}
 				});
 				anim.start();
@@ -158,9 +158,12 @@ public class LoginActivity extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
-	
-	
-	
+
+	private void showButton() {
+		mLoginButton.setAlpha(1);
+		mLoginButton.setScaleX(1);
+		mLoginButton.setScaleY(1);
+	}
 }
 
 
