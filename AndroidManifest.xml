@@ -31,7 +31,7 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="Message"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/Theme.Themeactionbar" >
         <activity
             android:name="com.weidongjian.com.selfdestructingmessage.ui.MainActivity"
             android:launchMode="singleTask"

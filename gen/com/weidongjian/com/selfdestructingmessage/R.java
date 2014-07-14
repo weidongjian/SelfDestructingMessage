@@ -66,54 +66,86 @@ public final class R {
     }
     public static final class drawable {
         public static final int ab_background_textured_ribbitthem=0x7f020000;
-        public static final int ab_bottom_solid_ribbitthem=0x7f020001;
-        public static final int ab_solid_ribbitthem=0x7f020002;
-        public static final int ab_stacked_solid_ribbitthem=0x7f020003;
-        public static final int ab_texture_tile_ribbitthem=0x7f020004;
-        public static final int ab_transparent_ribbitthem=0x7f020005;
-        public static final int bg_button=0x7f020006;
-        public static final int btn_cab_done_default_ribbitthem=0x7f020007;
-        public static final int btn_cab_done_focused_ribbitthem=0x7f020008;
-        public static final int btn_cab_done_pressed_ribbitthem=0x7f020009;
-        public static final int btn_cab_done_ribbitthem=0x7f02000a;
-        public static final int cab_background_bottom_ribbitthem=0x7f02000b;
-        public static final int cab_background_top_ribbitthem=0x7f02000c;
-        public static final int com_parse_ui_facebook_login_button_background_selector=0x7f02000d;
-        public static final int com_parse_ui_parse_login_button_background_selector=0x7f02000e;
-        public static final int com_parse_ui_twitter_login_button_background_selector=0x7f02000f;
-        public static final int ic_action_choice=0x7f020010;
-        public static final int ic_action_navigation_refresh=0x7f020011;
-        public static final int ic_action_send_now=0x7f020012;
-        public static final int ic_av_play=0x7f020013;
-        public static final int ic_content_email=0x7f020014;
-        public static final int ic_content_password=0x7f020015;
-        public static final int ic_content_person=0x7f020016;
-        public static final int ic_content_picture=0x7f020017;
-        public static final int ic_launcher=0x7f020018;
-        public static final int ic_social_person=0x7f020019;
-        public static final int iv_background_grid=0x7f02001a;
-        public static final int iv_friend_check=0x7f02001b;
-        public static final int list_focused_ribbitthem=0x7f02001c;
-        public static final int list_pressed_ribbitthem=0x7f02001d;
-        public static final int menu_dropdown_panel_ribbitthem=0x7f02001e;
-        public static final int progress_bg_ribbitthem=0x7f02001f;
-        public static final int progress_horizontal_ribbitthem=0x7f020020;
-        public static final int progress_primary_ribbitthem=0x7f020021;
-        public static final int progress_secondary_ribbitthem=0x7f020022;
-        public static final int ptr_pulltorefresh_arrow=0x7f020023;
-        public static final int selectable_background_ribbitthem=0x7f020024;
-        public static final int spinner_ab_default_ribbitthem=0x7f020025;
-        public static final int spinner_ab_disabled_ribbitthem=0x7f020026;
-        public static final int spinner_ab_focused_ribbitthem=0x7f020027;
-        public static final int spinner_ab_pressed_ribbitthem=0x7f020028;
-        public static final int spinner_background_ab_ribbitthem=0x7f020029;
-        public static final int tab_indicator_ab_ribbitthem=0x7f02002a;
-        public static final int tab_selected_focused_ribbitthem=0x7f02002b;
-        public static final int tab_selected_pressed_ribbitthem=0x7f02002c;
-        public static final int tab_selected_ribbitthem=0x7f02002d;
-        public static final int tab_unselected_focused_ribbitthem=0x7f02002e;
-        public static final int tab_unselected_pressed_ribbitthem=0x7f02002f;
-        public static final int tab_unselected_ribbitthem=0x7f020030;
+        public static final int ab_background_textured_themeactionbar=0x7f020001;
+        public static final int ab_bottom_solid_ribbitthem=0x7f020002;
+        public static final int ab_bottom_solid_themeactionbar=0x7f020003;
+        public static final int ab_solid_ribbitthem=0x7f020004;
+        public static final int ab_solid_themeactionbar=0x7f020005;
+        public static final int ab_stacked_solid_ribbitthem=0x7f020006;
+        public static final int ab_stacked_solid_themeactionbar=0x7f020007;
+        public static final int ab_texture_tile_ribbitthem=0x7f020008;
+        public static final int ab_texture_tile_themeactionbar=0x7f020009;
+        public static final int ab_transparent_ribbitthem=0x7f02000a;
+        public static final int ab_transparent_themeactionbar=0x7f02000b;
+        public static final int bg_button=0x7f02000c;
+        public static final int btn_cab_done_default_ribbitthem=0x7f02000d;
+        public static final int btn_cab_done_default_themeactionbar=0x7f02000e;
+        public static final int btn_cab_done_focused_ribbitthem=0x7f02000f;
+        public static final int btn_cab_done_focused_themeactionbar=0x7f020010;
+        public static final int btn_cab_done_pressed_ribbitthem=0x7f020011;
+        public static final int btn_cab_done_pressed_themeactionbar=0x7f020012;
+        public static final int btn_cab_done_ribbitthem=0x7f020013;
+        public static final int btn_cab_done_themeactionbar=0x7f020014;
+        public static final int cab_background_bottom_ribbitthem=0x7f020015;
+        public static final int cab_background_bottom_themeactionbar=0x7f020016;
+        public static final int cab_background_top_ribbitthem=0x7f020017;
+        public static final int cab_background_top_themeactionbar=0x7f020018;
+        public static final int com_parse_ui_facebook_login_button_background_selector=0x7f020019;
+        public static final int com_parse_ui_parse_login_button_background_selector=0x7f02001a;
+        public static final int com_parse_ui_twitter_login_button_background_selector=0x7f02001b;
+        public static final int ic_action_choice=0x7f02001c;
+        public static final int ic_action_navigation_refresh=0x7f02001d;
+        public static final int ic_action_send_now=0x7f02001e;
+        public static final int ic_av_play=0x7f02001f;
+        public static final int ic_content_email=0x7f020020;
+        public static final int ic_content_password=0x7f020021;
+        public static final int ic_content_person=0x7f020022;
+        public static final int ic_content_picture=0x7f020023;
+        public static final int ic_launcher=0x7f020024;
+        public static final int ic_social_person=0x7f020025;
+        public static final int iv_background_grid=0x7f020026;
+        public static final int iv_friend_check=0x7f020027;
+        public static final int list_focused_ribbitthem=0x7f020028;
+        public static final int list_focused_themeactionbar=0x7f020029;
+        public static final int list_pressed_ribbitthem=0x7f02002a;
+        public static final int list_pressed_themeactionbar=0x7f02002b;
+        public static final int menu_dropdown_panel_ribbitthem=0x7f02002c;
+        public static final int menu_dropdown_panel_themeactionbar=0x7f02002d;
+        public static final int progress_bg_ribbitthem=0x7f02002e;
+        public static final int progress_bg_themeactionbar=0x7f02002f;
+        public static final int progress_horizontal_ribbitthem=0x7f020030;
+        public static final int progress_horizontal_themeactionbar=0x7f020031;
+        public static final int progress_primary_ribbitthem=0x7f020032;
+        public static final int progress_primary_themeactionbar=0x7f020033;
+        public static final int progress_secondary_ribbitthem=0x7f020034;
+        public static final int progress_secondary_themeactionbar=0x7f020035;
+        public static final int ptr_pulltorefresh_arrow=0x7f020036;
+        public static final int selectable_background_ribbitthem=0x7f020037;
+        public static final int selectable_background_themeactionbar=0x7f020038;
+        public static final int spinner_ab_default_ribbitthem=0x7f020039;
+        public static final int spinner_ab_default_themeactionbar=0x7f02003a;
+        public static final int spinner_ab_disabled_ribbitthem=0x7f02003b;
+        public static final int spinner_ab_disabled_themeactionbar=0x7f02003c;
+        public static final int spinner_ab_focused_ribbitthem=0x7f02003d;
+        public static final int spinner_ab_focused_themeactionbar=0x7f02003e;
+        public static final int spinner_ab_pressed_ribbitthem=0x7f02003f;
+        public static final int spinner_ab_pressed_themeactionbar=0x7f020040;
+        public static final int spinner_background_ab_ribbitthem=0x7f020041;
+        public static final int spinner_background_ab_themeactionbar=0x7f020042;
+        public static final int tab_indicator_ab_ribbitthem=0x7f020043;
+        public static final int tab_indicator_ab_themeactionbar=0x7f020044;
+        public static final int tab_selected_focused_ribbitthem=0x7f020045;
+        public static final int tab_selected_focused_themeactionbar=0x7f020046;
+        public static final int tab_selected_pressed_ribbitthem=0x7f020047;
+        public static final int tab_selected_pressed_themeactionbar=0x7f020048;
+        public static final int tab_selected_ribbitthem=0x7f020049;
+        public static final int tab_selected_themeactionbar=0x7f02004a;
+        public static final int tab_unselected_focused_ribbitthem=0x7f02004b;
+        public static final int tab_unselected_focused_themeactionbar=0x7f02004c;
+        public static final int tab_unselected_pressed_ribbitthem=0x7f02004d;
+        public static final int tab_unselected_pressed_themeactionbar=0x7f02004e;
+        public static final int tab_unselected_ribbitthem=0x7f02004f;
+        public static final int tab_unselected_themeactionbar=0x7f020050;
     }
     public static final class id {
         public static final int action_choice=0x7f0c001d;
@@ -255,13 +287,15 @@ public final class R {
         public static final int title_section3=0x7f060007;
     }
     public static final class style {
-        public static final int ActionBar_Solid_Ribbitthem=0x7f05000a;
-        public static final int ActionBar_Transparent_Ribbitthem=0x7f05000b;
-        public static final int ActionBarTabStyle_Ribbitthem=0x7f05000e;
-        public static final int ActionButton_CloseMode_Ribbitthem=0x7f050012;
+        public static final int ActionBar_Solid_Themeactionbar=0x7f050012;
+        public static final int ActionBar_Transparent_Themeactionbar=0x7f050013;
+        public static final int ActionBarTabStyle_Themeactionbar=0x7f050016;
+        public static final int ActionButton_CloseMode_Themeactionbar=0x7f050019;
         /** 
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+
+
 
 
     
@@ -285,33 +319,25 @@ public final class R {
  API 14 theme customizations can go here. 
          */
         public static final int AppBaseTheme=0x7f050007;
-        /**  Application theme. 
- All customizations that are NOT specific to a particular API-level can go here. 
-         */
         public static final int AppTheme=0x7f050008;
-        public static final int DropDownListView_Ribbitthem=0x7f05000d;
-        public static final int DropDownNav_Ribbitthem=0x7f050010;
-        public static final int EditText=0x7f050015;
-        public static final int Globle=0x7f050014;
-        public static final int GridView=0x7f050018;
-        public static final int IndeterminateProgress=0x7f05000f;
-        /**  add from parse ui 
+        public static final int DropDownListView_Themeactionbar=0x7f050015;
+        public static final int DropDownNav_Themeactionbar=0x7f050017;
+        public static final int EditText=0x7f05000c;
+        public static final int Globle=0x7f05000b;
+        public static final int GridView=0x7f05000f;
+        public static final int IndeterminateProgress=0x7f05000a;
+        public static final int MyActionBarTabText=0x7f050009;
+        public static final int PopupMenu_Themeactionbar=0x7f050014;
+        public static final int ProgressBar_Themeactionbar=0x7f050018;
+        public static final int TextView=0x7f05000d;
+        public static final int TextView_subtitle=0x7f05000e;
+        /**  add from android asset studio 
          */
-        public static final int ParseLoginUI=0x7f05001a;
-        public static final int ParseLoginUI_Button=0x7f05001b;
-        public static final int ParseLoginUI_Button_ThirdPartyLogin=0x7f05001c;
-        public static final int ParseLoginUI_EditText=0x7f05001f;
-        public static final int ParseLoginUI_HelpButton=0x7f05001d;
-        public static final int ParseLoginUI_TextView=0x7f05001e;
-        public static final int PopupMenu_Ribbitthem=0x7f05000c;
-        public static final int ProgressBar_Ribbitthem=0x7f050011;
-        public static final int TextView=0x7f050016;
-        public static final int TextView_subtitle=0x7f050017;
-        public static final int Theme_Ribbitthem=0x7f050009;
+        public static final int Theme_Themeactionbar=0x7f050011;
         /**  this style is only referenced in a Light.DarkActionBar based theme 
          */
-        public static final int Theme_Ribbitthem_Widget=0x7f050013;
-        public static final int button=0x7f050019;
+        public static final int Theme_Themeactionbar_Widget=0x7f05001a;
+        public static final int button=0x7f050010;
         public static final int ptr_arrow=0x7f050002;
         public static final int ptr_header=0x7f050001;
         public static final int ptr_headerContainer=0x7f050000;
