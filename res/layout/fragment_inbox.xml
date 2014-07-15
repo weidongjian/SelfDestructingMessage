@@ -21,6 +21,5 @@
         style="@style/TextView"
         android:text="No message"
         />
-    
 
 </LinearLayout>
