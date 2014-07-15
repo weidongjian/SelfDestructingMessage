@@ -23,6 +23,7 @@ int color com_parse_ui_parse_login_text_hint 0x7f070009
 int color com_parse_ui_twitter_login_button 0x7f07000e
 int color com_parse_ui_twitter_login_button_focus 0x7f070010
 int color com_parse_ui_twitter_login_button_push 0x7f07000f
+int color tab_text_color 0x7f070012
 int dimen activity_horizontal_margin 0x7f080000
 int dimen activity_vertical_margin 0x7f080001
 int dimen com_parse_ui_horizontal_margin 0x7f080003

@@ -42,6 +42,7 @@ public final class R {
         public static final int com_parse_ui_twitter_login_button=0x7f07000e;
         public static final int com_parse_ui_twitter_login_button_focus=0x7f070010;
         public static final int com_parse_ui_twitter_login_button_push=0x7f07000f;
+        public static final int tab_text_color=0x7f070012;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 

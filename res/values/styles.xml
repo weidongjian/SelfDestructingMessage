@@ -18,7 +18,7 @@
     </style>
 
     <style name="MyActionBarTabText" parent="@android:style/Widget.Holo.ActionBar.TabText">
-        <item name="android:textColor">#669900</item>
+        <item name="android:textColor">@color/tab_text_color</item>
     </style>
 
     <style name="IndeterminateProgress" parent="@android:style/Widget.Holo.ProgressBar.Small">
