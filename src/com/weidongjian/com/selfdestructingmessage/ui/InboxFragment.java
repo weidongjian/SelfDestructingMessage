@@ -25,6 +25,7 @@ import com.parse.ParseFile;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
+import com.weidongjian.com.selfdestructingmessage.Message;
 import com.weidongjian.com.selfdestructingmessage.ParseConstant;
 import com.weidongjian.com.selfdestructingmessage.R;
 import com.weidongjian.com.selfdestructingmessage.adapter.MessageAdapter;
@@ -36,6 +37,7 @@ import eu.erikw.PullToRefreshListView.OnRefreshListener;
 public class InboxFragment extends ListFragment {
 	public static final int REQUEST_CODE_VIEW_IMAGE = 0;
 	protected List<ParseObject> mMessage;
+	protected List<Message> mMessages;
 	protected PullToRefreshListView listview;
 	protected int location;
 	private MessageAdapter adapter;

@@ -20,11 +20,13 @@ import android.support.v13.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Window;
 import android.widget.Toast;
 
+import com.astuetz.PagerSlidingTabStrip;
 import com.parse.ParseUser;
 import com.weidongjian.com.selfdestructingmessage.ParseConstant;
 import com.weidongjian.com.selfdestructingmessage.R;
@@ -84,6 +86,16 @@ public class MainActivity extends FragmentActivity implements
 		// Set up the ViewPager with the sections adapter.
 		mViewPager = (ViewPager) findViewById(R.id.pager);
 		mViewPager.setAdapter(mSectionsPagerAdapter);
+		
+//		PagerSlidingTabStrip tabs = (PagerSlidingTabStrip) findViewById(R.id.tabs);  
+//		final int pageMargin = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 4, getResources()  
+//                .getDisplayMetrics());  
+//        mViewPager.setPageMargin(pageMargin);  
+//  
+//        tabs.setViewPager(mViewPager);  
+//		PagerSlidingTabStrip tabs = (PagerSlidingTabStrip) findViewById(R.id.tabs);
+//		 tabs.setViewPager(mViewPager);
+  
 
 		// When swiping between different sections, select the corresponding
 		// tab. We can also use ActionBar.Tab#select() to do this if we have
@@ -120,7 +132,6 @@ public class MainActivity extends FragmentActivity implements
 		// Inflate the menu; this adds items to the action bar if it is present.
 		this.optionMenu = menu;
 		getMenuInflater().inflate(R.menu.main, menu);
-		optionMenu.findItem(R.id.progress_bar).setActionView(R.layout.indeterminate_progress_bar);
 		return true;
 	}
 
@@ -140,7 +151,7 @@ public class MainActivity extends FragmentActivity implements
 					.setTitle("Create message")
 					.setItems(R.array.action_choice, mListener)
 					.setInverseBackgroundForced(true)
-					.setPositiveButton(android.R.string.ok, null).show();
+					.setNegativeButton(android.R.string.cancel, null).show();
 			break;
 		case R.id.action_edit_friends:
 			Intent editFriendsIntent = new Intent(MainActivity.this,

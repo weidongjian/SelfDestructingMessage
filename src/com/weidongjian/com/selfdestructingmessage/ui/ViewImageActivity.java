@@ -2,6 +2,7 @@ package com.weidongjian.com.selfdestructingmessage.ui;
 
 import android.app.ActionBar;
 import android.app.Activity;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -52,6 +53,8 @@ public class ViewImageActivity extends Activity {
 					@Override
 					public void onFinish() {
 						Toast.makeText(ViewImageActivity.this, "The selected message is deleted.", Toast.LENGTH_LONG).show();
+						Intent intent = new Intent(ViewImageActivity.this, MainActivity.class);
+						startActivity(intent);
 						finish();
 					}
 				}.start();

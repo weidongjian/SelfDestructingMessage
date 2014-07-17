@@ -2,12 +2,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.weidongjian.com.selfdestructingmessage.ui.MainActivity" >
     
-    <item android:id="@+id/progress_bar"
-        android:orderInCategory="1"
-        android:showAsAction="always"
-        android:title="refresh"
-        android:visible="true"/>
-
     <item
         android:id="@+id/action_logout"
         android:orderInCategory="100"
