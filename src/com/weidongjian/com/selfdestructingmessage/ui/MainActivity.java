@@ -12,6 +12,7 @@ import android.app.AlertDialog;
 import android.app.FragmentTransaction;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -19,6 +20,7 @@ import android.provider.MediaStore;
 import android.support.v13.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.Menu;
@@ -32,8 +34,7 @@ import com.weidongjian.com.selfdestructingmessage.ParseConstant;
 import com.weidongjian.com.selfdestructingmessage.R;
 import com.weidongjian.com.selfdestructingmessage.adapter.SectionsPagerAdapter;
 
-public class MainActivity extends FragmentActivity implements
-		ActionBar.TabListener {
+public class MainActivity extends FragmentActivity  {
 
 	/**
 	 * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -57,6 +58,8 @@ public class MainActivity extends FragmentActivity implements
 	public static final int REQUEST_CODE_CHOOSE_VIDEO = 3;
 	public static final int MEDIA_TYPE_IMAGE = 4;
 	public static final int MEDIA_TYPE_VIDEO = 5;
+	private PagerSlidingTabStrip tabs;
+	private DisplayMetrics dm;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -76,7 +79,7 @@ public class MainActivity extends FragmentActivity implements
 
 		// Set up the action bar.
 		final ActionBar actionBar = getActionBar();
-		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+//		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
 		// Create the adapter that will return a fragment for each of the three
 		// primary sections of the activity.
@@ -109,15 +112,42 @@ public class MainActivity extends FragmentActivity implements
 				});
 
 		// For each of the sections in the app, add a tab to the action bar.
-		for (int i = 0; i < mSectionsPagerAdapter.getCount(); i++) {
-			// Create a tab with text corresponding to the page title defined by
-			// the adapter. Also specify this Activity object, which implements
-			// the TabListener interface, as the callback (listener) for when
-			// this tab is selected.
-			actionBar.addTab(actionBar.newTab()
-					.setText(mSectionsPagerAdapter.getPageTitle(i))
-					.setTabListener(this));
-		}
+//		for (int i = 0; i < mSectionsPagerAdapter.getCount(); i++) {
+//			// Create a tab with text corresponding to the page title defined by
+//			// the adapter. Also specify this Activity object, which implements
+//			// the TabListener interface, as the callback (listener) for when
+//			// this tab is selected.
+//			actionBar.addTab(actionBar.newTab()
+//					.setText(mSectionsPagerAdapter.getPageTitle(i))
+//					.setTabListener(this));
+//		}
+		
+		dm = getResources().getDisplayMetrics();
+		tabs = (PagerSlidingTabStrip) findViewById(R.id.tabs);
+		tabs.setViewPager(mViewPager);
+		setTabsValue();
+	}
+	
+	private void setTabsValue() {
+		// 设置Tab是自动填充满屏幕的
+		tabs.setShouldExpand(true);
+		// 设置Tab的分割线是透明的
+		tabs.setDividerColor(Color.TRANSPARENT);
+		// 设置Tab底部线的高度
+		tabs.setUnderlineHeight((int) TypedValue.applyDimension(
+				TypedValue.COMPLEX_UNIT_DIP, 1, dm));
+		// 设置Tab Indicator的高度
+		tabs.setIndicatorHeight((int) TypedValue.applyDimension(
+				TypedValue.COMPLEX_UNIT_DIP, 4, dm));
+		// 设置Tab标题文字的大小
+		tabs.setTextSize((int) TypedValue.applyDimension(
+				TypedValue.COMPLEX_UNIT_SP, 16, dm));
+		// 设置Tab Indicator的颜色
+		tabs.setIndicatorColor(Color.parseColor("#45c01a"));
+		// 设置选中Tab文字的颜色 (这是我自定义的一个方法)
+		tabs.setSelectedTextColor(Color.parseColor("#45c01a"));
+		// 取消点击Tab时的背景色
+		tabs.setTabBackground(0);
 	}
 
 	private void navigateToLogin() {
@@ -163,23 +193,23 @@ public class MainActivity extends FragmentActivity implements
 		return super.onOptionsItemSelected(item);
 	}
 
-	@Override
-	public void onTabSelected(ActionBar.Tab tab,
-			FragmentTransaction fragmentTransaction) {
-		// When the given tab is selected, switch to the corresponding page in
-		// the ViewPager.
-		mViewPager.setCurrentItem(tab.getPosition());
-	}
+//	@Override
+//	public void onTabSelected(ActionBar.Tab tab,
+//			FragmentTransaction fragmentTransaction) {
+//		// When the given tab is selected, switch to the corresponding page in
+//		// the ViewPager.
+//		mViewPager.setCurrentItem(tab.getPosition());
+//	}
 
-	@Override
-	public void onTabUnselected(ActionBar.Tab tab,
-			FragmentTransaction fragmentTransaction) {
-	}
-
-	@Override
-	public void onTabReselected(ActionBar.Tab tab,
-			FragmentTransaction fragmentTransaction) {
-	}
+//	@Override
+//	public void onTabUnselected(ActionBar.Tab tab,
+//			FragmentTransaction fragmentTransaction) {
+//	}
+//
+//	@Override
+//	public void onTabReselected(ActionBar.Tab tab,
+//			FragmentTransaction fragmentTransaction) {
+//	}
 
 	DialogInterface.OnClickListener mListener = new DialogInterface.OnClickListener() {
 		@Override

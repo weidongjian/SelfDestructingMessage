@@ -119,28 +119,28 @@ containing a value of this type.
         public static final int pstsUnderlineHeight=0x7f010004;
     }
     public static final class color {
-        public static final int Text=0x7f050001;
-        public static final int background_activity=0x7f050002;
-        public static final int background_editText=0x7f050003;
-        public static final int background_tab_pressed=0x7f050000;
-        public static final int com_parse_ui_facebook_login_button=0x7f05000c;
-        public static final int com_parse_ui_facebook_login_button_focus=0x7f05000e;
-        public static final int com_parse_ui_facebook_login_button_push=0x7f05000d;
+        public static final int Text=0x7f070000;
+        public static final int background_activity=0x7f070001;
+        public static final int background_editText=0x7f070002;
+        public static final int background_tab_pressed=0x7f070011;
+        public static final int com_parse_ui_facebook_login_button=0x7f07000b;
+        public static final int com_parse_ui_facebook_login_button_focus=0x7f07000d;
+        public static final int com_parse_ui_facebook_login_button_push=0x7f07000c;
         /**  add from parse login ui 
          */
-        public static final int com_parse_ui_parse_login_button=0x7f050004;
-        public static final int com_parse_ui_parse_login_button_focus=0x7f050006;
-        public static final int com_parse_ui_parse_login_button_push=0x7f050005;
-        public static final int com_parse_ui_parse_login_display_text=0x7f05000b;
-        public static final int com_parse_ui_parse_login_help_button_label=0x7f050007;
-        public static final int com_parse_ui_parse_login_help_button_label_focus=0x7f050009;
-        public static final int com_parse_ui_parse_login_help_button_label_push=0x7f050008;
-        public static final int com_parse_ui_parse_login_help_button_label_selector=0x7f050012;
-        public static final int com_parse_ui_parse_login_text_hint=0x7f05000a;
-        public static final int com_parse_ui_twitter_login_button=0x7f05000f;
-        public static final int com_parse_ui_twitter_login_button_focus=0x7f050011;
-        public static final int com_parse_ui_twitter_login_button_push=0x7f050010;
-        public static final int tab_text_color=0x7f050013;
+        public static final int com_parse_ui_parse_login_button=0x7f070003;
+        public static final int com_parse_ui_parse_login_button_focus=0x7f070005;
+        public static final int com_parse_ui_parse_login_button_push=0x7f070004;
+        public static final int com_parse_ui_parse_login_display_text=0x7f07000a;
+        public static final int com_parse_ui_parse_login_help_button_label=0x7f070006;
+        public static final int com_parse_ui_parse_login_help_button_label_focus=0x7f070008;
+        public static final int com_parse_ui_parse_login_help_button_label_push=0x7f070007;
+        public static final int com_parse_ui_parse_login_help_button_label_selector=0x7f070012;
+        public static final int com_parse_ui_parse_login_text_hint=0x7f070009;
+        public static final int com_parse_ui_twitter_login_button=0x7f07000e;
+        public static final int com_parse_ui_twitter_login_button_focus=0x7f070010;
+        public static final int com_parse_ui_twitter_login_button_push=0x7f07000f;
+        public static final int tab_text_color=0x7f070013;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -251,37 +251,38 @@ containing a value of this type.
         public static final int tab_unselected_themeactionbar=0x7f020054;
     }
     public static final class id {
-        public static final int action_choice=0x7f0c001d;
-        public static final int action_edit_friends=0x7f0c001e;
-        public static final int action_logout=0x7f0c001c;
-        public static final int action_send=0x7f0c001f;
-        public static final int action_settings=0x7f0c001b;
+        public static final int action_choice=0x7f0c001e;
+        public static final int action_edit_friends=0x7f0c001f;
+        public static final int action_logout=0x7f0c001d;
+        public static final int action_send=0x7f0c0020;
+        public static final int action_settings=0x7f0c001c;
         public static final int bt_login=0x7f0c0005;
-        public static final int bt_singup=0x7f0c0009;
+        public static final int bt_singup=0x7f0c000a;
         public static final int cb_show_password=0x7f0c0004;
-        public static final int et_email=0x7f0c0008;
+        public static final int et_email=0x7f0c0009;
         public static final int et_password=0x7f0c0003;
         public static final int et_username=0x7f0c0002;
-        public static final int gv_friends=0x7f0c000d;
-        public static final int iv_background_grid=0x7f0c0017;
-        public static final int iv_check_grid=0x7f0c0018;
-        public static final int iv_file_type=0x7f0c0010;
-        public static final int iv_view_image=0x7f0c000b;
-        public static final int pager=0x7f0c0007;
-        public static final int progress_bar=0x7f0c001a;
-        public static final int ptr_id_header=0x7f0c0011;
-        public static final int ptr_id_image=0x7f0c0012;
-        public static final int ptr_id_last_updated=0x7f0c0016;
-        public static final int ptr_id_spinner=0x7f0c0013;
-        public static final int ptr_id_text=0x7f0c0015;
-        public static final int ptr_id_textwrapper=0x7f0c0014;
-        public static final int tv_back_to_login=0x7f0c000a;
-        public static final int tv_created_at=0x7f0c000f;
-        public static final int tv_friend_name=0x7f0c0019;
-        public static final int tv_sender_name=0x7f0c000e;
+        public static final int gv_friends=0x7f0c000e;
+        public static final int iv_background_grid=0x7f0c0018;
+        public static final int iv_check_grid=0x7f0c0019;
+        public static final int iv_file_type=0x7f0c0011;
+        public static final int iv_view_image=0x7f0c000c;
+        public static final int pager=0x7f0c0008;
+        public static final int progress_bar=0x7f0c001b;
+        public static final int ptr_id_header=0x7f0c0012;
+        public static final int ptr_id_image=0x7f0c0013;
+        public static final int ptr_id_last_updated=0x7f0c0017;
+        public static final int ptr_id_spinner=0x7f0c0014;
+        public static final int ptr_id_text=0x7f0c0016;
+        public static final int ptr_id_textwrapper=0x7f0c0015;
+        public static final int tabs=0x7f0c0007;
+        public static final int tv_back_to_login=0x7f0c000b;
+        public static final int tv_created_at=0x7f0c0010;
+        public static final int tv_friend_name=0x7f0c001a;
+        public static final int tv_sender_name=0x7f0c000f;
         public static final int tv_singup=0x7f0c0006;
         public static final int tv_subtitle=0x7f0c0001;
-        public static final int tv_time_conuntDown=0x7f0c000c;
+        public static final int tv_time_conuntDown=0x7f0c000d;
         public static final int tv_title=0x7f0c0000;
     }
     public static final class layout {
@@ -308,92 +309,92 @@ containing a value of this type.
         public static final int com_parse_ui_password_too_short_toast=0x7f0a0000;
     }
     public static final class string {
-        public static final int action_logout=0x7f070013;
-        public static final int action_send=0x7f070019;
-        public static final int action_settings=0x7f070008;
-        public static final int app_name=0x7f070004;
-        public static final int choice=0x7f070018;
-        public static final int com_parse_ui_confirm_password_input_hint=0x7f070026;
-        public static final int com_parse_ui_create_account_button_label=0x7f070028;
-        public static final int com_parse_ui_email_input_hint=0x7f070025;
-        public static final int com_parse_ui_email_taken_toast=0x7f070034;
-        public static final int com_parse_ui_facebook_login_button_label=0x7f070023;
-        public static final int com_parse_ui_facebook_login_failed_toast=0x7f07002d;
-        public static final int com_parse_ui_forgot_password_button_label=0x7f070020;
-        public static final int com_parse_ui_invalid_email_toast=0x7f070033;
-        public static final int com_parse_ui_login_dispatch_user_logged_in=0x7f07004c;
-        public static final int com_parse_ui_login_dispatch_user_not_logged_in=0x7f07004d;
-        public static final int com_parse_ui_login_help_email_input_hint=0x7f070038;
-        public static final int com_parse_ui_login_help_email_sent=0x7f07003c;
-        public static final int com_parse_ui_login_help_instructions=0x7f070037;
-        public static final int com_parse_ui_login_help_login_again_button_label=0x7f07003a;
-        public static final int com_parse_ui_login_help_submit_button_label=0x7f070039;
-        public static final int com_parse_ui_login_help_submit_failed_unknown=0x7f07003b;
-        public static final int com_parse_ui_login_warning_disabled_facebook_login=0x7f070043;
-        public static final int com_parse_ui_login_warning_disabled_twitter_login=0x7f070044;
-        public static final int com_parse_ui_login_warning_disabled_username_password_login=0x7f070042;
-        public static final int com_parse_ui_login_warning_facebook_login_failed=0x7f070046;
-        public static final int com_parse_ui_login_warning_facebook_login_user_update_failed=0x7f070048;
-        public static final int com_parse_ui_login_warning_layout_missing_login_button=0x7f07003f;
-        public static final int com_parse_ui_login_warning_layout_missing_login_help_button=0x7f070041;
-        public static final int com_parse_ui_login_warning_layout_missing_password_field=0x7f07003e;
-        public static final int com_parse_ui_login_warning_layout_missing_signup_button=0x7f070040;
-        public static final int com_parse_ui_login_warning_layout_missing_username_field=0x7f07003d;
-        public static final int com_parse_ui_login_warning_parse_login_failed=0x7f070045;
-        public static final int com_parse_ui_login_warning_parse_signup_failed=0x7f07004a;
-        public static final int com_parse_ui_login_warning_password_reset_failed=0x7f07004b;
-        public static final int com_parse_ui_login_warning_twitter_login_failed=0x7f070047;
-        public static final int com_parse_ui_login_warning_twitter_login_user_update_failed=0x7f070049;
+        public static final int action_logout=0x7f060013;
+        public static final int action_send=0x7f060019;
+        public static final int action_settings=0x7f060008;
+        public static final int app_name=0x7f060004;
+        public static final int choice=0x7f060018;
+        public static final int com_parse_ui_confirm_password_input_hint=0x7f060026;
+        public static final int com_parse_ui_create_account_button_label=0x7f060028;
+        public static final int com_parse_ui_email_input_hint=0x7f060025;
+        public static final int com_parse_ui_email_taken_toast=0x7f060034;
+        public static final int com_parse_ui_facebook_login_button_label=0x7f060023;
+        public static final int com_parse_ui_facebook_login_failed_toast=0x7f06002d;
+        public static final int com_parse_ui_forgot_password_button_label=0x7f060020;
+        public static final int com_parse_ui_invalid_email_toast=0x7f060033;
+        public static final int com_parse_ui_login_dispatch_user_logged_in=0x7f06004c;
+        public static final int com_parse_ui_login_dispatch_user_not_logged_in=0x7f06004d;
+        public static final int com_parse_ui_login_help_email_input_hint=0x7f060038;
+        public static final int com_parse_ui_login_help_email_sent=0x7f06003c;
+        public static final int com_parse_ui_login_help_instructions=0x7f060037;
+        public static final int com_parse_ui_login_help_login_again_button_label=0x7f06003a;
+        public static final int com_parse_ui_login_help_submit_button_label=0x7f060039;
+        public static final int com_parse_ui_login_help_submit_failed_unknown=0x7f06003b;
+        public static final int com_parse_ui_login_warning_disabled_facebook_login=0x7f060043;
+        public static final int com_parse_ui_login_warning_disabled_twitter_login=0x7f060044;
+        public static final int com_parse_ui_login_warning_disabled_username_password_login=0x7f060042;
+        public static final int com_parse_ui_login_warning_facebook_login_failed=0x7f060046;
+        public static final int com_parse_ui_login_warning_facebook_login_user_update_failed=0x7f060048;
+        public static final int com_parse_ui_login_warning_layout_missing_login_button=0x7f06003f;
+        public static final int com_parse_ui_login_warning_layout_missing_login_help_button=0x7f060041;
+        public static final int com_parse_ui_login_warning_layout_missing_password_field=0x7f06003e;
+        public static final int com_parse_ui_login_warning_layout_missing_signup_button=0x7f060040;
+        public static final int com_parse_ui_login_warning_layout_missing_username_field=0x7f06003d;
+        public static final int com_parse_ui_login_warning_parse_login_failed=0x7f060045;
+        public static final int com_parse_ui_login_warning_parse_signup_failed=0x7f06004a;
+        public static final int com_parse_ui_login_warning_password_reset_failed=0x7f06004b;
+        public static final int com_parse_ui_login_warning_twitter_login_failed=0x7f060047;
+        public static final int com_parse_ui_login_warning_twitter_login_user_update_failed=0x7f060049;
         /**  add from parse ui 
          */
-        public static final int com_parse_ui_logo_content_description=0x7f07001c;
-        public static final int com_parse_ui_mismatch_confirm_password_toast=0x7f070031;
-        public static final int com_parse_ui_name_input_hint=0x7f070027;
-        public static final int com_parse_ui_no_email_toast=0x7f070032;
-        public static final int com_parse_ui_no_name_toast=0x7f070035;
-        public static final int com_parse_ui_no_password_toast=0x7f07002a;
-        public static final int com_parse_ui_no_username_toast=0x7f070029;
-        public static final int com_parse_ui_parse_login_button_label=0x7f070021;
-        public static final int com_parse_ui_parse_login_failed_unknown_toast=0x7f07002c;
-        public static final int com_parse_ui_parse_login_invalid_credentials_toast=0x7f07002b;
-        public static final int com_parse_ui_parse_signup_button_label=0x7f070022;
-        public static final int com_parse_ui_password_input_hint=0x7f07001f;
-        public static final int com_parse_ui_progress_dialog_text=0x7f07001d;
-        public static final int com_parse_ui_reenter_password_toast=0x7f070030;
-        public static final int com_parse_ui_signup_failed_unknown_toast=0x7f070036;
-        public static final int com_parse_ui_twitter_login_button_label=0x7f070024;
-        public static final int com_parse_ui_twitter_login_failed_toast=0x7f07002e;
-        public static final int com_parse_ui_username_input_hint=0x7f07001e;
-        public static final int com_parse_ui_username_taken_toast=0x7f07002f;
-        public static final int hello_world=0x7f07000a;
-        public static final int hint_email=0x7f070015;
-        public static final int hint_password=0x7f070014;
-        public static final int hint_username=0x7f070010;
-        public static final int login=0x7f07000e;
-        public static final int login_subtilte=0x7f07000f;
-        public static final int message_back_to_login=0x7f070016;
-        public static final int message_singup=0x7f070012;
-        public static final int ptr_last_updated=0x7f070003;
-        public static final int ptr_pull_to_refresh=0x7f070000;
-        public static final int ptr_refreshing=0x7f070002;
-        public static final int ptr_release_to_refresh=0x7f070001;
-        public static final int show_password=0x7f070011;
-        public static final int signup=0x7f070017;
-        public static final int tab_title_friend=0x7f07000c;
-        public static final int tab_title_inbox=0x7f07000b;
-        public static final int time_countDown=0x7f07001a;
-        public static final int title_activity_inbox_fragment=0x7f070009;
-        public static final int title_activity_login=0x7f07000d;
-        public static final int title_main_actionbar=0x7f07001b;
-        public static final int title_section1=0x7f070005;
-        public static final int title_section2=0x7f070006;
-        public static final int title_section3=0x7f070007;
+        public static final int com_parse_ui_logo_content_description=0x7f06001c;
+        public static final int com_parse_ui_mismatch_confirm_password_toast=0x7f060031;
+        public static final int com_parse_ui_name_input_hint=0x7f060027;
+        public static final int com_parse_ui_no_email_toast=0x7f060032;
+        public static final int com_parse_ui_no_name_toast=0x7f060035;
+        public static final int com_parse_ui_no_password_toast=0x7f06002a;
+        public static final int com_parse_ui_no_username_toast=0x7f060029;
+        public static final int com_parse_ui_parse_login_button_label=0x7f060021;
+        public static final int com_parse_ui_parse_login_failed_unknown_toast=0x7f06002c;
+        public static final int com_parse_ui_parse_login_invalid_credentials_toast=0x7f06002b;
+        public static final int com_parse_ui_parse_signup_button_label=0x7f060022;
+        public static final int com_parse_ui_password_input_hint=0x7f06001f;
+        public static final int com_parse_ui_progress_dialog_text=0x7f06001d;
+        public static final int com_parse_ui_reenter_password_toast=0x7f060030;
+        public static final int com_parse_ui_signup_failed_unknown_toast=0x7f060036;
+        public static final int com_parse_ui_twitter_login_button_label=0x7f060024;
+        public static final int com_parse_ui_twitter_login_failed_toast=0x7f06002e;
+        public static final int com_parse_ui_username_input_hint=0x7f06001e;
+        public static final int com_parse_ui_username_taken_toast=0x7f06002f;
+        public static final int hello_world=0x7f06000a;
+        public static final int hint_email=0x7f060015;
+        public static final int hint_password=0x7f060014;
+        public static final int hint_username=0x7f060010;
+        public static final int login=0x7f06000e;
+        public static final int login_subtilte=0x7f06000f;
+        public static final int message_back_to_login=0x7f060016;
+        public static final int message_singup=0x7f060012;
+        public static final int ptr_last_updated=0x7f060003;
+        public static final int ptr_pull_to_refresh=0x7f060000;
+        public static final int ptr_refreshing=0x7f060002;
+        public static final int ptr_release_to_refresh=0x7f060001;
+        public static final int show_password=0x7f060011;
+        public static final int signup=0x7f060017;
+        public static final int tab_title_friend=0x7f06000c;
+        public static final int tab_title_inbox=0x7f06000b;
+        public static final int time_countDown=0x7f06001a;
+        public static final int title_activity_inbox_fragment=0x7f060009;
+        public static final int title_activity_login=0x7f06000d;
+        public static final int title_main_actionbar=0x7f06001b;
+        public static final int title_section1=0x7f060005;
+        public static final int title_section2=0x7f060006;
+        public static final int title_section3=0x7f060007;
     }
     public static final class style {
-        public static final int ActionBar_Solid_Themeactionbar=0x7f060012;
-        public static final int ActionBar_Transparent_Themeactionbar=0x7f060013;
-        public static final int ActionBarTabStyle_Themeactionbar=0x7f060016;
-        public static final int ActionButton_CloseMode_Themeactionbar=0x7f060019;
+        public static final int ActionBar_Solid_Themeactionbar=0x7f050012;
+        public static final int ActionBar_Transparent_Themeactionbar=0x7f050013;
+        public static final int ActionBarTabStyle_Themeactionbar=0x7f050016;
+        public static final int ActionButton_CloseMode_Themeactionbar=0x7f050019;
         /** 
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
@@ -421,33 +422,33 @@ containing a value of this type.
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f060007;
-        public static final int AppTheme=0x7f060008;
-        public static final int DropDownListView_Themeactionbar=0x7f060015;
-        public static final int DropDownNav_Themeactionbar=0x7f060017;
-        public static final int EditText=0x7f06000c;
-        public static final int Globle=0x7f06000b;
-        public static final int GridView=0x7f06000f;
-        public static final int IndeterminateProgress=0x7f06000a;
-        public static final int MyActionBarTabText=0x7f060009;
-        public static final int PopupMenu_Themeactionbar=0x7f060014;
-        public static final int ProgressBar_Themeactionbar=0x7f060018;
-        public static final int TextView=0x7f06000d;
-        public static final int TextView_subtitle=0x7f06000e;
+        public static final int AppBaseTheme=0x7f050007;
+        public static final int AppTheme=0x7f050008;
+        public static final int DropDownListView_Themeactionbar=0x7f050015;
+        public static final int DropDownNav_Themeactionbar=0x7f050017;
+        public static final int EditText=0x7f05000c;
+        public static final int Globle=0x7f05000b;
+        public static final int GridView=0x7f05000f;
+        public static final int IndeterminateProgress=0x7f05000a;
+        public static final int MyActionBarTabText=0x7f050009;
+        public static final int PopupMenu_Themeactionbar=0x7f050014;
+        public static final int ProgressBar_Themeactionbar=0x7f050018;
+        public static final int TextView=0x7f05000d;
+        public static final int TextView_subtitle=0x7f05000e;
         /**  add from android asset studio 
          */
-        public static final int Theme_Themeactionbar=0x7f060011;
+        public static final int Theme_Themeactionbar=0x7f050011;
         /**  this style is only referenced in a Light.DarkActionBar based theme 
          */
-        public static final int Theme_Themeactionbar_Widget=0x7f06001a;
-        public static final int button=0x7f060010;
-        public static final int ptr_arrow=0x7f060002;
-        public static final int ptr_header=0x7f060001;
-        public static final int ptr_headerContainer=0x7f060000;
-        public static final int ptr_last_updated=0x7f060006;
-        public static final int ptr_spinner=0x7f060003;
-        public static final int ptr_text=0x7f060005;
-        public static final int ptr_textwrapper=0x7f060004;
+        public static final int Theme_Themeactionbar_Widget=0x7f05001a;
+        public static final int button=0x7f050010;
+        public static final int ptr_arrow=0x7f050002;
+        public static final int ptr_header=0x7f050001;
+        public static final int ptr_headerContainer=0x7f050000;
+        public static final int ptr_last_updated=0x7f050006;
+        public static final int ptr_spinner=0x7f050003;
+        public static final int ptr_text=0x7f050005;
+        public static final int ptr_textwrapper=0x7f050004;
     }
     public static final class styleable {
         /** Attributes that can be used with a PagerSlidingTabStrip.
