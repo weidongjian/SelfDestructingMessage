@@ -138,7 +138,7 @@ public class MainActivity extends FragmentActivity  {
 				TypedValue.COMPLEX_UNIT_DIP, 1, dm));
 		// 设置Tab Indicator的高度
 		tabs.setIndicatorHeight((int) TypedValue.applyDimension(
-				TypedValue.COMPLEX_UNIT_DIP, 4, dm));
+				TypedValue.COMPLEX_UNIT_DIP, 3, dm));
 		// 设置Tab标题文字的大小
 		tabs.setTextSize((int) TypedValue.applyDimension(
 				TypedValue.COMPLEX_UNIT_SP, 16, dm));

@@ -391,10 +391,12 @@ containing a value of this type.
         public static final int title_section3=0x7f060007;
     }
     public static final class style {
-        public static final int ActionBar_Solid_Themeactionbar=0x7f050012;
-        public static final int ActionBar_Transparent_Themeactionbar=0x7f050013;
-        public static final int ActionBarTabStyle_Themeactionbar=0x7f050016;
-        public static final int ActionButton_CloseMode_Themeactionbar=0x7f050019;
+        public static final int ActionBar_MyStyle=0x7f050008;
+        public static final int ActionBar_Solid_Themeactionbar=0x7f050014;
+        public static final int ActionBar_Transparent_Themeactionbar=0x7f050015;
+        public static final int ActionBarProgressBar_MyStyle=0x7f050009;
+        public static final int ActionBarTabStyle_Themeactionbar=0x7f050018;
+        public static final int ActionButton_CloseMode_Themeactionbar=0x7f05001b;
         /** 
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
@@ -403,13 +405,6 @@ containing a value of this type.
 
 
     
-
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-
-
-        
 
         Base application theme for API 11+. This theme completely replaces
         AppBaseTheme from res/values/styles.xml on API 11+ devices.
@@ -423,25 +418,25 @@ containing a value of this type.
  API 14 theme customizations can go here. 
          */
         public static final int AppBaseTheme=0x7f050007;
-        public static final int AppTheme=0x7f050008;
-        public static final int DropDownListView_Themeactionbar=0x7f050015;
-        public static final int DropDownNav_Themeactionbar=0x7f050017;
-        public static final int EditText=0x7f05000c;
-        public static final int Globle=0x7f05000b;
-        public static final int GridView=0x7f05000f;
-        public static final int IndeterminateProgress=0x7f05000a;
-        public static final int MyActionBarTabText=0x7f050009;
-        public static final int PopupMenu_Themeactionbar=0x7f050014;
-        public static final int ProgressBar_Themeactionbar=0x7f050018;
-        public static final int TextView=0x7f05000d;
-        public static final int TextView_subtitle=0x7f05000e;
+        public static final int AppTheme=0x7f05000a;
+        public static final int DropDownListView_Themeactionbar=0x7f050017;
+        public static final int DropDownNav_Themeactionbar=0x7f050019;
+        public static final int EditText=0x7f05000e;
+        public static final int Globle=0x7f05000d;
+        public static final int GridView=0x7f050011;
+        public static final int IndeterminateProgress=0x7f05000c;
+        public static final int MyActionBarTabText=0x7f05000b;
+        public static final int PopupMenu_Themeactionbar=0x7f050016;
+        public static final int ProgressBar_Themeactionbar=0x7f05001a;
+        public static final int TextView=0x7f05000f;
+        public static final int TextView_subtitle=0x7f050010;
         /**  add from android asset studio 
          */
-        public static final int Theme_Themeactionbar=0x7f050011;
+        public static final int Theme_Themeactionbar=0x7f050013;
         /**  this style is only referenced in a Light.DarkActionBar based theme 
          */
-        public static final int Theme_Themeactionbar_Widget=0x7f05001a;
-        public static final int button=0x7f050010;
+        public static final int Theme_Themeactionbar_Widget=0x7f05001c;
+        public static final int button=0x7f050012;
         public static final int ptr_arrow=0x7f050002;
         public static final int ptr_header=0x7f050001;
         public static final int ptr_headerContainer=0x7f050000;
