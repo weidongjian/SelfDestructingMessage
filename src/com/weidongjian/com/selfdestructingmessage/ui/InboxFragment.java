@@ -61,7 +61,7 @@ public class InboxFragment extends ListFragment {
 			public boolean onItemLongClick(AdapterView<?> arg0, View arg1,
 					final int position, long id) {
 				new AlertDialog.Builder(getActivity())
-				.setTitle("Comfirmation")
+				.setTitle("Confirm")
 				.setMessage("The selected message will be deleted")
 				.setPositiveButton(android.R.string.ok, new OnClickListener() {
 					@Override

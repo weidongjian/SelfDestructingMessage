@@ -30,7 +30,7 @@
         android:name=".BaseApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
-        android:label="Message"
+        android:label="D Message"
         android:theme="@style/AppBaseTheme" >
         <activity
             android:name="com.weidongjian.com.selfdestructingmessage.ui.MainActivity"

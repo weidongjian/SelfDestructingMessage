@@ -7,13 +7,13 @@
         android:id="@+id/iv_background_grid"
         android:background="#d0c3c3"
         style="@style/GridView"
-        android:src="@drawable/iv_background_grid"
+        android:scaleType="fitXY"
         />
     
     <ImageView 
         android:id="@+id/iv_check_grid"
         style="@style/GridView"
-        android:src="@drawable/iv_friend_check"
+        android:src="@drawable/ic_action_check"
         android:visibility="invisible"
         />
     
@@ -26,6 +26,7 @@
         android:background="#e7dddd"
         android:padding="4dp"
         android:maxLines="2"
+        android:textColor="@android:color/black"
         android:textStyle="bold"
         android:gravity="center"
         android:text="Demo" />

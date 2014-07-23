@@ -135,7 +135,7 @@ public class MainActivity extends FragmentActivity  {
 		tabs.setDividerColor(Color.TRANSPARENT);
 		// 设置Tab底部线的高度
 		tabs.setUnderlineHeight((int) TypedValue.applyDimension(
-				TypedValue.COMPLEX_UNIT_DIP, 1, dm));
+				TypedValue.COMPLEX_UNIT_DIP, 0, dm));
 		// 设置Tab Indicator的高度
 		tabs.setIndicatorHeight((int) TypedValue.applyDimension(
 				TypedValue.COMPLEX_UNIT_DIP, 3, dm));
