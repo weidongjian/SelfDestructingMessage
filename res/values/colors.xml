@@ -3,6 +3,7 @@
     <color name="Text">#1E1E1E</color>
     <color name="background_activity">#99C68E</color>
     <color name="background_editText">#E0FFFF</color>
+    <color name="light_gray_header_color">#646663</color>
     
     <!-- add from parse login ui -->
     <color name="com_parse_ui_parse_login_button">#40CCCCCC</color>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.weidongjian.com.selfdestructingmessage"
-    android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionCode="2"
+    android:versionName="1.1" >
 
     <uses-sdk
         android:minSdkVersion="14"
@@ -19,11 +19,12 @@
 
     <!--
   IMPORTANT: Change "com.parse.starter.permission.C2D_MESSAGE" in the lines below
-  to match your app's package name + ".permission.C2D_MESSAGE".
+  to match your app's package name + ".permission.C2D_MESSAGE".
     -->
     <permission
         android:name="com.weidongjian.com.selfdestructingmessage.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
+
     <uses-permission android:name="com.weidongjian.com.selfdestructingmessage.permission.C2D_MESSAGE" />
 
     <application
@@ -34,13 +35,14 @@
         android:theme="@style/AppBaseTheme" >
         <activity
             android:name="com.weidongjian.com.selfdestructingmessage.ui.MainActivity"
-            android:launchMode="singleTask"
             android:label="@string/title_main_actionbar"
+            android:launchMode="singleTask"
             android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.weidongjian.com.selfdestructingmessage.ui.LoginActivity"
             android:label="@string/title_activity_login"
+            android:launchMode="singleTask"
             android:screenOrientation="portrait" >
         </activity>
         <activity
@@ -97,6 +99,12 @@
                 <category android:name="com.weidongjian.com.selfdestructingmessage" />
             </intent-filter>
         </receiver>
+
+        <activity
+            android:name=".ui.Doodle"
+            android:screenOrientation="portrait"
+            android:label="Doodle" >
+        </activity>
     </application>
 
 </manifest>

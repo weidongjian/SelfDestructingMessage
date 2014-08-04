@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <item android:id="@+id/menuItemColor"
+        android:title="@string/menuitem_color"
+        android:showAsAction="never"/>
+    <item android:id="@+id/menuItemWidth"
+        android:title="@string/menuitem_line_width"
+        android:showAsAction="never"/>
+    <item android:id="@+id/menuItemErase"
+        android:title="@string/menuitem_erase"
+        android:showAsAction="never"/>
+    <item android:id="@+id/menuItemClear"
+        android:title="@string/menuitem_clear"
+        android:showAsAction="never"/>
+    <item android:id="@+id/menuItemSave"
+        android:title="@string/menuitem_send_image"
+        android:showAsAction="never"/>
+
+</menu>

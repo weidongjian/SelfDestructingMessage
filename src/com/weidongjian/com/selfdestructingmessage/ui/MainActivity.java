@@ -58,6 +58,7 @@ public class MainActivity extends FragmentActivity  {
 	public static final int REQUEST_CODE_CHOOSE_VIDEO = 3;
 	public static final int MEDIA_TYPE_IMAGE = 4;
 	public static final int MEDIA_TYPE_VIDEO = 5;
+	public static final int REQUEST_CODE_DOODLE = 6;
 	private PagerSlidingTabStrip tabs;
 	private DisplayMetrics dm;
 
@@ -265,6 +266,11 @@ public class MainActivity extends FragmentActivity  {
 				startActivityForResult(pickVideoIntent,
 						REQUEST_CODE_CHOOSE_VIDEO);
 				break;
+			case 4:
+				//run doodle activity
+				Intent doodleIntent = new Intent(MainActivity.this, Doodle.class);
+				startActivityForResult(doodleIntent, REQUEST_CODE_DOODLE);
+				break;
 			}
 
 		}
@@ -293,16 +299,13 @@ public class MainActivity extends FragmentActivity  {
 								mediaUri);
 						fileSize = inputStream.available();
 					} catch (FileNotFoundException e) {
-						// TODO Auto-generated catch block
 						e.printStackTrace();
 					} catch (IOException e) {
-						// TODO Auto-generated catch block
 						e.printStackTrace();
 					} finally {
 						try {
 							inputStream.close();
 						} catch (IOException e) {
-							// TODO Auto-generated catch block
 							e.printStackTrace();
 						}
 					}

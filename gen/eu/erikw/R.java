@@ -9,20 +9,20 @@ package eu.erikw;
 public final class R {
 	public static final class drawable {
 		public static final int ic_forward = 0x7f020028;
-		public static final int ptr_pulltorefresh_arrow = 0x7f02003b;
-		public static final int ptr_pulltorefresh_arrow_2 = 0x7f02003c;
-		public static final int ptr_pulltorefresh_arrow_3 = 0x7f02003d;
+		public static final int ptr_pulltorefresh_arrow = 0x7f02003c;
+		public static final int ptr_pulltorefresh_arrow_2 = 0x7f02003d;
+		public static final int ptr_pulltorefresh_arrow_3 = 0x7f02003e;
 	}
 	public static final class id {
-		public static final int ptr_id_header = 0x7f0c0012;
-		public static final int ptr_id_image = 0x7f0c0013;
-		public static final int ptr_id_last_updated = 0x7f0c0017;
-		public static final int ptr_id_spinner = 0x7f0c0014;
-		public static final int ptr_id_text = 0x7f0c0016;
-		public static final int ptr_id_textwrapper = 0x7f0c0015;
+		public static final int ptr_id_header = 0x7f0c001c;
+		public static final int ptr_id_image = 0x7f0c001d;
+		public static final int ptr_id_last_updated = 0x7f0c0021;
+		public static final int ptr_id_spinner = 0x7f0c001e;
+		public static final int ptr_id_text = 0x7f0c0020;
+		public static final int ptr_id_textwrapper = 0x7f0c001f;
 	}
 	public static final class layout {
-		public static final int ptr_header = 0x7f030009;
+		public static final int ptr_header = 0x7f03000b;
 	}
 	public static final class string {
 		public static final int ptr_last_updated = 0x7f060003;

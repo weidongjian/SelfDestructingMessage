@@ -46,7 +46,7 @@ public class FriendFragment extends Fragment {
 	public void onResume() {
 		super.onResume();
 		mParseRelation = mCurrentUser.getRelation(ParseConstant.KEY_FRIEND_RELATION);
-		ParseQuery<ParseUser> query = ParseUser.getQuery();
+		ParseQuery<ParseUser> query = mParseRelation.getQuery();
 		query.setLimit(100);
 		query.orderByAscending(ParseConstant.KEY_USERNAME);
 		query.findInBackground(new FindCallback<ParseUser>() {

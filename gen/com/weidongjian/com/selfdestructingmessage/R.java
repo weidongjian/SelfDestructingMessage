@@ -20,6 +20,158 @@ public final class R {
         public static final int action_choice=0x7f090000;
     }
     public static final class attr {
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int circle_color=0x7f010017;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int circle_fill=0x7f01001f;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int circle_progress_color=0x7f010018;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int circle_stroke_width=0x7f010013;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int circle_x_radius=0x7f010011;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int circle_y_radius=0x7f010012;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int end_angle=0x7f01001e;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int lock_enabled=0x7f010010;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int maintain_equal_circle=0x7f01000e;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int max=0x7f01000c;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int move_outside_circle=0x7f01000d;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int pointer_alpha_ontouch=0x7f01001c;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int pointer_color=0x7f010019;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int pointer_halo_border_width=0x7f010016;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int pointer_halo_color=0x7f01001a;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int pointer_halo_color_ontouch=0x7f01001b;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int pointer_halo_width=0x7f010015;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int pointer_radius=0x7f010014;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int progress=0x7f01000b;
         /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
 <p>This may also be a reference to a resource (in the form
@@ -117,30 +269,47 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int pstsUnderlineHeight=0x7f010004;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int start_angle=0x7f01001d;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int use_custom_radii=0x7f01000f;
     }
     public static final class color {
         public static final int Text=0x7f070000;
         public static final int background_activity=0x7f070001;
         public static final int background_editText=0x7f070002;
-        public static final int background_tab_pressed=0x7f070011;
-        public static final int com_parse_ui_facebook_login_button=0x7f07000b;
-        public static final int com_parse_ui_facebook_login_button_focus=0x7f07000d;
-        public static final int com_parse_ui_facebook_login_button_push=0x7f07000c;
+        public static final int background_tab_pressed=0x7f070012;
+        public static final int com_parse_ui_facebook_login_button=0x7f07000c;
+        public static final int com_parse_ui_facebook_login_button_focus=0x7f07000e;
+        public static final int com_parse_ui_facebook_login_button_push=0x7f07000d;
         /**  add from parse login ui 
          */
-        public static final int com_parse_ui_parse_login_button=0x7f070003;
-        public static final int com_parse_ui_parse_login_button_focus=0x7f070005;
-        public static final int com_parse_ui_parse_login_button_push=0x7f070004;
-        public static final int com_parse_ui_parse_login_display_text=0x7f07000a;
-        public static final int com_parse_ui_parse_login_help_button_label=0x7f070006;
-        public static final int com_parse_ui_parse_login_help_button_label_focus=0x7f070008;
-        public static final int com_parse_ui_parse_login_help_button_label_push=0x7f070007;
-        public static final int com_parse_ui_parse_login_help_button_label_selector=0x7f070012;
-        public static final int com_parse_ui_parse_login_text_hint=0x7f070009;
-        public static final int com_parse_ui_twitter_login_button=0x7f07000e;
-        public static final int com_parse_ui_twitter_login_button_focus=0x7f070010;
-        public static final int com_parse_ui_twitter_login_button_push=0x7f07000f;
-        public static final int tab_text_color=0x7f070013;
+        public static final int com_parse_ui_parse_login_button=0x7f070004;
+        public static final int com_parse_ui_parse_login_button_focus=0x7f070006;
+        public static final int com_parse_ui_parse_login_button_push=0x7f070005;
+        public static final int com_parse_ui_parse_login_display_text=0x7f07000b;
+        public static final int com_parse_ui_parse_login_help_button_label=0x7f070007;
+        public static final int com_parse_ui_parse_login_help_button_label_focus=0x7f070009;
+        public static final int com_parse_ui_parse_login_help_button_label_push=0x7f070008;
+        public static final int com_parse_ui_parse_login_help_button_label_selector=0x7f070013;
+        public static final int com_parse_ui_parse_login_text_hint=0x7f07000a;
+        public static final int com_parse_ui_twitter_login_button=0x7f07000f;
+        public static final int com_parse_ui_twitter_login_button_focus=0x7f070011;
+        public static final int com_parse_ui_twitter_login_button_push=0x7f070010;
+        public static final int light_gray_header_color=0x7f070003;
+        public static final int tab_text_color=0x7f070014;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -223,90 +392,114 @@ containing a value of this type.
         public static final int progress_primary_themeactionbar=0x7f020038;
         public static final int progress_secondary_ribbitthem=0x7f020039;
         public static final int progress_secondary_themeactionbar=0x7f02003a;
-        public static final int ptr_pulltorefresh_arrow=0x7f02003b;
-        public static final int ptr_pulltorefresh_arrow_2=0x7f02003c;
-        public static final int ptr_pulltorefresh_arrow_3=0x7f02003d;
-        public static final int selectable_background_ribbitthem=0x7f02003e;
-        public static final int selectable_background_themeactionbar=0x7f02003f;
-        public static final int spinner_ab_default_ribbitthem=0x7f020040;
-        public static final int spinner_ab_default_themeactionbar=0x7f020041;
-        public static final int spinner_ab_disabled_ribbitthem=0x7f020042;
-        public static final int spinner_ab_disabled_themeactionbar=0x7f020043;
-        public static final int spinner_ab_focused_ribbitthem=0x7f020044;
-        public static final int spinner_ab_focused_themeactionbar=0x7f020045;
-        public static final int spinner_ab_pressed_ribbitthem=0x7f020046;
-        public static final int spinner_ab_pressed_themeactionbar=0x7f020047;
-        public static final int spinner_background_ab_ribbitthem=0x7f020048;
-        public static final int spinner_background_ab_themeactionbar=0x7f020049;
-        public static final int tab_indicator_ab_ribbitthem=0x7f02004a;
-        public static final int tab_indicator_ab_themeactionbar=0x7f02004b;
-        public static final int tab_selected_focused_ribbitthem=0x7f02004c;
-        public static final int tab_selected_focused_themeactionbar=0x7f02004d;
-        public static final int tab_selected_pressed_ribbitthem=0x7f02004e;
-        public static final int tab_selected_pressed_themeactionbar=0x7f02004f;
-        public static final int tab_selected_ribbitthem=0x7f020050;
-        public static final int tab_selected_themeactionbar=0x7f020051;
-        public static final int tab_unselected_focused_ribbitthem=0x7f020052;
-        public static final int tab_unselected_focused_themeactionbar=0x7f020053;
-        public static final int tab_unselected_pressed_ribbitthem=0x7f020054;
-        public static final int tab_unselected_pressed_themeactionbar=0x7f020055;
-        public static final int tab_unselected_ribbitthem=0x7f020056;
-        public static final int tab_unselected_themeactionbar=0x7f020057;
+        public static final int progressbar=0x7f02003b;
+        public static final int ptr_pulltorefresh_arrow=0x7f02003c;
+        public static final int ptr_pulltorefresh_arrow_2=0x7f02003d;
+        public static final int ptr_pulltorefresh_arrow_3=0x7f02003e;
+        public static final int selectable_background_ribbitthem=0x7f02003f;
+        public static final int selectable_background_themeactionbar=0x7f020040;
+        public static final int spinner_ab_default_ribbitthem=0x7f020041;
+        public static final int spinner_ab_default_themeactionbar=0x7f020042;
+        public static final int spinner_ab_disabled_ribbitthem=0x7f020043;
+        public static final int spinner_ab_disabled_themeactionbar=0x7f020044;
+        public static final int spinner_ab_focused_ribbitthem=0x7f020045;
+        public static final int spinner_ab_focused_themeactionbar=0x7f020046;
+        public static final int spinner_ab_pressed_ribbitthem=0x7f020047;
+        public static final int spinner_ab_pressed_themeactionbar=0x7f020048;
+        public static final int spinner_background_ab_ribbitthem=0x7f020049;
+        public static final int spinner_background_ab_themeactionbar=0x7f02004a;
+        public static final int tab_indicator_ab_ribbitthem=0x7f02004b;
+        public static final int tab_indicator_ab_themeactionbar=0x7f02004c;
+        public static final int tab_selected_focused_ribbitthem=0x7f02004d;
+        public static final int tab_selected_focused_themeactionbar=0x7f02004e;
+        public static final int tab_selected_pressed_ribbitthem=0x7f02004f;
+        public static final int tab_selected_pressed_themeactionbar=0x7f020050;
+        public static final int tab_selected_ribbitthem=0x7f020051;
+        public static final int tab_selected_themeactionbar=0x7f020052;
+        public static final int tab_unselected_focused_ribbitthem=0x7f020053;
+        public static final int tab_unselected_focused_themeactionbar=0x7f020054;
+        public static final int tab_unselected_pressed_ribbitthem=0x7f020055;
+        public static final int tab_unselected_pressed_themeactionbar=0x7f020056;
+        public static final int tab_unselected_ribbitthem=0x7f020057;
+        public static final int tab_unselected_themeactionbar=0x7f020058;
     }
     public static final class id {
-        public static final int action_choice=0x7f0c001e;
-        public static final int action_edit_friends=0x7f0c001f;
-        public static final int action_logout=0x7f0c001d;
-        public static final int action_send=0x7f0c0020;
-        public static final int action_settings=0x7f0c001c;
-        public static final int bt_login=0x7f0c0005;
-        public static final int bt_singup=0x7f0c000a;
-        public static final int cb_show_password=0x7f0c0004;
-        public static final int et_email=0x7f0c0009;
-        public static final int et_password=0x7f0c0003;
-        public static final int et_username=0x7f0c0002;
-        public static final int gv_friends=0x7f0c000e;
-        public static final int iv_background_grid=0x7f0c0018;
-        public static final int iv_check_grid=0x7f0c0019;
-        public static final int iv_file_type=0x7f0c0011;
-        public static final int iv_view_image=0x7f0c000c;
-        public static final int pager=0x7f0c0008;
-        public static final int progress_bar=0x7f0c001b;
-        public static final int ptr_id_header=0x7f0c0012;
-        public static final int ptr_id_image=0x7f0c0013;
-        public static final int ptr_id_last_updated=0x7f0c0017;
-        public static final int ptr_id_spinner=0x7f0c0014;
-        public static final int ptr_id_text=0x7f0c0016;
-        public static final int ptr_id_textwrapper=0x7f0c0015;
-        public static final int tabs=0x7f0c0007;
-        public static final int tv_back_to_login=0x7f0c000b;
-        public static final int tv_created_at=0x7f0c0010;
-        public static final int tv_friend_name=0x7f0c001a;
-        public static final int tv_sender_name=0x7f0c000f;
-        public static final int tv_singup=0x7f0c0006;
-        public static final int tv_subtitle=0x7f0c0001;
-        public static final int tv_time_conuntDown=0x7f0c000d;
-        public static final int tv_title=0x7f0c0000;
+        public static final int action_choice=0x7f0c0031;
+        public static final int action_edit_friends=0x7f0c0032;
+        public static final int action_logout=0x7f0c0030;
+        public static final int action_send=0x7f0c0033;
+        public static final int action_settings=0x7f0c002f;
+        public static final int alphaSeekbar=0x7f0c0012;
+        public static final int blueSeekbar=0x7f0c0015;
+        public static final int bt_login=0x7f0c0007;
+        public static final int bt_singup=0x7f0c000c;
+        public static final int cb_show_password=0x7f0c0006;
+        public static final int colorDialogLinearDialog=0x7f0c0010;
+        public static final int colorView=0x7f0c0016;
+        public static final int doodleView=0x7f0c0001;
+        public static final int et_email=0x7f0c000b;
+        public static final int et_password=0x7f0c0005;
+        public static final int et_username=0x7f0c0004;
+        public static final int greenSeekbar=0x7f0c0014;
+        public static final int gv_friends=0x7f0c0018;
+        public static final int iv_background_grid=0x7f0c0022;
+        public static final int iv_check_grid=0x7f0c0023;
+        public static final int iv_file_type=0x7f0c001b;
+        public static final int iv_view_image=0x7f0c000e;
+        public static final int menuItemClear=0x7f0c002c;
+        public static final int menuItemColor=0x7f0c0029;
+        public static final int menuItemErase=0x7f0c002b;
+        public static final int menuItemSave=0x7f0c002d;
+        public static final int menuItemWidth=0x7f0c002a;
+        public static final int pager=0x7f0c000a;
+        public static final int progress_bar=0x7f0c002e;
+        public static final int ptr_id_header=0x7f0c001c;
+        public static final int ptr_id_image=0x7f0c001d;
+        public static final int ptr_id_last_updated=0x7f0c0021;
+        public static final int ptr_id_spinner=0x7f0c001e;
+        public static final int ptr_id_text=0x7f0c0020;
+        public static final int ptr_id_textwrapper=0x7f0c001f;
+        public static final int redSeekbar=0x7f0c0013;
+        public static final int relativeLayout=0x7f0c0000;
+        public static final int setColorButton=0x7f0c0017;
+        public static final int tableLayout=0x7f0c0011;
+        public static final int tabs=0x7f0c0009;
+        public static final int tv_back_to_login=0x7f0c000d;
+        public static final int tv_created_at=0x7f0c001a;
+        public static final int tv_friend_name=0x7f0c0024;
+        public static final int tv_sender_name=0x7f0c0019;
+        public static final int tv_singup=0x7f0c0008;
+        public static final int tv_subtitle=0x7f0c0003;
+        public static final int tv_time_conuntDown=0x7f0c000f;
+        public static final int tv_title=0x7f0c0002;
+        public static final int widthDialogDoneButton=0x7f0c0028;
+        public static final int widthDialogLinearLayout=0x7f0c0025;
+        public static final int widthImageView=0x7f0c0026;
+        public static final int widthSeekbar=0x7f0c0027;
     }
     public static final class layout {
-        public static final int activity_login=0x7f030000;
-        public static final int activity_main=0x7f030001;
-        public static final int activity_sing_up=0x7f030002;
-        public static final int activity_view_image=0x7f030003;
-        public static final int fragment_friend=0x7f030004;
-        public static final int fragment_inbox=0x7f030005;
-        public static final int gv_user=0x7f030006;
-        public static final int indeterminate_progress_bar=0x7f030007;
-        public static final int message_item=0x7f030008;
-        public static final int ptr_header=0x7f030009;
-        public static final int user_item=0x7f03000a;
+        public static final int activity_doodle=0x7f030000;
+        public static final int activity_login=0x7f030001;
+        public static final int activity_main=0x7f030002;
+        public static final int activity_sing_up=0x7f030003;
+        public static final int activity_view_image=0x7f030004;
+        public static final int color_dialog=0x7f030005;
+        public static final int fragment_friend=0x7f030006;
+        public static final int fragment_inbox=0x7f030007;
+        public static final int gv_user=0x7f030008;
+        public static final int indeterminate_progress_bar=0x7f030009;
+        public static final int message_item=0x7f03000a;
+        public static final int ptr_header=0x7f03000b;
+        public static final int user_item=0x7f03000c;
+        public static final int width_dialog=0x7f03000d;
     }
     public static final class menu {
-        public static final int inbox_fragment=0x7f0b0000;
-        public static final int login=0x7f0b0001;
-        public static final int main=0x7f0b0002;
-        public static final int navigate_up_menu=0x7f0b0003;
-        public static final int recipient=0x7f0b0004;
+        public static final int doodle_main=0x7f0b0000;
+        public static final int inbox_fragment=0x7f0b0001;
+        public static final int login=0x7f0b0002;
+        public static final int main=0x7f0b0003;
+        public static final int navigate_up_menu=0x7f0b0004;
+        public static final int recipient=0x7f0b0005;
     }
     public static final class plurals {
         public static final int com_parse_ui_password_too_short_toast=0x7f0a0000;
@@ -316,66 +509,83 @@ containing a value of this type.
         public static final int action_send=0x7f060019;
         public static final int action_settings=0x7f060008;
         public static final int app_name=0x7f060004;
+        public static final int button_cancel=0x7f06001d;
+        public static final int button_erase=0x7f06001c;
+        public static final int button_set_color=0x7f06001e;
+        public static final int button_set_line_width=0x7f06001f;
         public static final int choice=0x7f060018;
-        public static final int com_parse_ui_confirm_password_input_hint=0x7f060026;
-        public static final int com_parse_ui_create_account_button_label=0x7f060028;
-        public static final int com_parse_ui_email_input_hint=0x7f060025;
-        public static final int com_parse_ui_email_taken_toast=0x7f060034;
-        public static final int com_parse_ui_facebook_login_button_label=0x7f060023;
-        public static final int com_parse_ui_facebook_login_failed_toast=0x7f06002d;
-        public static final int com_parse_ui_forgot_password_button_label=0x7f060020;
-        public static final int com_parse_ui_invalid_email_toast=0x7f060033;
-        public static final int com_parse_ui_login_dispatch_user_logged_in=0x7f06004c;
-        public static final int com_parse_ui_login_dispatch_user_not_logged_in=0x7f06004d;
-        public static final int com_parse_ui_login_help_email_input_hint=0x7f060038;
-        public static final int com_parse_ui_login_help_email_sent=0x7f06003c;
-        public static final int com_parse_ui_login_help_instructions=0x7f060037;
-        public static final int com_parse_ui_login_help_login_again_button_label=0x7f06003a;
-        public static final int com_parse_ui_login_help_submit_button_label=0x7f060039;
-        public static final int com_parse_ui_login_help_submit_failed_unknown=0x7f06003b;
-        public static final int com_parse_ui_login_warning_disabled_facebook_login=0x7f060043;
-        public static final int com_parse_ui_login_warning_disabled_twitter_login=0x7f060044;
-        public static final int com_parse_ui_login_warning_disabled_username_password_login=0x7f060042;
-        public static final int com_parse_ui_login_warning_facebook_login_failed=0x7f060046;
-        public static final int com_parse_ui_login_warning_facebook_login_user_update_failed=0x7f060048;
-        public static final int com_parse_ui_login_warning_layout_missing_login_button=0x7f06003f;
-        public static final int com_parse_ui_login_warning_layout_missing_login_help_button=0x7f060041;
-        public static final int com_parse_ui_login_warning_layout_missing_password_field=0x7f06003e;
-        public static final int com_parse_ui_login_warning_layout_missing_signup_button=0x7f060040;
-        public static final int com_parse_ui_login_warning_layout_missing_username_field=0x7f06003d;
-        public static final int com_parse_ui_login_warning_parse_login_failed=0x7f060045;
-        public static final int com_parse_ui_login_warning_parse_signup_failed=0x7f06004a;
-        public static final int com_parse_ui_login_warning_password_reset_failed=0x7f06004b;
-        public static final int com_parse_ui_login_warning_twitter_login_failed=0x7f060047;
-        public static final int com_parse_ui_login_warning_twitter_login_user_update_failed=0x7f060049;
+        public static final int com_parse_ui_confirm_password_input_hint=0x7f060039;
+        public static final int com_parse_ui_create_account_button_label=0x7f06003b;
+        public static final int com_parse_ui_email_input_hint=0x7f060038;
+        public static final int com_parse_ui_email_taken_toast=0x7f060047;
+        public static final int com_parse_ui_facebook_login_button_label=0x7f060036;
+        public static final int com_parse_ui_facebook_login_failed_toast=0x7f060040;
+        public static final int com_parse_ui_forgot_password_button_label=0x7f060033;
+        public static final int com_parse_ui_invalid_email_toast=0x7f060046;
+        public static final int com_parse_ui_login_dispatch_user_logged_in=0x7f06005f;
+        public static final int com_parse_ui_login_dispatch_user_not_logged_in=0x7f060060;
+        public static final int com_parse_ui_login_help_email_input_hint=0x7f06004b;
+        public static final int com_parse_ui_login_help_email_sent=0x7f06004f;
+        public static final int com_parse_ui_login_help_instructions=0x7f06004a;
+        public static final int com_parse_ui_login_help_login_again_button_label=0x7f06004d;
+        public static final int com_parse_ui_login_help_submit_button_label=0x7f06004c;
+        public static final int com_parse_ui_login_help_submit_failed_unknown=0x7f06004e;
+        public static final int com_parse_ui_login_warning_disabled_facebook_login=0x7f060056;
+        public static final int com_parse_ui_login_warning_disabled_twitter_login=0x7f060057;
+        public static final int com_parse_ui_login_warning_disabled_username_password_login=0x7f060055;
+        public static final int com_parse_ui_login_warning_facebook_login_failed=0x7f060059;
+        public static final int com_parse_ui_login_warning_facebook_login_user_update_failed=0x7f06005b;
+        public static final int com_parse_ui_login_warning_layout_missing_login_button=0x7f060052;
+        public static final int com_parse_ui_login_warning_layout_missing_login_help_button=0x7f060054;
+        public static final int com_parse_ui_login_warning_layout_missing_password_field=0x7f060051;
+        public static final int com_parse_ui_login_warning_layout_missing_signup_button=0x7f060053;
+        public static final int com_parse_ui_login_warning_layout_missing_username_field=0x7f060050;
+        public static final int com_parse_ui_login_warning_parse_login_failed=0x7f060058;
+        public static final int com_parse_ui_login_warning_parse_signup_failed=0x7f06005d;
+        public static final int com_parse_ui_login_warning_password_reset_failed=0x7f06005e;
+        public static final int com_parse_ui_login_warning_twitter_login_failed=0x7f06005a;
+        public static final int com_parse_ui_login_warning_twitter_login_user_update_failed=0x7f06005c;
         /**  add from parse ui 
          */
-        public static final int com_parse_ui_logo_content_description=0x7f06001c;
-        public static final int com_parse_ui_mismatch_confirm_password_toast=0x7f060031;
-        public static final int com_parse_ui_name_input_hint=0x7f060027;
-        public static final int com_parse_ui_no_email_toast=0x7f060032;
-        public static final int com_parse_ui_no_name_toast=0x7f060035;
-        public static final int com_parse_ui_no_password_toast=0x7f06002a;
-        public static final int com_parse_ui_no_username_toast=0x7f060029;
-        public static final int com_parse_ui_parse_login_button_label=0x7f060021;
-        public static final int com_parse_ui_parse_login_failed_unknown_toast=0x7f06002c;
-        public static final int com_parse_ui_parse_login_invalid_credentials_toast=0x7f06002b;
-        public static final int com_parse_ui_parse_signup_button_label=0x7f060022;
-        public static final int com_parse_ui_password_input_hint=0x7f06001f;
-        public static final int com_parse_ui_progress_dialog_text=0x7f06001d;
-        public static final int com_parse_ui_reenter_password_toast=0x7f060030;
-        public static final int com_parse_ui_signup_failed_unknown_toast=0x7f060036;
-        public static final int com_parse_ui_twitter_login_button_label=0x7f060024;
-        public static final int com_parse_ui_twitter_login_failed_toast=0x7f06002e;
-        public static final int com_parse_ui_username_input_hint=0x7f06001e;
-        public static final int com_parse_ui_username_taken_toast=0x7f06002f;
+        public static final int com_parse_ui_logo_content_description=0x7f06002f;
+        public static final int com_parse_ui_mismatch_confirm_password_toast=0x7f060044;
+        public static final int com_parse_ui_name_input_hint=0x7f06003a;
+        public static final int com_parse_ui_no_email_toast=0x7f060045;
+        public static final int com_parse_ui_no_name_toast=0x7f060048;
+        public static final int com_parse_ui_no_password_toast=0x7f06003d;
+        public static final int com_parse_ui_no_username_toast=0x7f06003c;
+        public static final int com_parse_ui_parse_login_button_label=0x7f060034;
+        public static final int com_parse_ui_parse_login_failed_unknown_toast=0x7f06003f;
+        public static final int com_parse_ui_parse_login_invalid_credentials_toast=0x7f06003e;
+        public static final int com_parse_ui_parse_signup_button_label=0x7f060035;
+        public static final int com_parse_ui_password_input_hint=0x7f060032;
+        public static final int com_parse_ui_progress_dialog_text=0x7f060030;
+        public static final int com_parse_ui_reenter_password_toast=0x7f060043;
+        public static final int com_parse_ui_signup_failed_unknown_toast=0x7f060049;
+        public static final int com_parse_ui_twitter_login_button_label=0x7f060037;
+        public static final int com_parse_ui_twitter_login_failed_toast=0x7f060041;
+        public static final int com_parse_ui_username_input_hint=0x7f060031;
+        public static final int com_parse_ui_username_taken_toast=0x7f060042;
         public static final int hello_world=0x7f06000a;
         public static final int hint_email=0x7f060015;
         public static final int hint_password=0x7f060014;
         public static final int hint_username=0x7f060010;
+        public static final int label_alpha=0x7f060020;
+        public static final int label_blue=0x7f060023;
+        public static final int label_green=0x7f060022;
+        public static final int label_red=0x7f060021;
         public static final int login=0x7f06000e;
         public static final int login_subtilte=0x7f06000f;
+        public static final int menuitem_clear=0x7f060024;
+        public static final int menuitem_color=0x7f060026;
+        public static final int menuitem_erase=0x7f060025;
+        public static final int menuitem_line_width=0x7f060027;
+        public static final int menuitem_save_image=0x7f060028;
+        public static final int menuitem_send_image=0x7f06002e;
         public static final int message_back_to_login=0x7f060016;
+        public static final int message_erase=0x7f06002b;
+        public static final int message_error_saving=0x7f060029;
+        public static final int message_saved=0x7f06002a;
         public static final int message_singup=0x7f060012;
         public static final int ptr_last_updated=0x7f060003;
         public static final int ptr_pull_to_refresh=0x7f060000;
@@ -388,6 +598,8 @@ containing a value of this type.
         public static final int time_countDown=0x7f06001a;
         public static final int title_activity_inbox_fragment=0x7f060009;
         public static final int title_activity_login=0x7f06000d;
+        public static final int title_color_dialog=0x7f06002c;
+        public static final int title_line_width_dialog=0x7f06002d;
         public static final int title_main_actionbar=0x7f06001b;
         public static final int title_section1=0x7f060005;
         public static final int title_section2=0x7f060006;
@@ -449,6 +661,358 @@ containing a value of this type.
         public static final int ptr_textwrapper=0x7f050004;
     }
     public static final class styleable {
+        /** Attributes that can be used with a CircularSeekBar.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #CircularSeekBar_circle_color com.weidongjian.com.selfdestructingmessage:circle_color}</code></td><td></td></tr>
+           <tr><td><code>{@link #CircularSeekBar_circle_fill com.weidongjian.com.selfdestructingmessage:circle_fill}</code></td><td></td></tr>
+           <tr><td><code>{@link #CircularSeekBar_circle_progress_color com.weidongjian.com.selfdestructingmessage:circle_progress_color}</code></td><td></td></tr>
+           <tr><td><code>{@link #CircularSeekBar_circle_stroke_width com.weidongjian.com.selfdestructingmessage:circle_stroke_width}</code></td><td></td></tr>
+           <tr><td><code>{@link #CircularSeekBar_circle_x_radius com.weidongjian.com.selfdestructingmessage:circle_x_radius}</code></td><td></td></tr>
+           <tr><td><code>{@link #CircularSeekBar_circle_y_radius com.weidongjian.com.selfdestructingmessage:circle_y_radius}</code></td><td></td></tr>
+           <tr><td><code>{@link #CircularSeekBar_end_angle com.weidongjian.com.selfdestructingmessage:end_angle}</code></td><td></td></tr>
+           <tr><td><code>{@link #CircularSeekBar_lock_enabled com.weidongjian.com.selfdestructingmessage:lock_enabled}</code></td><td></td></tr>
+           <tr><td><code>{@link #CircularSeekBar_maintain_equal_circle com.weidongjian.com.selfdestructingmessage:maintain_equal_circle}</code></td><td></td></tr>
+           <tr><td><code>{@link #CircularSeekBar_max com.weidongjian.com.selfdestructingmessage:max}</code></td><td></td></tr>
+           <tr><td><code>{@link #CircularSeekBar_move_outside_circle com.weidongjian.com.selfdestructingmessage:move_outside_circle}</code></td><td></td></tr>
+           <tr><td><code>{@link #CircularSeekBar_pointer_alpha_ontouch com.weidongjian.com.selfdestructingmessage:pointer_alpha_ontouch}</code></td><td></td></tr>
+           <tr><td><code>{@link #CircularSeekBar_pointer_color com.weidongjian.com.selfdestructingmessage:pointer_color}</code></td><td></td></tr>
+           <tr><td><code>{@link #CircularSeekBar_pointer_halo_border_width com.weidongjian.com.selfdestructingmessage:pointer_halo_border_width}</code></td><td></td></tr>
+           <tr><td><code>{@link #CircularSeekBar_pointer_halo_color com.weidongjian.com.selfdestructingmessage:pointer_halo_color}</code></td><td></td></tr>
+           <tr><td><code>{@link #CircularSeekBar_pointer_halo_color_ontouch com.weidongjian.com.selfdestructingmessage:pointer_halo_color_ontouch}</code></td><td></td></tr>
+           <tr><td><code>{@link #CircularSeekBar_pointer_halo_width com.weidongjian.com.selfdestructingmessage:pointer_halo_width}</code></td><td></td></tr>
+           <tr><td><code>{@link #CircularSeekBar_pointer_radius com.weidongjian.com.selfdestructingmessage:pointer_radius}</code></td><td></td></tr>
+           <tr><td><code>{@link #CircularSeekBar_progress com.weidongjian.com.selfdestructingmessage:progress}</code></td><td></td></tr>
+           <tr><td><code>{@link #CircularSeekBar_start_angle com.weidongjian.com.selfdestructingmessage:start_angle}</code></td><td></td></tr>
+           <tr><td><code>{@link #CircularSeekBar_use_custom_radii com.weidongjian.com.selfdestructingmessage:use_custom_radii}</code></td><td></td></tr>
+           </table>
+           @see #CircularSeekBar_circle_color
+           @see #CircularSeekBar_circle_fill
+           @see #CircularSeekBar_circle_progress_color
+           @see #CircularSeekBar_circle_stroke_width
+           @see #CircularSeekBar_circle_x_radius
+           @see #CircularSeekBar_circle_y_radius
+           @see #CircularSeekBar_end_angle
+           @see #CircularSeekBar_lock_enabled
+           @see #CircularSeekBar_maintain_equal_circle
+           @see #CircularSeekBar_max
+           @see #CircularSeekBar_move_outside_circle
+           @see #CircularSeekBar_pointer_alpha_ontouch
+           @see #CircularSeekBar_pointer_color
+           @see #CircularSeekBar_pointer_halo_border_width
+           @see #CircularSeekBar_pointer_halo_color
+           @see #CircularSeekBar_pointer_halo_color_ontouch
+           @see #CircularSeekBar_pointer_halo_width
+           @see #CircularSeekBar_pointer_radius
+           @see #CircularSeekBar_progress
+           @see #CircularSeekBar_start_angle
+           @see #CircularSeekBar_use_custom_radii
+         */
+        public static final int[] CircularSeekBar = {
+            0x7f01000b, 0x7f01000c, 0x7f01000d, 0x7f01000e,
+            0x7f01000f, 0x7f010010, 0x7f010011, 0x7f010012,
+            0x7f010013, 0x7f010014, 0x7f010015, 0x7f010016,
+            0x7f010017, 0x7f010018, 0x7f010019, 0x7f01001a,
+            0x7f01001b, 0x7f01001c, 0x7f01001d, 0x7f01001e,
+            0x7f01001f
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.weidongjian.com.selfdestructingmessage.R.attr#circle_color}
+          attribute's value can be found in the {@link #CircularSeekBar} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.weidongjian.com.selfdestructingmessage:circle_color
+        */
+        public static final int CircularSeekBar_circle_color = 12;
+        /**
+          <p>This symbol is the offset where the {@link com.weidongjian.com.selfdestructingmessage.R.attr#circle_fill}
+          attribute's value can be found in the {@link #CircularSeekBar} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.weidongjian.com.selfdestructingmessage:circle_fill
+        */
+        public static final int CircularSeekBar_circle_fill = 20;
+        /**
+          <p>This symbol is the offset where the {@link com.weidongjian.com.selfdestructingmessage.R.attr#circle_progress_color}
+          attribute's value can be found in the {@link #CircularSeekBar} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.weidongjian.com.selfdestructingmessage:circle_progress_color
+        */
+        public static final int CircularSeekBar_circle_progress_color = 13;
+        /**
+          <p>This symbol is the offset where the {@link com.weidongjian.com.selfdestructingmessage.R.attr#circle_stroke_width}
+          attribute's value can be found in the {@link #CircularSeekBar} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.weidongjian.com.selfdestructingmessage:circle_stroke_width
+        */
+        public static final int CircularSeekBar_circle_stroke_width = 8;
+        /**
+          <p>This symbol is the offset where the {@link com.weidongjian.com.selfdestructingmessage.R.attr#circle_x_radius}
+          attribute's value can be found in the {@link #CircularSeekBar} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.weidongjian.com.selfdestructingmessage:circle_x_radius
+        */
+        public static final int CircularSeekBar_circle_x_radius = 6;
+        /**
+          <p>This symbol is the offset where the {@link com.weidongjian.com.selfdestructingmessage.R.attr#circle_y_radius}
+          attribute's value can be found in the {@link #CircularSeekBar} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.weidongjian.com.selfdestructingmessage:circle_y_radius
+        */
+        public static final int CircularSeekBar_circle_y_radius = 7;
+        /**
+          <p>This symbol is the offset where the {@link com.weidongjian.com.selfdestructingmessage.R.attr#end_angle}
+          attribute's value can be found in the {@link #CircularSeekBar} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.weidongjian.com.selfdestructingmessage:end_angle
+        */
+        public static final int CircularSeekBar_end_angle = 19;
+        /**
+          <p>This symbol is the offset where the {@link com.weidongjian.com.selfdestructingmessage.R.attr#lock_enabled}
+          attribute's value can be found in the {@link #CircularSeekBar} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.weidongjian.com.selfdestructingmessage:lock_enabled
+        */
+        public static final int CircularSeekBar_lock_enabled = 5;
+        /**
+          <p>This symbol is the offset where the {@link com.weidongjian.com.selfdestructingmessage.R.attr#maintain_equal_circle}
+          attribute's value can be found in the {@link #CircularSeekBar} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.weidongjian.com.selfdestructingmessage:maintain_equal_circle
+        */
+        public static final int CircularSeekBar_maintain_equal_circle = 3;
+        /**
+          <p>This symbol is the offset where the {@link com.weidongjian.com.selfdestructingmessage.R.attr#max}
+          attribute's value can be found in the {@link #CircularSeekBar} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.weidongjian.com.selfdestructingmessage:max
+        */
+        public static final int CircularSeekBar_max = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.weidongjian.com.selfdestructingmessage.R.attr#move_outside_circle}
+          attribute's value can be found in the {@link #CircularSeekBar} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.weidongjian.com.selfdestructingmessage:move_outside_circle
+        */
+        public static final int CircularSeekBar_move_outside_circle = 2;
+        /**
+          <p>This symbol is the offset where the {@link com.weidongjian.com.selfdestructingmessage.R.attr#pointer_alpha_ontouch}
+          attribute's value can be found in the {@link #CircularSeekBar} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.weidongjian.com.selfdestructingmessage:pointer_alpha_ontouch
+        */
+        public static final int CircularSeekBar_pointer_alpha_ontouch = 17;
+        /**
+          <p>This symbol is the offset where the {@link com.weidongjian.com.selfdestructingmessage.R.attr#pointer_color}
+          attribute's value can be found in the {@link #CircularSeekBar} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.weidongjian.com.selfdestructingmessage:pointer_color
+        */
+        public static final int CircularSeekBar_pointer_color = 14;
+        /**
+          <p>This symbol is the offset where the {@link com.weidongjian.com.selfdestructingmessage.R.attr#pointer_halo_border_width}
+          attribute's value can be found in the {@link #CircularSeekBar} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.weidongjian.com.selfdestructingmessage:pointer_halo_border_width
+        */
+        public static final int CircularSeekBar_pointer_halo_border_width = 11;
+        /**
+          <p>This symbol is the offset where the {@link com.weidongjian.com.selfdestructingmessage.R.attr#pointer_halo_color}
+          attribute's value can be found in the {@link #CircularSeekBar} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.weidongjian.com.selfdestructingmessage:pointer_halo_color
+        */
+        public static final int CircularSeekBar_pointer_halo_color = 15;
+        /**
+          <p>This symbol is the offset where the {@link com.weidongjian.com.selfdestructingmessage.R.attr#pointer_halo_color_ontouch}
+          attribute's value can be found in the {@link #CircularSeekBar} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.weidongjian.com.selfdestructingmessage:pointer_halo_color_ontouch
+        */
+        public static final int CircularSeekBar_pointer_halo_color_ontouch = 16;
+        /**
+          <p>This symbol is the offset where the {@link com.weidongjian.com.selfdestructingmessage.R.attr#pointer_halo_width}
+          attribute's value can be found in the {@link #CircularSeekBar} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.weidongjian.com.selfdestructingmessage:pointer_halo_width
+        */
+        public static final int CircularSeekBar_pointer_halo_width = 10;
+        /**
+          <p>This symbol is the offset where the {@link com.weidongjian.com.selfdestructingmessage.R.attr#pointer_radius}
+          attribute's value can be found in the {@link #CircularSeekBar} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.weidongjian.com.selfdestructingmessage:pointer_radius
+        */
+        public static final int CircularSeekBar_pointer_radius = 9;
+        /**
+          <p>This symbol is the offset where the {@link com.weidongjian.com.selfdestructingmessage.R.attr#progress}
+          attribute's value can be found in the {@link #CircularSeekBar} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.weidongjian.com.selfdestructingmessage:progress
+        */
+        public static final int CircularSeekBar_progress = 0;
+        /**
+          <p>This symbol is the offset where the {@link com.weidongjian.com.selfdestructingmessage.R.attr#start_angle}
+          attribute's value can be found in the {@link #CircularSeekBar} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.weidongjian.com.selfdestructingmessage:start_angle
+        */
+        public static final int CircularSeekBar_start_angle = 18;
+        /**
+          <p>This symbol is the offset where the {@link com.weidongjian.com.selfdestructingmessage.R.attr#use_custom_radii}
+          attribute's value can be found in the {@link #CircularSeekBar} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.weidongjian.com.selfdestructingmessage:use_custom_radii
+        */
+        public static final int CircularSeekBar_use_custom_radii = 4;
         /** Attributes that can be used with a PagerSlidingTabStrip.
            <p>Includes the following attributes:</p>
            <table>
