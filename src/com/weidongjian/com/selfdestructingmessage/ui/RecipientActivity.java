@@ -13,6 +13,7 @@ import com.parse.ParseQuery;
 import com.parse.ParseRelation;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
+import com.parse.SendCallback;
 import com.weidongjian.com.selfdestructingmessage.FileHelper;
 import com.weidongjian.com.selfdestructingmessage.ImageResizer;
 import com.weidongjian.com.selfdestructingmessage.ParseConstant;
@@ -22,6 +23,9 @@ import com.weidongjian.com.selfdestructingmessage.adapter.userAdapter;
 import android.R.array;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
@@ -115,7 +119,6 @@ public class RecipientActivity extends Activity{
 			}
 			else {
 				sendMessage(message);
-				finish();
 			}
 			return true;
 		}
@@ -134,14 +137,19 @@ public class RecipientActivity extends Activity{
 			public void done(ParseException e) {
 				setProgressBarIndeterminateVisibility(false);
 				if (e == null) {
-					Toast.makeText(RecipientActivity.this, "success save message.", Toast.LENGTH_LONG).show();
+					Toast.makeText(RecipientActivity.this, "success send message.", Toast.LENGTH_LONG).show();
 					sendPushNotification();
 				}
 				else {
 					new AlertDialog.Builder(RecipientActivity.this).setTitle("error")
 					.setMessage(e.getMessage())
 					.setInverseBackgroundForced(true)
-					.setPositiveButton(android.R.string.ok, null)
+					.setPositiveButton(android.R.string.ok, new OnClickListener() {
+						@Override
+						public void onClick(DialogInterface arg0, int arg1) {
+							navigateToMainActivity();
+						}
+					})
 					.show();
 				}
 			}
@@ -155,7 +163,12 @@ public class RecipientActivity extends Activity{
 		
 		push.setQuery(query);
 		push.setMessage("You have a new message from " + ParseUser.getCurrentUser().getUsername());
-		push.sendInBackground();
+		push.sendInBackground(new SendCallback() {
+			@Override
+			public void done(ParseException arg0) {
+				navigateToMainActivity();
+			}
+		});
 	}
 
 	private ParseObject createMessage() {
@@ -213,5 +226,12 @@ public class RecipientActivity extends Activity{
 			}
 		};
 	};
+	
+	private void navigateToMainActivity() {
+		Intent toMainActivityInent = new Intent(RecipientActivity.this, MainActivity.class);
+		toMainActivityInent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+		toMainActivityInent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+		startActivity(toMainActivityInent);
+	}
 
 }

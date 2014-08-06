@@ -23,6 +23,7 @@ import android.support.v4.view.ViewPager;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.util.TypedValue;
+import android.view.ContextThemeWrapper;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Window;
@@ -136,7 +137,7 @@ public class MainActivity extends FragmentActivity  {
 		tabs.setDividerColor(Color.TRANSPARENT);
 		// 设置Tab底部线的高度
 		tabs.setUnderlineHeight((int) TypedValue.applyDimension(
-				TypedValue.COMPLEX_UNIT_DIP, 0, dm));
+				TypedValue.COMPLEX_UNIT_DIP, 1, dm));
 		// 设置Tab Indicator的高度
 		tabs.setIndicatorHeight((int) TypedValue.applyDimension(
 				TypedValue.COMPLEX_UNIT_DIP, 3, dm));
@@ -178,7 +179,7 @@ public class MainActivity extends FragmentActivity  {
 			navigateToLogin();
 			break;
 		case R.id.action_choice:
-			new AlertDialog.Builder(MainActivity.this)
+			new AlertDialog.Builder(new ContextThemeWrapper(MainActivity.this, R.style.dialog))
 					.setTitle("Create message")
 					.setItems(R.array.action_choice, mListener)
 					.setInverseBackgroundForced(true)

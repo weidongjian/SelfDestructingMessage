@@ -76,6 +76,12 @@ public class Doodle extends Activity {
 		currentAcceleration = sensorManager.GRAVITY_EARTH;
 		lastAcceleration = sensorManager.GRAVITY_EARTH;
 
+		
+	}
+	
+	@Override
+	protected void onResume() {
+		super.onResume();
 		enableAccelerometerListener();
 	}
 
@@ -92,11 +98,9 @@ public class Doodle extends Activity {
 		disableAccelerometerListener();
 	}
 
-	@SuppressWarnings("deprecation")
 	private void disableAccelerometerListener() {
 		if (sensorManager != null) {
-			sensorManager.unregisterListener(sensorEventListener, sensorManager
-					.getDefaultSensor(SensorManager.SENSOR_ACCELEROMETER));
+			sensorManager.unregisterListener(sensorEventListener);
 			sensorManager = null;
 		}
 	}
@@ -145,7 +149,6 @@ public class Doodle extends Activity {
 
 		@Override
 		public void onAccuracyChanged(Sensor sensor, int accuracy) {
-			// TODO Auto-generated method stub
 
 		}
 	};

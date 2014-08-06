@@ -7,6 +7,7 @@ import com.parse.Parse;
 import com.parse.ParseInstallation;
 import com.parse.ParseUser;
 import com.parse.PushService;
+import com.weidongjian.com.selfdestructingmessage.ui.MainActivity;
 
 import android.app.Application;
 
@@ -15,7 +16,7 @@ public class BaseApplication extends Application {
 	@Override
 	public void onCreate() {
 		Parse.initialize(this, "NkSX5F1euzX7EiiaJvKgHkbMWD7WCsBo0LrH7HGC", "B0jJ11ALr9ZBJfwJSF56fZ46XNmQ4wL6rkGQgFHJ");
-		PushService.setDefaultPushCallback(this, DispatchActivity.class);
+		PushService.setDefaultPushCallback(this, MainActivity.class);
 		ParseInstallation installation = ParseInstallation.getCurrentInstallation();
 		installation.saveInBackground();
 		

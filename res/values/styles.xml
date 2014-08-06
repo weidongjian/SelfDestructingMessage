@@ -5,9 +5,7 @@
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
     -->
 
-    <style name="AppBaseTheme" parent="android:Theme.Holo">
-        <item name="android:actionBarStyle">@style/ActionBar.MyStyle</item>
-    </style>
+    
     
     <style name="ActionBar.MyStyle" parent="@android:style/Widget.Holo.ActionBar">
         <item name="android:indeterminateProgressStyle">@style/ActionBarProgressBar.MyStyle</item>
@@ -77,6 +75,18 @@
         <item name="android:shadowColor">#A3A8A1</item>
         <item name="android:textSize">25sp</item>
         <item name="android:background">@drawable/bg_button</item>
+    </style>
+    
+    <style name="dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:fullDark">@drawable/dialog_body</item>
+        <item name="android:topDark">@drawable/dialog_title</item>
+        <item name="android:centerDark">@drawable/dialog_body</item>
+        <item name="android:bottomDark">@drawable/dialog_footer</item>
+        <item name="android:fullBright">@drawable/dialog_body</item>
+        <item name="android:centerBright">@drawable/dialog_body</item>
+        <item name="android:bottomBright">@drawable/dialog_footer</item>
+        <item name="android:bottomMedium">@drawable/dialog_footer</item>
+        <item name="android:centerMedium">@drawable/dialog_body</item>
     </style>
 
     <!-- add from android asset studio -->

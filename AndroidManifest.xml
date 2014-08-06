@@ -67,7 +67,8 @@
         </activity>
         <activity
             android:name=".ui.ViewImageActivity"
-            android:parentActivityName="com.weidongjian.com.selfdestructingmessage.ui.MainActivity" >
+            android:parentActivityName="com.weidongjian.com.selfdestructingmessage.ui.MainActivity"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.weidongjian.com.selfdestructingmessage.ui.MainActivity" />
