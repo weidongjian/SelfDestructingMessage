@@ -14,6 +14,7 @@ public final class Manifest {
   to match your app's package name + ".permission.C2D_MESSAGE".
 
 
+
     
          */
         public static final String C2D_MESSAGE="com.weidongjian.com.selfdestructingmessage.permission.C2D_MESSAGE";

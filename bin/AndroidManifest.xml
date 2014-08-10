@@ -19,7 +19,7 @@
 
     <!--
   IMPORTANT: Change "com.parse.starter.permission.C2D_MESSAGE" in the lines below
-  to match your app's package name + ".permission.C2D_MESSAGE".
+  to match your app's package name + ".permission.C2D_MESSAGE".
     -->
     <permission
         android:name="com.weidongjian.com.selfdestructingmessage.permission.C2D_MESSAGE"
@@ -103,9 +103,13 @@
 
         <activity
             android:name=".ui.Doodle"
-            android:screenOrientation="portrait"
-            android:label="Doodle" >
+            android:label="Doodle"
+            android:screenOrientation="portrait" >
         </activity>
+
+        <service android:name=".util.DeleteMessageService"
+            android:exported="false" >
+        </service>
     </application>
 
 </manifest>

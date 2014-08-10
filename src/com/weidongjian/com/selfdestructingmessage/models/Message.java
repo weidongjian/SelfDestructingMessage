@@ -10,13 +10,13 @@ public class Message {
 	private Uri fileUri;
 	private String fileType;
 	private String senderName;
-	private Date createdAt;
+	private long createdAt;
 
 	public Message() {
 	}
 
 	public Message(String objectId, Uri fileUri, String fileType,
-			String senderName, Date createdAt) {
+			String senderName, long createdAt) {
 		this.objectId = objectId;
 		this.fileUri = fileUri;
 		this.fileType = fileType;
@@ -95,7 +95,7 @@ public class Message {
 	/**
 	 * @return the createdAt
 	 */
-	public Date getCreatedAt() {
+	public long getCreatedAt() {
 		return createdAt;
 	}
 
@@ -103,7 +103,7 @@ public class Message {
 	 * @param createdAt
 	 *            the createdAt to set
 	 */
-	public void setCreatedAt(Date createdAt) {
+	public void setCreatedAt(long createdAt) {
 		this.createdAt = createdAt;
 	}
 
