@@ -79,6 +79,7 @@ public class ViewImageActivity extends Activity {
 		});
 	}
 	
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		getMenuInflater().inflate(R.menu.navigate_up_menu, menu);

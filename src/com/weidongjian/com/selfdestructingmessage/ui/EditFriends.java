@@ -12,6 +12,7 @@ import com.parse.SaveCallback;
 import com.weidongjian.com.selfdestructingmessage.ParseConstant;
 import com.weidongjian.com.selfdestructingmessage.R;
 import com.weidongjian.com.selfdestructingmessage.adapter.userAdapter;
+import com.weidongjian.com.selfdestructingmessage.models.User;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -53,6 +54,7 @@ public class EditFriends extends Activity {
 		mGridview.setOnItemClickListener(mItemClickListener);
 		mCurrentUser = ParseUser.getCurrentUser();
 		mParseRelation = mCurrentUser.getRelation(ParseConstant.KEY_FRIEND_RELATION);
+			
 	}
 	
 	@Override
@@ -142,6 +144,5 @@ public boolean onOptionsItemSelected(MenuItem item) {
 			});
 		};
 	};
-	
 	
 }

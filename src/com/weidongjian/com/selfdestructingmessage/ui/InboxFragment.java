@@ -1,6 +1,7 @@
 package com.weidongjian.com.selfdestructingmessage.ui;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import android.app.Activity;
@@ -9,6 +10,8 @@ import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
@@ -19,16 +22,18 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.ListView;
 
+import com.google.gson.Gson;
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseFile;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
-import com.weidongjian.com.selfdestructingmessage.Message;
 import com.weidongjian.com.selfdestructingmessage.ParseConstant;
 import com.weidongjian.com.selfdestructingmessage.R;
 import com.weidongjian.com.selfdestructingmessage.adapter.MessageAdapter;
+import com.weidongjian.com.selfdestructingmessage.models.Message;
+import com.weidongjian.com.selfdestructingmessage.util.DatabaseHandler;
 
 import eu.erikw.PullToRefreshListView;
 import eu.erikw.PullToRefreshListView.OnRefreshListener;
@@ -37,16 +42,23 @@ import eu.erikw.PullToRefreshListView.OnRefreshListener;
 public class InboxFragment extends ListFragment {
 	public static final int REQUEST_CODE_VIEW_IMAGE = 0;
 	protected List<ParseObject> mMessage;
-	protected List<Message> mMessages;
 	protected PullToRefreshListView listview;
 	protected int location;
 	private MessageAdapter adapter;
 	protected ProgressDialog pd;
+	private Gson gson = new Gson();
+	private SharedPreferences sp;
+	private long refreshDate;
+	private DatabaseHandler databaseHandler;
 //	protected MenuItem progressBar = null;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		sp = getActivity().getSharedPreferences("refreshDate", 0);
+		refreshDate = sp.getLong("date", 0);
+		System.out.println("onCreate" + refreshDate);
+		databaseHandler = new DatabaseHandler(getActivity());
 //		pd.show(getActivity(), "loading", "please wait");
 	}
 	
@@ -87,27 +99,43 @@ public class InboxFragment extends ListFragment {
 		retrieveMessages();
 	}
 	
-//	@Override
-//	public void onResume() {
-//		super.onResume();
-//		
-//	}
+	@Override
+	public void onResume() {
+		super.onResume();
+		databaseHandler.open();
+		Cursor cursor = databaseHandler.getAllMessage();
+		if (cursor.moveToFirst()) {
+			do {
+				int index = cursor.getColumnIndex("objectId");
+				String objectID = cursor.getString(index);
+				System.out.println(objectID);
+			} while (cursor.moveToNext());
+		}
+	}
 
 	public void retrieveMessages() {
 		ParseQuery<ParseObject> query = new ParseQuery<ParseObject>(ParseConstant.CLASS_MESSAGE);
 		query.whereEqualTo(ParseConstant.KEY_RECEIVE_ID, ParseUser.getCurrentUser().getObjectId());
 		query.orderByDescending(ParseConstant.KEY_CREATED_AT);
+		query.whereGreaterThan("createdAt", new Date(refreshDate));
 		query.findInBackground(new FindCallback<ParseObject>() {
 			@Override
 			public void done(List<ParseObject> messages, ParseException e) {
 //				if (pd != null && pd.isShowing()) {
 //					pd.dismiss();
 //				}
+				SharedPreferences.Editor editor = sp.edit();
+				refreshDate = new Date().getTime();
+				editor.putLong("date", refreshDate);
+				System.out.println("retrieveMessages" + refreshDate);
+				editor.commit();
 				getActivity().setProgressBarIndeterminateVisibility(false);
 				listview.onRefreshComplete();
 				if (e == null) {
 					mMessage = messages;
-					
+					if (!mMessage.isEmpty()) {
+						addMessageToDatabase(mMessage);
+					}
 //					if (getListView().getAdapter() == null) {
 						adapter = new MessageAdapter(getListView().getContext(), mMessage);
 						setListAdapter(adapter);
@@ -118,6 +146,19 @@ public class InboxFragment extends ListFragment {
 				}
 			}
 		});
+	}
+	
+	private void addMessageToDatabase(List<ParseObject> mMessage) {
+		for (ParseObject message : mMessage) {
+			String objectId = message.getObjectId();
+			ParseFile file = message.getParseFile(ParseConstant.KEY_FILE);
+			Uri uri = Uri.parse(file.getUrl());
+			String fileType = message.getString(ParseConstant.KEY_FILE_TYPE);
+			String senderName = message.getString(ParseConstant.KEY_SENDER_NAME);
+			Date createdAt = message.getCreatedAt();
+			Message newMessage = new Message(objectId, uri, fileType, senderName, createdAt);
+			databaseHandler.addMessage(newMessage);
+		}
 	}
 	
 	@Override
@@ -172,6 +213,12 @@ public class InboxFragment extends ListFragment {
 			deleteMessage(mMessage.get(location));
 		}
 	};
+	
+	@Override
+	public void onDestroy() {
+		super.onDestroy();
+	}
+	
 }
 
 

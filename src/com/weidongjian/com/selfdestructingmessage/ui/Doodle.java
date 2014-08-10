@@ -20,6 +20,7 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -29,6 +30,8 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
+import android.widget.Toast;
+
 import com.devadvance.circularseekbar.CircularSeekBar;
 import com.devadvance.circularseekbar.CircularSeekBar.OnCircularSeekBarChangeListener;
 import com.weidongjian.com.selfdestructingmessage.ParseConstant;
@@ -40,6 +43,7 @@ public class Doodle extends Activity {
 	private float acceleration;
 	private float currentAcceleration;
 	private float lastAcceleration;
+	private boolean doubleBackToExitPressedOnce;
 	private AtomicBoolean dialogIsDisplay = new AtomicBoolean();
 	private RelativeLayout relativeLayout;
 
@@ -342,5 +346,23 @@ public class Doodle extends Activity {
 				Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
 		mediaScanIntent.setData(contentUri);
 		this.sendBroadcast(mediaScanIntent);
+	}
+	
+	@Override
+	public void onBackPressed() {
+		if (doubleBackToExitPressedOnce) {
+			super.onBackPressed();
+			return;
+		}
+		
+		this.doubleBackToExitPressedOnce = true;
+		Toast.makeText(this, "Please click BACK again to exit Doodle ", Toast.LENGTH_SHORT).show();
+		
+		new Handler().postDelayed(new Runnable() {
+			@Override
+			public void run() {
+				doubleBackToExitPressedOnce = false;
+			}
+		}, 1000 * 2);
 	}
 }
