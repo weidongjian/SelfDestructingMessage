@@ -107,7 +107,7 @@
             android:screenOrientation="portrait" >
         </activity>
 
-        <service android:name=".util.DeleteMessageService"
+        <service android:name=".util.MessageService"
             android:exported="false" >
         </service>
     </application>

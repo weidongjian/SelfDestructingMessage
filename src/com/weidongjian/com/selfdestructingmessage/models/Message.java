@@ -2,6 +2,8 @@ package com.weidongjian.com.selfdestructingmessage.models;
 
 import java.util.Date;
 
+import com.parse.ParseUser;
+
 import android.net.Uri;
 
 public class Message {
