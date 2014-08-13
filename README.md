@@ -1,13 +1,11 @@
-SelfDestructingMessage
+D Message
 ======================
-该app是一款阅后即焚的应用（Self Destructing Message），支持好友之间发送照片或者长度为5s的视频，主要特点介绍如下：：
-* 后台使用的是Parse的api；
-* Login登入按钮增加动画效果，Loing页面与Signup页面增加平移动画效果；
-* EditFriends页面里面显示所有已注册的账户，点击头像即可增加为好友；
-* 主页增加了Pull to refresh效果
-* 优化了Actionbar的UI
-* 点击NEW MESSAGE，有四种方式可以创建新的消息，；
+该app是一款阅后即焚类社交应用，支持好友之间发送照片或者长度为5s的视频，主要特点介绍如下：
+* 发送照片有三种方式：拍照、选择本地照片、涂鸦，涂鸦会自动保存画笔设置；
+* EditFriends页面里面显示所有已注册的账户，点击头像即可增加或取消好友；
 * 增加了Parse Push，当有收到信的消息的时候，会弹出一个Push Notifacation；
 * 点击列表，可以查看收到的消息，查看完后，消息自动被删除；
+* Inbox页面采用Sqlite本地保存；
+* 服务器的数据交换和Sqlite数据库的操作在Service中完成，增加UI灵敏度。
 
 **测试账号：test，密码：test**
