@@ -38,25 +38,21 @@
 
 <h1></h1>
 
-<h3>
-<a name="%E6%BA%90%E4%BB%A3%E7%A0%81%E5%B7%B2%E6%9B%B4%E6%96%B0%E4%BB%A5%E4%B8%8B%E7%9A%84%E6%8F%8F%E8%BF%B0%E5%8F%AA%E9%80%82%E7%94%A8%E4%BA%8E%E8%80%81%E7%89%88%E6%9C%AC%E7%9A%84d-message" class="anchor" href="#%E6%BA%90%E4%BB%A3%E7%A0%81%E5%B7%B2%E6%9B%B4%E6%96%B0%E4%BB%A5%E4%B8%8B%E7%9A%84%E6%8F%8F%E8%BF%B0%E5%8F%AA%E9%80%82%E7%94%A8%E4%BA%8E%E8%80%81%E7%89%88%E6%9C%AC%E7%9A%84d-message"><span class="octicon octicon-link"></span></a>源代码已更新，以下的描述只适用于老版本的D Message</h3>
-
 <p>该应用可以通过<a href="http://zhushou.360.cn/detail/index/soft_id/1814749#btn-install-now-log">360市场</a>下载，或者直接下载<a href="http://shouji.360tpcdn.com/140720/5c92be62531711b2eea7021ffc19da5d/com.weidongjian.com.selfdestructingmessage_1.apk">APK</a>。</p>
 
-<p>该app是一款阅后即焚类的应用（Self Destructing Message），支持好友之间发送照片或者长度为5s的视频，主要特点介绍如下：</p>
+<p>该app是一款阅后即焚类社交应用，支持好友之间发送照片或者长度为5s的视频，主要特点介绍如下：</p>
 
 <ul>
-<li>后台使用的是<a href="https://www.parse.com/">Parse</a>的api；</li>
-<li>Login登入按钮增加动画效果，Login页面与Signup页面增加平移动画效果；</li>
+<li>发送照片有三种方式：拍照、选择本地照片、<strong>涂鸦</strong>，涂鸦会自动保存画笔设置；</li>
 <li>EditFriends页面里面显示所有已注册的账户，点击头像即可增加或取消好友；</li>
-<li>主页增加了Pull to refresh效果；</li>
-<li>优化了Actionbar的UI；</li>
-<li>点击NEW MESSAGE，有四种方式可以创建新的消息；</li>
 <li>增加了Parse Push，当有收到信的消息的时候，会弹出一个Push Notifacation；</li>
 <li>点击列表，可以查看收到的消息，查看完后，消息自动被删除；</li>
-<li>把图片类消息的删除时间改成图片load完毕后再删除；</li>
-<li>主页面改用PagerSlidingTabStrip；</li>
+<li>Inbox页面采用Sqlite本地保存；</li>
+<li>服务器的数据交换和Sqlite数据库的操作在Service中完成，增加UI灵敏度。</li>
 </ul><p><img src="https://raw.githubusercontent.com/weidongjian/ImageBackup/master/%E5%BA%94%E7%94%A8%E5%AE%9D%E5%8A%A8%E6%80%81%E6%88%AA%E5%B1%8F2014072401.gif" alt="动态截图"></p>
+
+<p>涂鸦截图
+<img src="https://raw.githubusercontent.com/weidongjian/ImageBackup/master/%E6%B6%82%E9%B8%A6.png" alt="涂鸦"></p>
 
 <p><strong>测试账号：test，密码：test</strong></p>
       </section>
