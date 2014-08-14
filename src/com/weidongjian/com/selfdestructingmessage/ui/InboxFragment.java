@@ -362,6 +362,16 @@ public class InboxFragment extends ListFragment {
 						listview.onRefreshComplete();
 					}
 					getActivity().setProgressBarIndeterminateVisibility(false);
+					if (resultData != null) {
+						System.out.println("resultData is not empty");
+						int result = resultData.getInt("resultData");
+						System.out.println("resultData is " + result);
+						if (result == 0) {
+							Toast.makeText(getActivity(), "No new message.", Toast.LENGTH_SHORT).show();
+						}else {
+							Toast.makeText(getActivity(), result + " new message added to the list.", Toast.LENGTH_SHORT).show();
+						}
+					}
 				}
 			}
 		});

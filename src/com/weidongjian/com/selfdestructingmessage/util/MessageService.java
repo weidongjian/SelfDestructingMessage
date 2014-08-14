@@ -18,11 +18,13 @@ import android.app.IntentService;
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
+import android.os.Bundle;
 import android.os.ResultReceiver;
 
 public class MessageService extends IntentService {
 	private DatabaseHandler databaseHandler;
 	private ResultReceiver rec;
+	private int resultCount = 0;
 
 	public MessageService() {
 		super("MessageService");
@@ -30,7 +32,7 @@ public class MessageService extends IntentService {
 
 	@Override
 	protected void onHandleIntent(Intent intent) {
-//		System.out.println("service had started");
+		// System.out.println("service had started");
 		databaseHandler = new DatabaseHandler(getBaseContext());
 		databaseHandler.open();
 		String type = intent.getStringExtra("type");
@@ -43,7 +45,7 @@ public class MessageService extends IntentService {
 			deleteParseMessage(objectID);
 			rec.send(Activity.RESULT_OK, null);
 		} else if (type.equals("retrieveMessage")) {
-//			System.out.println("get the ResultReceiver");
+			// System.out.println("get the ResultReceiver");
 			rec = intent.getParcelableExtra("receiver");
 			retrieveMessage();
 			// System.out.println("send retrieveMessage result");
@@ -92,13 +94,16 @@ public class MessageService extends IntentService {
 			@Override
 			public void done(List<ParseObject> arg0, ParseException arg1) {
 				if (arg1 == null) {
-//					System.out.println("parseQuery done with no error");
+					// System.out.println("parseQuery done with no error");
 					if (!arg0.isEmpty()) {
+						resultCount = arg0.size();
 						System.out.println("parseQuery done with result:"
 								+ arg0.size());
 						addMessageToDatabase(arg0);
-					}else {
-						rec.send(Activity.RESULT_OK, null);
+					} else {
+						Bundle bundle = new Bundle();
+						bundle.putInt("resultCount", resultCount);
+						rec.send(Activity.RESULT_OK, bundle);
 					}
 				} else {
 					rec.send(Activity.RESULT_OK, null);
@@ -134,11 +139,13 @@ public class MessageService extends IntentService {
 			long createdAt = message.getCreatedAt().getTime();
 			Message newMessage = new Message(objectId, uri, fileType,
 					senderName, createdAt);
-//			databaseHandler.open();
+			// databaseHandler.open();
 			databaseHandler.addMessage(newMessage);
-			rec.send(Activity.RESULT_OK, null);
-//			databaseHandler.close();
+			// databaseHandler.close();
 		}
+		Bundle bundle = new Bundle();
+		bundle.putInt("resultCount", resultCount);
+		rec.send(Activity.RESULT_OK, bundle);
 	}
 
 }

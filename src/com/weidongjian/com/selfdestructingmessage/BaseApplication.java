@@ -19,6 +19,7 @@ public class BaseApplication extends Application {
 //		PushService.setDefaultPushCallback(this, MainActivity.class);
 		ParseInstallation installation = ParseInstallation.getCurrentInstallation();
 		installation.saveInBackground();
+		PushService.setDefaultPushCallback(this, MainActivity.class);
 		
 		ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(getApplicationContext()).build();
 		ImageLoader.getInstance().init(config);

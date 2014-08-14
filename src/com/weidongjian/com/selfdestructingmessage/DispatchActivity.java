@@ -16,7 +16,6 @@ public class DispatchActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		ParseAnalytics.trackAppOpened(getIntent());
-		PushService.setDefaultPushCallback(this, MainActivity.class);
 		
 		if (ParseUser.getCurrentUser() != null) {
 			Intent i = new Intent(this, MainActivity.class);
