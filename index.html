@@ -38,18 +38,18 @@
 
 <h1></h1>
 
-<p>该应用可以通过<a href="http://zhushou.360.cn/detail/index/soft_id/1814749#btn-install-now-log">360市场</a>下载，或者直接下载<a href="http://shouji.360tpcdn.com/140720/5c92be62531711b2eea7021ffc19da5d/com.weidongjian.com.selfdestructingmessage_1.apk">APK</a>。
-（2014.8.13晚上提交的，预计8.14号下午审核完成并发布）</p>
-
-<p>该app是一款阅后即焚类社交应用，支持好友之间发送照片或者长度为5s的视频，主要特点介绍如下：</p>
+<p>这是本人重点开发的一款阅后即焚类社交应用，支持好友之间发送照片或者长度为5s的视频：</p>
 
 <ul>
-<li>发送照片有三种方式：拍照、选择本地照片、<strong>涂鸦</strong>，涂鸦会自动保存画笔设置；</li>
-<li>EditFriends页面里面显示所有已注册的账户，点击头像即可增加或取消好友；</li>
-<li>增加了Parse Push，当有收到信的消息的时候，会弹出一个Push Notifacation；</li>
-<li>点击列表，可以查看收到的消息，查看完后，消息自动被删除；</li>
-<li>Inbox页面采用Sqlite本地保存；</li>
-<li>服务器的数据交换和Sqlite数据库的操作在Service中完成，增加UI灵敏度。</li>
+<li>进入APP首先是要求注册账号或登入已有的账号（服务器用的是Parse）；</li>
+<li>主页有两个Tap，一个是显示收件箱，一个是显示好友账号；</li>
+<li>在EditFriends页面里面显示所有已注册的账户，点击头像即可增加或取消为好友；</li>
+<li>可以拍照或者选择本地的照片发送给好友，或者拍视频或者选择本地视频发送给好友（视频大小不超过10M）；</li>
+<li>可以选择涂鸦（Doodle）自己作画，然后发送给好友；</li>
+<li>当有收到信的消息的时候，系统会弹出一个Push Notifacation；</li>
+<li>点击列表，直接查看收到的消息，查看完后，消息被自动删除；</li>
+<li>收件箱的内容那个采用SqliteDatabase本地动态保存并且跟服务器中的收件箱保持同步；</li>
+<li>建立Service模块，处理服务器的数据交换和Sqlite数据库的操作。</li>
 </ul><p><img src="https://raw.githubusercontent.com/weidongjian/ImageBackup/master/%E5%BA%94%E7%94%A8%E5%AE%9D%E5%8A%A8%E6%80%81%E6%88%AA%E5%B1%8F2014072401.gif" alt="动态截图"></p>
 
 <p><img src="https://raw.githubusercontent.com/weidongjian/ImageBackup/master/002.png" alt="涂鸦"></p>
